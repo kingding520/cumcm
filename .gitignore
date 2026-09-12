@@ -1,0 +1,20 @@
+# Temporary tool output and installers
+tmp/
+
+# TeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# MATLAB editor and generated backup files
+*.asv
+
+# Operating-system files
+Thumbs.db
+.DS_Store
