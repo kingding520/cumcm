@@ -18,3 +18,8 @@ tmp/
 # Operating-system files
 Thumbs.db
 .DS_Store
+
+# Python bytecode caches
+__pycache__/
+*.pyc
+.venv/
