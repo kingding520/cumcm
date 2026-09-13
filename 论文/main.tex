@@ -1,0 +1,263 @@
+\documentclass[UTF8,a4paper,11pt]{ctexart}
+
+\usepackage[a4paper,margin=2.4cm]{geometry}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{booktabs,longtable,array}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption,subcaption}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\sisetup{detect-all,per-mode=symbol}
+\newcommand{\placeholder}[1]{\textcolor{gray}{\fbox{\parbox{0.92\linewidth}{#1}}}}
+\newcommand{\figplaceholder}[2]{\begin{figure}[H]\centering\fbox{\parbox[c][#2][c]{0.82\linewidth}{\centering\textcolor{gray}{待由 MATLAB 图表包回填：#1}}}\caption{#1}\end{figure}}
+\newcommand{\tabplaceholder}[2]{\begin{table}[H]\centering\caption{#1}\placeholder{待由 MATLAB 图表包回填：#2}\end{table}}
+
+\title{药材的烘干问题：固定圆柱预热阶段建模与数值求解}
+\author{参赛队伍：待填写}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\placeholder{摘要暂不填写数值结论。待问题 1--4 的统一求解、网格收敛、质量守恒和灵敏度分析完成后，按“研究背景—统一模型—数值方法—定量结果—工程价值”顺序回填。}
+\end{abstract}
+
+\section{问题重述}
+
+题目研究圆柱形中药材在热风烘房中的温度和干基含水率演化。药材初始长度为 \SI{25}{cm}，初始半径为 \SI{2}{cm}，初始温度为 \SI{28}{\degreeCelsius}，初始干基含水率为 \SI{2.55}{kg/kg}。附件 1 给出烘房温度与水分浓度的离散时间序列，附件 2 给出长期烘干过程中的半径时间序列。
+
+四个问题具有递进关系。问题 1 要求在固定半径和预热平衡阶段内计算药材内部温度、水分浓度的时空分布；问题 2 在相同几何下引入附录 3 的温湿相关物性；问题 3 以全域含水率阈值确定烘干结束时间；问题 4 进一步考虑半径随时间收缩，并使用附录 4 的物性公式重新判断结束时间。本文将四问组织为同一守恒型径向热—质传递框架。
+
+\section{数据说明与预处理}
+
+\subsection{数据文件}
+
+\begin{table}[H]
+\centering
+\caption{题目附件与建模用途}
+\label{tab:data}
+\begin{tabular}{p{0.25\linewidth}p{0.30\linewidth}p{0.32\linewidth}}
+\toprule
+文件 & 数据内容 & 建模用途\\
+\midrule
+附件 1 & 时间、烘房温度、烘房水分浓度 & 问题 1--3 的时变环境边界\\
+附件 2 & 时间、药材半径 & 问题 4 的移动边界\\
+附件 3 & result1--result4 模板 & 最终结果文件的工作表和字段格式\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+附件 1 的时间单位为 s，附件 2 的时间单位为 s，长度在题面中以 cm 给出。程序内部统一使用 SI 单位，论文表格按题目要求转换为 cm、h 和 \si{\degreeCelsius}。含水率 $C$ 按题目定义为干基含水率，单位为 \si{kg/kg}。
+
+\subsection{数据审计}
+
+正式计算前检查时间严格递增、数据无缺失、半径为正且不增，并绘制烘房温度、烘房水分浓度和药材半径曲线。附件 1 的观测点之间采用分段线性插值：
+\begin{equation}
+f(t)=f_j+\frac{t-t_j}{t_{j+1}-t_j}(f_{j+1}-f_j),\qquad t_j\le t\le t_{j+1}.
+\end{equation}
+该方法通过所有原始观测点且不会制造高阶插值过冲。附件 2 的半径主方案采用保持单调的保形插值；线性插值作为敏感性对照。
+
+问题 3 和问题 4 可能超过附件 1 的观测时段。主方案将末段环境设定作为延拓方案，另外比较末点保持和末段均值保持，所有延拓规则及其对结束时间的影响在灵敏度分析中单独报告。
+
+\figplaceholder{附件 1 烘房温度与水分浓度原始序列}{5cm}
+\figplaceholder{附件 2 药材半径原始序列及插值曲线}{5cm}
+
+\section{模型假设}
+
+\begin{enumerate}
+  \item 药材视为轴对称圆柱介质，材料参数在同一径向层内均匀。
+  \item 药材长度远大于半径，主体区域的轴向温度和含水率梯度相对径向梯度较小，问题 1--3 采用一维径向模型；端面影响通过敏感性分析讨论。
+  \item 初始温度和初始干基含水率在药材内部均匀。
+  \item 药材与烘房之间的热、质交换分别服从 Newton 对流换热和线性对流传质边界。
+  \item 水分在药材内部用有效扩散描述，忽略题面未给出的化学反应热、辐射换热和宏观液态渗流参数。
+  \item 问题 1--3 半径固定；问题 4 使用题给半径序列构造移动边界，并在材料坐标中描述收缩。
+  \item 经验扩散式中的温度统一使用绝对温度 $T_K=T_{\degree C}+273.15$。
+\end{enumerate}
+
+每条假设均需在最终稿中注明依据、可能影响方向和对应检验，不能以假设替代数值验证。
+
+\section{符号说明}
+
+\begin{longtable}{p{0.18\linewidth}p{0.48\linewidth}p{0.20\linewidth}}
+\caption{主要符号}\label{tab:symbols}\\
+\toprule
+符号 & 含义 & 单位\\
+\midrule
+\endfirsthead
+\toprule
+符号 & 含义 & 单位\\
+\midrule
+\endhead
+$r$ & 到圆柱中心轴的径向距离 & m\\
+$R$ & 药材半径；问题 1--3 为 $R_0$，问题 4 为 $R(t)$ & m\\
+$t$ & 时间 & s\\
+$T$ & 药材温度 & $^\circ$C\\
+$T_\infty$ & 烘房温度 & $^\circ$C\\
+$C$ & 药材干基含水率 & kg/kg\\
+$C_\infty$ & 烘房水分浓度 & kg/kg\\
+$\rho$ & 药材密度 & kg/m$^3$\\
+$c_p$ & 比热容 & J/(kg\,K)\\
+$k$ & 导热系数 & W/(m\,K)\\
+$D$ & 有效水分扩散系数 & m$^2$/s\\
+$h$ & 对流换热系数 & W/(m$^2$\,K)\\
+$h_m$ & 对流传质系数 & m/s\\
+$C_{\mathrm{lim}}$ & 达标含水率阈值，题设取 $0.15$ & kg/kg\\
+\bottomrule
+\end{longtable}
+
+\section{统一热—质传递模型}
+
+\subsection{几何与分布参数必要性}
+
+圆柱长径比为 $L/R_0=12.5$。热 Biot 数和质传 Biot 数分别定义为
+\begin{equation}
+\mathrm{Bi}_T=\frac{hR_0}{k},\qquad \mathrm{Bi}_C=\frac{h_mR_0}{D}.
+\end{equation}
+正式论文中回填由题给参数计算的数值，并据此判断内部温湿梯度能否忽略。集中参数模型仅作为数量级对照，不作为问题 1 的主模型。
+
+\subsection{固定半径控制方程}
+
+在 $0<r<R_0$ 上，能量守恒方程为
+\begin{equation}
+\rho(C)c_p(C)\frac{\partial T}{\partial t}
+=\frac{1}{r}\frac{\partial}{\partial r}
+\left(rk(C)\frac{\partial T}{\partial r}\right).
+\end{equation}
+水分守恒方程为
+\begin{equation}
+\frac{\partial C}{\partial t}
+=\frac{1}{r}\frac{\partial}{\partial r}
+\left(rD(T,C)\frac{\partial C}{\partial r}\right).
+\end{equation}
+
+初始条件为
+\begin{equation}
+T(r,0)=28,\qquad C(r,0)=2.55.
+\end{equation}
+中心对称条件为
+\begin{equation}
+\left.\frac{\partial T}{\partial r}\right|_{r=0}=0,qquad
+\left.\frac{\partial C}{\partial r}\right|_{r=0}=0.
+\end{equation}
+表面 Robin 边界为
+\begin{equation}
+-k\left.\frac{\partial T}{\partial r}\right|_{r=R_0}
+=h\bigl[T(R_0,t)-T_\infty(t)\bigr],
+\end{equation}
+\begin{equation}
+-D\left.\frac{\partial C}{\partial r}\right|_{r=R_0}
+=h_m\bigl[C(R_0,t)-C_\infty(t)\bigr].
+\end{equation}
+
+问题 1 采用附录 2 的常密度、常比热、常导热系数和含水率相关扩散系数。问题 2、3 将物性切换为附录 3；问题 4 在移动边界下切换为附录 4。所有物性函数、单位和参数值由 MATLAB 配置文件统一维护。
+
+\subsection{问题 1 的守恒有限体积离散}
+
+将 $[0,R_0]$ 划分为 $N$ 个环形控制体，面坐标为 $r_{i\pm1/2}$，中心坐标为 $r_i$。单位长度控制体积和面面积为
+\begin{equation}
+V_i=\pi\left(r_{i+1/2}^2-r_{i-1/2}^2\right)L,
+\qquad A_{i+1/2}=2\pi r_{i+1/2}L.
+\end{equation}
+内部界面导热系数和扩散系数采用调和平均：
+\begin{equation}
+k_{i+1/2}=\frac{2k_ik_{i+1}}{k_i+k_{i+1}},
+\qquad
+D_{i+1/2}=\frac{2D_iD_{i+1}}{D_i+D_{i+1}}.
+\end{equation}
+
+对第 $i$ 个控制体积分后，内部界面对温度的贡献写为
+\begin{equation}
+G^T_{i+1/2}(T_{i+1}-T_i),qquad
+G^T_{i+1/2}=\frac{k_{i+1/2}A_{i+1/2}}{r_{i+1}-r_i},
+\end{equation}
+水分方程对应地将 $G^T$ 替换为
+\begin{equation}
+G^C_{i+1/2}=\frac{D_{i+1/2}A_{i+1/2}}{r_{i+1}-r_i}.
+\end{equation}
+中心面通量严格置为零。表面将半个控制体内的传导/扩散阻力与外部 Robin 阻力串联，构造
+\begin{equation}
+G_b^T=\frac{A_R}{\Delta r/ (2k_N)+1/h},qquad
+G_b^C=\frac{A_R}{\Delta r/ (2D_N)+1/h_m}.
+\end{equation}
+时间推进采用隐式方法，非线性扩散系数在每个时间层内迭代更新。内部计算保留双精度，结果输出时再按题意保留四位小数。
+
+\subsection{问题 1 的求解与检验安排}
+
+MATLAB 程序 \texttt{solve\_q1.m} 产生唯一结果源 \texttt{out.t,out.r,out.T,out.C}。程序不直接写 Excel；\texttt{postprocess\_q1.m} 只抽取表 1、表 2 的规定时间和位置并导出 CSV。\texttt{test\_q1.m} 检查中心零通量、表面方向、水分非负、SI 单位、恒定平衡简化算例和 $N=80,160,320$ 网格收敛。
+
+\tabplaceholder{问题 1 的温度结果}{表 1：$t=100,300,600,900,1200,1500,1800$ s；$r=0,0.5,1,1.5,2$ cm。}
+\tabplaceholder{问题 1 的水分浓度结果}{表 2：$t=100,300,600,900,1200,1500,1800$ s；$r=0,0.5,1,1.5,2$ cm。}
+\figplaceholder{问题 1 温度径向剖面}{5cm}
+\figplaceholder{问题 1 水分浓度径向剖面}{5cm}
+\tabplaceholder{问题 1 网格收敛与守恒检验}{待 MATLAB 测试脚本生成误差和残差。}
+
+\section{问题 2：变物性热湿耦合模型}
+
+本节暂留正式稿位置。沿用统一控制方程，将附录 3 的 $\rho(C)$、$c_p(C)$、$k(C)$ 和 $D(T,C)$ 在每个时间层内更新，并报告非线性迭代收敛、3 h 温度和水分场以及与问题 1 的差异。
+
+\tabplaceholder{问题 2 温度结果}{表 3 待回填。}
+\tabplaceholder{问题 2 水分浓度结果}{表 4 待回填。}
+\figplaceholder{问题 2 温度时空场}{5cm}
+\figplaceholder{问题 2 水分浓度时空场}{5cm}
+
+\section{问题 3：全域达标时间}
+
+本节暂留正式稿位置。以
+\begin{equation}
+g(t)=\max_{0\le r\le R_0}C(r,t)-0.15
+\end{equation}
+定义全域达标事件，以未四舍五入的数值结果定位 $g(t)=0$ 的最早时刻。
+
+\tabplaceholder{问题 3 水分浓度结果}{表 5 待回填。}
+\figplaceholder{问题 3 最大含水率与阈值交点}{5cm}
+
+\section{问题 4：收缩移动边界}
+
+本节暂留正式稿位置。令 $\xi=r/R(t)$，在材料坐标中建立固定参考域上的守恒模型，并使用附件 2 半径序列与附录 4 物性。需明确固定物理距离超出当前半径时的空值规则，并单独输出“药材表面”列。
+
+\tabplaceholder{问题 4 水分浓度结果}{表 6 待回填。}
+\figplaceholder{问题 4 半径与移动边界示意}{5cm}
+
+\section{模型检验与灵敏度分析}
+
+本节暂留正式稿位置，至少包括圆柱常系数简化算例、网格无关性、时间步收敛、离散质量收支、固定半径退化检验、边界延拓敏感性、传热/传质系数敏感性和半径插值敏感性。所有误差指标、阈值和结束时间在 MATLAB 实算后回填。
+
+\section{模型评价与推广}
+
+\subsection{模型优点}
+
+模型基于能量守恒和水分守恒，圆柱坐标形式与题目几何一致；有限体积离散具有局部守恒性；问题 1--4 共享求解框架，便于进行收敛和退化检验；问题 3 使用全域阈值而不是平均含水率。
+
+\subsection{模型局限与改进}
+
+当前模型忽略端面二维效应，采用有效扩散系数概括复杂水分迁移，且题面未提供潜热和传递系数反演数据。后续可建立二维轴对称模型，引入蒸发潜热，或利用实测温度/质量损失反演传递参数。
+
+\section{参考文献}
+
+\begin{thebibliography}{99}
+\bibitem{incropera} Incropera F P, DeWitt D P, Bergman T L, Lavine A S. Fundamentals of Heat and Mass Transfer. Wiley.
+\bibitem{patankar} Patankar S V. Numerical Heat Transfer and Fluid Flow. Hemisphere Publishing.
+\bibitem{ale} Donea J, Huerta A. Finite Element Methods for Flow Problems. Wiley.
+\bibitem{drying} 参考文献条目待根据最终采用的干燥与收缩文献补充，所有 DOI、卷期和页码须核验。
+\end{thebibliography}
+
+\appendix
+\section{程序与结果文件说明}
+
+\begin{itemize}
+  \item \texttt{matlab/solve\_q1.m}：固定半径圆柱有限体积求解器。
+  \item \texttt{matlab/postprocess\_q1.m}：表 1、表 2 时间和位置抽取及 CSV 导出。
+  \item \texttt{matlab/tests/test\_q1.m}：物理方向、简化算例、维度和网格收敛测试。
+  \item 结果文件、图表和运行日志由同一结果源生成，正式稿不手工抄录数值。
+\end{itemize}
+
+\section{待回填清单}
+
+\placeholder{完成 Q1 计算后回填：表 1、表 2、图形、Biot 数、网格误差、守恒残差和问题 1 的定量结论。问题 2--4 的正文、表格和结论在相应求解器完成后继续填写。}
+
+\end{document}
