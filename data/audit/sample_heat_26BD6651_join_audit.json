@@ -1,0 +1,119 @@
+{
+  "heat_id": "26BD6651",
+  "source_hashes": {
+    "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx": "c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7",
+    "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx": "19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b",
+    "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx": "40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b",
+    "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx": "f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45",
+    "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls": "79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236",
+    "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx": "dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a"
+  },
+  "source_rows_by_workbook": {
+    "1#LF.xlsx": [
+      {
+        "file": "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx",
+        "sheet": "LF精炼位1信息数据",
+        "excel_row": 8
+      }
+    ],
+    "1#RH.xlsx": [
+      {
+        "file": "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx",
+        "sheet": "RH精炼位1信息数据",
+        "excel_row": 4
+      }
+    ],
+    "3#连铸.xlsx": [
+      {
+        "file": "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx",
+        "sheet": "连铸C信息数据",
+        "excel_row": 4
+      }
+    ],
+    "B炉.xlsx": [
+      {
+        "file": "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx",
+        "sheet": "转炉B信息数据",
+        "excel_row": 9
+      }
+    ],
+    "出钢计划表单.xls": [
+      {
+        "file": "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls",
+        "sheet": "steel_tapping_plan_info(2)",
+        "excel_row": 1306
+      }
+    ],
+    "工序时间信息.xlsx": [
+      {
+        "file": "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx",
+        "sheet": "工序信息数据",
+        "excel_row": 21
+      }
+    ]
+  },
+  "event_count": 43,
+  "event_trace_csv": "sample_heat_26BD6651_trace.csv",
+  "converter_to_lf_tier2_fallback": {
+    "status": "pass",
+    "criteria": {
+      "same_heat_id": true,
+      "same_ladle_number": true,
+      "time_monotone": true,
+      "time_window_le_90min": true,
+      "weight_diff_le_3t": true
+    },
+    "converter_ladle_id": "21",
+    "lf_ladle_id": "21",
+    "converter_temp_ladle_id": null,
+    "converter_tap_weight_t": 410.5,
+    "lf_incoming_weight_t": 410.5,
+    "absolute_weight_difference_t": 0.0,
+    "tap_end_time": "2026-10-12 05:10:08",
+    "lf_arrival_time": "2026-10-12 05:31:55",
+    "minutes_tap_end_to_lf_arrival": 21.783333333333335,
+    "source_rows": {
+      "converter": {
+        "file": "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx",
+        "sheet": "转炉B信息数据",
+        "excel_row": 9
+      },
+      "lf": {
+        "file": "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx",
+        "sheet": "LF精炼位1信息数据",
+        "excel_row": 8
+      }
+    }
+  },
+  "lf_rh_ccm_tier1_temp_ladle_id": {
+    "status": "pass",
+    "ids": {
+      "LF": "x179175305721520940",
+      "RH": "x179175305721520940",
+      "CCM": "x179175305721520940"
+    },
+    "consistent_nonempty_ids": true,
+    "source_rows": {
+      "lf": {
+        "file": "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx",
+        "sheet": "LF精炼位1信息数据",
+        "excel_row": 8
+      },
+      "rh": {
+        "file": "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx",
+        "sheet": "RH精炼位1信息数据",
+        "excel_row": 4
+      },
+      "ccm": {
+        "file": "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx",
+        "sheet": "连铸C信息数据",
+        "excel_row": 4
+      }
+    }
+  },
+  "notes": [
+    "The trace preserves source timestamps and row references; it does not repair raw cells or claim a full plant schedule.",
+    "The B-furnace temporary steel-ladle ID is allowed to be blank only because the Tier-2 fallback checks are explicitly reported.",
+    "Duplicate source headers are written with their original column number in event_field."
+  ]
+}

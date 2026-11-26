@@ -1,0 +1,685 @@
+﻿source_file,file_sha256,sheet_name,column_index,column_letter,field_name,nonempty_data_cells,data_types,header_blank
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,1,A,LF精炼设备号,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,2,B,钢包号,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,3,C,LF精炼工位号,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,4,D,LF处理号,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,5,E,熔炼号,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,6,F,出钢记号,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,7,G,进处理位时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,8,H,出处理位时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,9,I,精炼处理开始时间,447,"{""text"": 447}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,10,J,精炼处理结束时间,447,"{""text"": 447}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,11,K,加热时间,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,12,L,净吹时间,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,13,M,进入重量,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,14,N,放包天车,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,15,O,离开重量,462,"{""text"": 462}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,16,P,吊包天车,462,"{""text"": 462}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,17,Q,重包进站到LF精炼待机位时间,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,18,R,工作时间,462,"{""text"": 462}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,19,S,LF重包从待机位吊起时间,462,"{""text"": 462}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,20,T,净吹氧,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,21,U,进站温度,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,22,V,进站游离氧,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,23,W,出站温度,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,24,X,工作状态,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,25,Y,临时罐号,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,26,Z,班别,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,27,AA,班次,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,1,A,RH设备号,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,2,B,RH处理号,289,"{""text"": 289}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,3,C,熔炼号,336,"{""text"": 336}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,4,D,出钢记号,289,"{""text"": 289}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,5,E,进处理位时间,289,"{""text"": 289}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,6,F,出处理位时间,289,"{""text"": 289}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,7,G,脱气开始时间,289,"{""text"": 289}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,8,H,脱气结束时间,286,"{""text"": 286}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,9,I,RH处理周期,286,"{""text"": 286}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,10,J,进站温度,289,"{""text"": 289}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,11,K,进站游离氧,289,"{""text"": 289}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,12,L,出站温度,289,"{""text"": 289}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,13,M,RH处理模式,253,"{""text"": 253}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,14,N,RH工位号,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,15,O,钢包号,336,"{""text"": 336}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,16,P,进入重量,336,"{""text"": 336}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,17,Q,放包天车,336,"{""text"": 336}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,18,R,离开重量,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,19,S,吊包天车,336,"{""text"": 336}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,20,T,重包到RH接受位时间,336,"{""text"": 336}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,21,U,重罐出站到吊罐位时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,22,V,重包从RH吊起时间,336,"{""text"": 336}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,23,W,工作时间,336,"{""text"": 336}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,24,X,RH起吊重包重量,336,"{""text"": 336}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,25,Y,工作状态,336,"{""text"": 336}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,26,Z,临时罐号,336,"{""text"": 336}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,27,AA,班别,289,"{""text"": 289}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,28,AB,班次,289,"{""text"": 289}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,29,AC,炉坐号,289,"{""text"": 289}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,1,A,连铸机设备号,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,2,B,熔炼号,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,3,C,铸余大罐回收的熔炼号,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,4,D,连连浇号,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,5,E,出钢记号,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,6,F,A臂大包秤重量,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,7,G,B臂大包秤重量,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,8,H,TD钢水温度,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,9,I,奇流铸造长,440,"{""text"": 440}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,10,J,奇流断面长,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,11,K,奇流断面宽,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,12,L,偶流铸造长,440,"{""text"": 440}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,13,M,偶流断面长,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,14,N,偶流断面宽,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,15,O,奇流拉速,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,16,P,偶流拉速,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,17,Q,大包开浇时刻,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,18,R,大包终浇时刻,442,"{""text"": 442}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,19,S,连铸机旋转台工作号,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,20,T,钢包号,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,21,U,重包到铸机接受位座包时间,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,22,V,放包天车,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,23,W,铸机接受位重包放下重量,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,24,X,空包在铸机接受位吊起时间,447,"{""text"": 447}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,25,Y,吊包天车,447,"{""text"": 447}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,26,Z,铸机接受位空包吊起重量,447,"{""text"": 447}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,27,AA,空包到翻包位时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,28,AB,残余量,447,"{""text"": 447}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,29,AC,翻渣开始时间1,387,"{""text"": 387}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,30,AD,翻渣结束时间1,387,"{""text"": 387}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,31,AE,翻渣前重量1,388,"{""text"": 388}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,32,AF,翻渣后重量1,388,"{""text"": 388}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,33,AG,翻渣量1,388,"{""text"": 388}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,34,AH,翻渣设备号1,381,"{""text"": 381}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,35,AI,翻渣开始时间2,4,"{""text"": 4}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,36,AJ,翻渣结束时间2,4,"{""text"": 4}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,37,AK,翻渣前重量2,5,"{""text"": 5}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,38,AL,翻渣后重量2,5,"{""text"": 5}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,39,AM,翻渣量2,5,"{""text"": 5}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,40,AN,翻渣设备号2,4,"{""text"": 4}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,41,AO,铸余次数,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,42,AP,铸余回收量1,55,"{""text"": 55}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,43,AQ,铸余接收罐号1,55,"{""text"": 55}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,44,AR,铸余接收罐子的熔炼号1,54,"{""text"": 54}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,45,AS,铸余回收位置1,55,"{""text"": 55}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,46,AT,铸余开始时间1,55,"{""text"": 55}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,47,AU,铸余结束时间1,55,"{""text"": 55}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,48,AV,铸余前重量1,55,"{""text"": 55}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,49,AW,铸余后重量1,55,"{""text"": 55}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,50,AX,铸余回收量2,1,"{""text"": 1}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,51,AY,铸余接收罐号2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,52,AZ,铸余接收罐子的熔炼号2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,53,BA,铸余回收位置2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,54,BB,铸余开始时间2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,55,BC,铸余结束时间2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,56,BD,铸余前重量2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,57,BE,铸余后重量2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,58,BF,铸余回收途径,427,"{""text"": 427}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,59,BG,废弃品量,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,60,BH,铸机转台称显示的重包重量,1,"{""text"": 1}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,61,BI,铸机转台称显示的空包重量,1,"{""text"": 1}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,62,BJ,空包旋转至铸机接受位时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,63,BK,工作状态,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,64,BL,临时罐号,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,65,BM,工作时长,447,"{""text"": 447}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,66,BN,班别,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,67,BO,班次,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,68,BP,空罐放下过渡平车时间,442,"{""text"": 442}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,69,BQ,皮重,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,70,BR,纯钢水量,448,"{""text"": 448}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,1,A,RH设备号,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,2,B,RH处理号,261,"{""text"": 261}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,3,C,熔炼号,314,"{""text"": 314}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,4,D,出钢记号,261,"{""text"": 261}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,5,E,进处理位时间,259,"{""text"": 259}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,6,F,出处理位时间,259,"{""text"": 259}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,7,G,脱气开始时间,259,"{""text"": 259}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,8,H,脱气结束时间,258,"{""text"": 258}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,9,I,RH处理周期,258,"{""text"": 258}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,10,J,进站温度,261,"{""text"": 261}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,11,K,进站游离氧,261,"{""text"": 261}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,12,L,出站温度,261,"{""text"": 261}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,13,M,RH处理模式,233,"{""text"": 233}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,14,N,RH工位号,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,15,O,钢包号,314,"{""text"": 314}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,16,P,进入重量,314,"{""text"": 314}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,17,Q,放包天车,314,"{""text"": 314}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,18,R,离开重量,2,"{""text"": 2}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,19,S,吊包天车,312,"{""text"": 312}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,20,T,重包到RH接受位时间,314,"{""text"": 314}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,21,U,重罐出站到吊罐位时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,22,V,重包从RH吊起时间,312,"{""text"": 312}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,23,W,工作时间,312,"{""text"": 312}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,24,X,RH起吊重包重量,312,"{""text"": 312}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,25,Y,工作状态,314,"{""text"": 314}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,26,Z,临时罐号,314,"{""text"": 314}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,27,AA,班别,261,"{""text"": 261}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,28,AB,班次,261,"{""text"": 261}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,29,AC,炉坐号,261,"{""text"": 261}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,1,A,连铸机设备号,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,2,B,熔炼号,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,3,C,铸余大罐回收的熔炼号,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,4,D,连连浇号,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,5,E,出钢记号,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,6,F,A臂大包秤重量,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,7,G,B臂大包秤重量,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,8,H,TD钢水温度,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,9,I,奇流铸造长,341,"{""text"": 341}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,10,J,奇流断面长,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,11,K,奇流断面宽,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,12,L,偶流铸造长,341,"{""text"": 341}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,13,M,偶流断面长,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,14,N,偶流断面宽,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,15,O,奇流拉速,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,16,P,偶流拉速,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,17,Q,大包开浇时刻,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,18,R,大包终浇时刻,344,"{""text"": 344}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,19,S,连铸机旋转台工作号,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,20,T,钢包号,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,21,U,重包到铸机接受位座包时间,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,22,V,放包天车,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,23,W,铸机接受位重包放下重量,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,24,X,空包在铸机接受位吊起时间,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,25,Y,吊包天车,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,26,Z,铸机接受位空包吊起重量,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,27,AA,空包到翻包位时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,28,AB,残余量,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,29,AC,翻渣开始时间1,187,"{""text"": 187}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,30,AD,翻渣结束时间1,187,"{""text"": 187}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,31,AE,翻渣前重量1,189,"{""text"": 189}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,32,AF,翻渣后重量1,189,"{""text"": 189}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,33,AG,翻渣量1,189,"{""text"": 189}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,34,AH,翻渣设备号1,187,"{""text"": 187}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,35,AI,翻渣开始时间2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,36,AJ,翻渣结束时间2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,37,AK,翻渣前重量2,2,"{""text"": 2}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,38,AL,翻渣后重量2,2,"{""text"": 2}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,39,AM,翻渣量2,2,"{""text"": 2}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,40,AN,翻渣设备号2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,41,AO,铸余次数,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,42,AP,铸余回收量1,154,"{""text"": 154}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,43,AQ,铸余接收罐号1,154,"{""text"": 154}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,44,AR,铸余接收罐子的熔炼号1,154,"{""text"": 154}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,45,AS,铸余回收位置1,154,"{""text"": 154}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,46,AT,铸余开始时间1,154,"{""text"": 154}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,47,AU,铸余结束时间1,154,"{""text"": 154}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,48,AV,铸余前重量1,154,"{""text"": 154}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,49,AW,铸余后重量1,154,"{""text"": 154}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,50,AX,铸余回收量2,2,"{""text"": 2}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,51,AY,铸余接收罐号2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,52,AZ,铸余接收罐子的熔炼号2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,53,BA,铸余回收位置2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,54,BB,铸余开始时间2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,55,BC,铸余结束时间2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,56,BD,铸余前重量2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,57,BE,铸余后重量2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,58,BF,铸余回收途径,337,"{""text"": 337}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,59,BG,废弃品量,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,60,BH,铸机转台称显示的重包重量,2,"{""text"": 2}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,61,BI,铸机转台称显示的空包重量,2,"{""text"": 2}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,62,BJ,空包旋转至铸机接受位时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,63,BK,工作状态,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,64,BL,临时罐号,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,65,BM,工作时长,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,66,BN,班别,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,67,BO,班次,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,68,BP,空罐放下过渡平车时间,340,"{""text"": 340}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,69,BQ,皮重,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,70,BR,纯钢水量,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,1,A,LF精炼设备号,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,2,B,钢包号,446,"{""text"": 446}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,3,C,LF精炼工位号,446,"{""text"": 446}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,4,D,LF处理号,415,"{""text"": 415}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,5,E,熔炼号,446,"{""text"": 446}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,6,F,出钢记号,415,"{""text"": 415}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,7,G,进处理位时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,8,H,出处理位时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,9,I,精炼处理开始时间,409,"{""text"": 409}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,10,J,精炼处理结束时间,414,"{""text"": 414}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,11,K,加热时间,415,"{""text"": 415}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,12,L,净吹时间,415,"{""text"": 415}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,13,M,进入重量,446,"{""text"": 446}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,14,N,放包天车,446,"{""text"": 446}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,15,O,离开重量,123,"{""text"": 123}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,16,P,吊包天车,123,"{""text"": 123}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,17,Q,重包进站到LF精炼待机位时间,446,"{""text"": 446}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,18,R,工作时间,123,"{""text"": 123}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,19,S,LF重包从待机位吊起时间,123,"{""text"": 123}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,20,T,净吹氧,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,21,U,进站温度,415,"{""text"": 415}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,22,V,进站游离氧,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,23,W,出站温度,415,"{""text"": 415}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,24,X,工作状态,446,"{""text"": 446}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,25,Y,临时罐号,446,"{""text"": 446}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,26,Z,班别,415,"{""text"": 415}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,27,AA,班次,415,"{""text"": 415}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,1,A,连铸机设备号,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,2,B,熔炼号,379,"{""text"": 379}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,3,C,铸余大罐回收的熔炼号,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,4,D,连连浇号,379,"{""text"": 379}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,5,E,出钢记号,379,"{""text"": 379}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,6,F,A臂大包秤重量,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,7,G,B臂大包秤重量,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,8,H,TD钢水温度,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,9,I,奇流铸造长,375,"{""text"": 375}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,10,J,奇流断面长,379,"{""text"": 379}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,11,K,奇流断面宽,379,"{""text"": 379}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,12,L,偶流铸造长,375,"{""text"": 375}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,13,M,偶流断面长,379,"{""text"": 379}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,14,N,偶流断面宽,379,"{""text"": 379}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,15,O,奇流拉速,379,"{""text"": 379}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,16,P,偶流拉速,379,"{""text"": 379}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,17,Q,大包开浇时刻,379,"{""text"": 379}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,18,R,大包终浇时刻,373,"{""text"": 373}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,19,S,连铸机旋转台工作号,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,20,T,钢包号,379,"{""text"": 379}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,21,U,重包到铸机接受位座包时间,379,"{""text"": 379}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,22,V,放包天车,379,"{""text"": 379}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,23,W,铸机接受位重包放下重量,379,"{""text"": 379}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,24,X,空包在铸机接受位吊起时间,377,"{""text"": 377}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,25,Y,吊包天车,377,"{""text"": 377}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,26,Z,铸机接受位空包吊起重量,377,"{""text"": 377}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,27,AA,空包到翻包位时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,28,AB,残余量,377,"{""text"": 377}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,29,AC,翻渣开始时间1,271,"{""text"": 271}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,30,AD,翻渣结束时间1,271,"{""text"": 271}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,31,AE,翻渣前重量1,279,"{""text"": 279}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,32,AF,翻渣后重量1,279,"{""text"": 279}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,33,AG,翻渣量1,279,"{""text"": 279}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,34,AH,翻渣设备号1,270,"{""text"": 270}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,35,AI,翻渣开始时间2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,36,AJ,翻渣结束时间2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,37,AK,翻渣前重量2,12,"{""text"": 12}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,38,AL,翻渣后重量2,12,"{""text"": 12}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,39,AM,翻渣量2,12,"{""text"": 12}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,40,AN,翻渣设备号2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,41,AO,铸余次数,379,"{""text"": 379}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,42,AP,铸余回收量1,109,"{""text"": 109}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,43,AQ,铸余接收罐号1,105,"{""text"": 105}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,44,AR,铸余接收罐子的熔炼号1,105,"{""text"": 105}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,45,AS,铸余回收位置1,105,"{""text"": 105}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,46,AT,铸余开始时间1,105,"{""text"": 105}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,47,AU,铸余结束时间1,105,"{""text"": 105}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,48,AV,铸余前重量1,105,"{""text"": 105}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,49,AW,铸余后重量1,105,"{""text"": 105}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,50,AX,铸余回收量2,12,"{""text"": 12}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,51,AY,铸余接收罐号2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,52,AZ,铸余接收罐子的熔炼号2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,53,BA,铸余回收位置2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,54,BB,铸余开始时间2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,55,BC,铸余结束时间2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,56,BD,铸余前重量2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,57,BE,铸余后重量2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,58,BF,铸余回收途径,366,"{""text"": 366}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,59,BG,废弃品量,379,"{""text"": 379}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,60,BH,铸机转台称显示的重包重量,12,"{""text"": 12}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,61,BI,铸机转台称显示的空包重量,12,"{""text"": 12}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,62,BJ,空包旋转至铸机接受位时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,63,BK,工作状态,379,"{""text"": 379}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,64,BL,临时罐号,379,"{""text"": 379}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,65,BM,工作时长,377,"{""text"": 377}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,66,BN,班别,379,"{""text"": 379}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,67,BO,班次,379,"{""text"": 379}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,68,BP,空罐放下过渡平车时间,376,"{""text"": 376}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,69,BQ,皮重,379,"{""text"": 379}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,70,BR,纯钢水量,379,"{""text"": 379}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,1,A,熔炼号,445,"{""text"": 445}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,2,B,出钢记号,444,"{""text"": 444}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,3,C,炉龄,443,"{""text"": 443}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,4,D,罐型,445,"{""text"": 445}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,5,E,铁水罐号,445,"{""text"": 445}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,6,F,钢水罐号,442,"{""text"": 442}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,7,G,pes罐号,442,"{""text"": 442}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,8,H,开始重量,445,"{""text"": 445}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,9,I,结束重量,445,"{""text"": 445}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,10,J,铁水装入量,445,"{""text"": 445}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,11,K,钢水罐空罐重量,445,"{""text"": 445}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,12,L,钢水罐出钢重量,445,"{""text"": 445}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,13,M,出钢量1,445,"{""text"": 445}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,14,N,出钢量2,445,"{""text"": 445}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,15,O,翻渣前重量1,445,"{""text"": 445}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,16,P,翻渣后重量1,445,"{""text"": 445}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,17,Q,翻渣量1,445,"{""text"": 445}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,18,R,翻渣前重量2,445,"{""text"": 445}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,19,S,翻渣后重量2,445,"{""text"": 445}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,20,T,翻渣量2,445,"{""text"": 445}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,21,U,铸余回收量1,445,"{""text"": 445}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,22,V,铸余回收量2,445,"{""text"": 445}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,23,W,钢水收得率,445,"{""text"": 445}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,24,X,转炉兑铁开始时间,445,"{""text"": 445}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,25,Y,转炉兑铁结束时间,445,"{""text"": 445}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,26,Z,兑铁耗时,445,"{""text"": 445}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,27,AA,吹炼开始时间,442,"{""text"": 442}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,28,AB,吹炼结束时间,439,"{""text"": 439}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,29,AC,出钢开始时间,435,"{""text"": 435}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,30,AD,出钢结束时间,442,"{""text"": 442}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,31,AE,排渣开始时间,87,"{""text"": 87}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,32,AF,排渣结束时间,79,"{""text"": 79}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,33,AG,炼钢冶炼周期,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,34,AH,吹氧量,443,"{""text"": 443}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,35,AI,吹炼时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,36,AJ,出钢时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,37,AK,TSC测量温度,443,"{""text"": 443}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,38,AL,TSC测量定碳含量,443,"{""text"": 443}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,39,AM,TSO测量温度,443,"{""text"": 443}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,40,AN,TSO测量定氧含量,443,"{""text"": 443}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,41,AO,出钢温度吹氩站温度,443,"{""text"": 443}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,42,AP,废钢种类1,335,"{""text"": 335}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,43,AQ,废钢装入量种类1,440,"{""text"": 440}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,44,AR,废钢种类2,215,"{""text"": 215}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,45,AS,废钢装入量种类2,396,"{""text"": 396}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,46,AT,废钢种类3,102,"{""text"": 102}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,47,AU,废钢装入量种类3,195,"{""text"": 195}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,48,AV,废钢种类4,9,"{""text"": 9}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,49,AW,废钢装入量种类4,37,"{""text"": 37}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,50,AX,废钢种类5,2,"{""text"": 2}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,51,AY,废钢装入量种类5,2,"{""text"": 2}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,52,AZ,废钢种类6,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,53,BA,废钢装入量种类6,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,54,BB,废钢种类7,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,55,BC,废钢装入量种类7,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,56,BD,废钢种类8,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,57,BE,废钢装入量种类8,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,58,BF,生铁装入量,445,"{""text"": 445}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,59,BG,铁水罐临时罐号,445,"{""text"": 445}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,60,BH,钢水罐临时罐号,442,"{""text"": 442}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,61,BI,班别,444,"{""text"": 444}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,62,BJ,班次,444,"{""text"": 444}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,63,BK,兑铁天车,445,"{""text"": 445}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,64,BL,炉后放包天车,444,"{""text"": 444}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,65,BM,炉后吊包天车,441,"{""text"": 441}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,66,BN,翻渣设备号1,286,"{""text"": 286}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,67,BO,翻渣天车1,286,"{""text"": 286}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,68,BP,翻渣设备号2,4,"{""text"": 4}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,69,BQ,翻渣天车2,4,"{""text"": 4}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,70,BR,连铸机设备号,435,"{""text"": 435}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,71,BS,铸余次数,445,"{""text"": 445}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,72,BT,铸余接收罐号1,153,"{""text"": 153}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,73,BU,铸余倒出量1,153,"{""text"": 153}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,74,BV,铸余倒出天车1,153,"{""text"": 153}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,75,BW,铸余回收位置1,153,"{""text"": 153}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,76,BX,铸余接收罐号2,1,"{""text"": 1}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,77,BY,铸余倒出量2,1,"{""text"": 1}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,78,BZ,铸余倒出天车2,1,"{""text"": 1}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,79,CA,铸余回收位置2,1,"{""text"": 1}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,80,CB,铸余回收罐号1,149,"{""text"": 149}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,81,CC,铸余回收熔炼号1,149,"{""text"": 149}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,82,CD,铸余回收罐号2,7,"{""text"": 7}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,83,CE,铸余回收熔炼号2,7,"{""text"": 7}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,84,CF,空罐放到转炉钢包车时间,442,"{""text"": 442}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,1,A,熔炼号,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,2,B,出钢记号,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,3,C,炉龄,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,4,D,罐型,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,5,E,铁水罐号,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,6,F,钢水罐号,465,"{""text"": 465}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,7,G,pes罐号,470,"{""text"": 470}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,8,H,开始重量,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,9,I,结束重量,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,10,J,铁水装入量,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,11,K,钢水罐空罐重量,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,12,L,钢水罐出钢重量,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,13,M,出钢量1,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,14,N,出钢量2,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,15,O,翻渣前重量1,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,16,P,翻渣后重量1,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,17,Q,翻渣量1,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,18,R,翻渣前重量2,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,19,S,翻渣后重量2,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,20,T,翻渣量2,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,21,U,铸余回收量1,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,22,V,铸余回收量2,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,23,W,钢水收得率,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,24,X,转炉兑铁开始时间,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,25,Y,转炉兑铁结束时间,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,26,Z,兑铁耗时,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,27,AA,吹炼开始时间,468,"{""text"": 468}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,28,AB,吹炼结束时间,463,"{""text"": 463}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,29,AC,出钢开始时间,464,"{""text"": 464}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,30,AD,出钢结束时间,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,31,AE,排渣开始时间,142,"{""text"": 142}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,32,AF,排渣结束时间,137,"{""text"": 137}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,33,AG,炼钢冶炼周期,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,34,AH,吹氧量,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,35,AI,吹炼时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,36,AJ,出钢时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,37,AK,TSC测量温度,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,38,AL,TSC测量定碳含量,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,39,AM,TSO测量温度,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,40,AN,TSO测量定氧含量,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,41,AO,出钢温度吹氩站温度,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,42,AP,废钢种类1,361,"{""text"": 361}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,43,AQ,废钢装入量种类1,454,"{""text"": 454}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,44,AR,废钢种类2,220,"{""text"": 220}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,45,AS,废钢装入量种类2,388,"{""text"": 388}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,46,AT,废钢种类3,114,"{""text"": 114}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,47,AU,废钢装入量种类3,216,"{""text"": 216}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,48,AV,废钢种类4,13,"{""text"": 13}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,49,AW,废钢装入量种类4,28,"{""text"": 28}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,50,AX,废钢种类5,2,"{""text"": 2}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,51,AY,废钢装入量种类5,4,"{""text"": 4}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,52,AZ,废钢种类6,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,53,BA,废钢装入量种类6,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,54,BB,废钢种类7,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,55,BC,废钢装入量种类7,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,56,BD,废钢种类8,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,57,BE,废钢装入量种类8,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,58,BF,生铁装入量,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,59,BG,铁水罐临时罐号,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,60,BH,钢水罐临时罐号,36,"{""text"": 36}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,61,BI,班别,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,62,BJ,班次,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,63,BK,兑铁天车,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,64,BL,炉后放包天车,470,"{""text"": 470}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,65,BM,炉后吊包天车,464,"{""text"": 464}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,66,BN,翻渣设备号1,330,"{""text"": 330}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,67,BO,翻渣天车1,330,"{""text"": 330}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,68,BP,翻渣设备号2,2,"{""text"": 2}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,69,BQ,翻渣天车2,2,"{""text"": 2}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,70,BR,连铸机设备号,463,"{""text"": 463}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,71,BS,铸余次数,471,"{""text"": 471}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,72,BT,铸余接收罐号1,137,"{""text"": 137}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,73,BU,铸余倒出量1,137,"{""text"": 137}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,74,BV,铸余倒出天车1,137,"{""text"": 137}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,75,BW,铸余回收位置1,137,"{""text"": 137}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,76,BX,铸余接收罐号2,1,"{""text"": 1}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,77,BY,铸余倒出量2,1,"{""text"": 1}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,78,BZ,铸余倒出天车2,1,"{""text"": 1}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,79,CA,铸余回收位置2,1,"{""text"": 1}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,80,CB,铸余回收罐号1,199,"{""text"": 199}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,81,CC,铸余回收熔炼号1,199,"{""text"": 199}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,82,CD,铸余回收罐号2,7,"{""text"": 7}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,83,CE,铸余回收熔炼号2,7,"{""text"": 7}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,84,CF,空罐放到转炉钢包车时间,465,"{""text"": 465}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,1,A,熔炼号,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,2,B,出钢记号,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,3,C,炉龄,422,"{""text"": 422}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,4,D,罐型,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,5,E,铁水罐号,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,6,F,钢水罐号,421,"{""text"": 421}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,7,G,pes罐号,422,"{""text"": 422}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,8,H,开始重量,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,9,I,结束重量,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,10,J,铁水装入量,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,11,K,钢水罐空罐重量,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,12,L,钢水罐出钢重量,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,13,M,出钢量1,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,14,N,出钢量2,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,15,O,翻渣前重量1,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,16,P,翻渣后重量1,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,17,Q,翻渣量1,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,18,R,翻渣前重量2,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,19,S,翻渣后重量2,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,20,T,翻渣量2,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,21,U,铸余回收量1,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,22,V,铸余回收量2,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,23,W,钢水收得率,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,24,X,转炉兑铁开始时间,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,25,Y,转炉兑铁结束时间,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,26,Z,兑铁耗时,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,27,AA,吹炼开始时间,421,"{""text"": 421}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,28,AB,吹炼结束时间,420,"{""text"": 420}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,29,AC,出钢开始时间,418,"{""text"": 418}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,30,AD,出钢结束时间,422,"{""text"": 422}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,31,AE,排渣开始时间,160,"{""text"": 160}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,32,AF,排渣结束时间,150,"{""text"": 150}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,33,AG,炼钢冶炼周期,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,34,AH,吹氧量,422,"{""text"": 422}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,35,AI,吹炼时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,36,AJ,出钢时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,37,AK,TSC测量温度,422,"{""text"": 422}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,38,AL,TSC测量定碳含量,422,"{""text"": 422}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,39,AM,TSO测量温度,422,"{""text"": 422}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,40,AN,TSO测量定氧含量,422,"{""text"": 422}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,41,AO,出钢温度吹氩站温度,422,"{""text"": 422}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,42,AP,废钢种类1,292,"{""text"": 292}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,43,AQ,废钢装入量种类1,408,"{""text"": 408}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,44,AR,废钢种类2,157,"{""text"": 157}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,45,AS,废钢装入量种类2,381,"{""text"": 381}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,46,AT,废钢种类3,121,"{""text"": 121}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,47,AU,废钢装入量种类3,199,"{""text"": 199}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,48,AV,废钢种类4,17,"{""text"": 17}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,49,AW,废钢装入量种类4,36,"{""text"": 36}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,50,AX,废钢种类5,1,"{""text"": 1}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,51,AY,废钢装入量种类5,5,"{""text"": 5}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,52,AZ,废钢种类6,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,53,BA,废钢装入量种类6,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,54,BB,废钢种类7,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,55,BC,废钢装入量种类7,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,56,BD,废钢种类8,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,57,BE,废钢装入量种类8,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,58,BF,生铁装入量,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,59,BG,铁水罐临时罐号,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,60,BH,钢水罐临时罐号,421,"{""text"": 421}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,61,BI,班别,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,62,BJ,班次,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,63,BK,兑铁天车,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,64,BL,炉后放包天车,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,65,BM,炉后吊包天车,420,"{""text"": 420}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,66,BN,翻渣设备号1,335,"{""text"": 335}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,67,BO,翻渣天车1,335,"{""text"": 335}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,68,BP,翻渣设备号2,3,"{""text"": 3}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,69,BQ,翻渣天车2,3,"{""text"": 3}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,70,BR,连铸机设备号,409,"{""text"": 409}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,71,BS,铸余次数,423,"{""text"": 423}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,72,BT,铸余接收罐号1,74,"{""text"": 74}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,73,BU,铸余倒出量1,74,"{""text"": 74}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,74,BV,铸余倒出天车1,74,"{""text"": 74}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,75,BW,铸余回收位置1,74,"{""text"": 74}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,76,BX,铸余接收罐号2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,77,BY,铸余倒出量2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,78,BZ,铸余倒出天车2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,79,CA,铸余回收位置2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,80,CB,铸余回收罐号1,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,81,CC,铸余回收熔炼号1,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,82,CD,铸余回收罐号2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,83,CE,铸余回收熔炼号2,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,84,CF,空罐放到转炉钢包车时间,421,"{""text"": 421}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),1,A,序号,1321,"{""number"": 1321}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),2,B,计划号,1321,"{""text"": 1321}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),3,C,制造命令号,1321,"{""text"": 1321}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),4,D,浇铸批号,1321,"{""text"": 1321}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),5,E,连连浇号,1321,"{""text"": 1321}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),6,F,浇次号,1321,"{""text"": 1321}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),7,G,二级浇次号,1321,"{""text"": 1321}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),8,H,连铸机号,1321,"{""text"": 1321}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),9,I,转炉设备号,1321,"{""text"": 1321}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),10,J,熔炼号,1321,"{""text"": 1321}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),11,K,出钢记号,1321,"{""text"": 1321}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),12,L,重引锭标志,106,"{""text"": 106}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),13,M,更换中包,1321,"{""text"": 1321}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),14,N,精炼路径,1321,"{""text"": 1321}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),15,O,计划状态,1321,"{""text"": 1321}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),16,P,运转状态,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),17,Q,铸坯规格,1319,"{""text"": 1319}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),18,R,牌号,1321,"{""text"": 1321}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),19,S,双联熔炼号,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),20,T,双联转炉号,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),21,U,脱磷开始时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),22,V,脱磷结束时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),23,W,转炉开始时间,1321,"{""datetime"": 1321}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),24,X,转炉结束时间,1321,"{""datetime"": 1321}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),25,Y,精炼1时间,895,"{""datetime"": 895}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),26,Z,精炼2时间,895,"{""datetime"": 895}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),27,AA,精炼3时间,629,"{""datetime"": 629}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),28,AB,精炼4时间,629,"{""datetime"": 629}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),29,AC,精炼5时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),30,AD,精炼6时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),31,AE,精炼7时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),32,AF,精炼8时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),33,AG,连铸开始时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),34,AH,连铸结束时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),35,AI,罐号,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),36,AJ,大罐级别,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),37,AK,工作衬回数,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),38,AL,罐皮重,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),39,AM,浇铸开始时间,1321,"{""datetime"": 1321}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),40,AN,浇铸结束时间,1321,"{""datetime"": 1321}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),41,AO,配包flag,1321,"{""number"": 1321}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),42,AP,是否过期flag,1321,"{""number"": 1321}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,1,A,钢包号,1354,"{""text"": 1354}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,2,B,熔炼号,1350,"{""text"": 1350}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,3,C,出钢记号,1349,"{""text"": 1349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,4,D,转炉设备号,1354,"{""text"": 1354}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,5,E,钢包车上空包重量,1354,"{""text"": 1354}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,6,F,空罐放到转炉钢包车时间,1354,"{""text"": 1354}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,7,G,出钢开始时间,1239,"{""text"": 1239}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,8,H,出钢结束时间,1255,"{""text"": 1255}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,9,I,钢包车座罐结束至出钢开始时间,1238,"{""text"": 1238}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,10,J,出钢开始至结束时间,1239,"{""text"": 1239}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,11,K,重罐吊起时间,1346,"{""text"": 1346}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,12,L,钢包车上重包重量,1338,"{""text"": 1338}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,13,M,重罐钢车开至吊罐位到重罐吊起时间,768,"{""text"": 768}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,14,N,LF设备号,901,"{""text"": 901}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,15,O,重罐落到LF待机位时间,901,"{""text"": 901}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,16,P,重罐吊起至落到LF待机位时间,901,"{""text"": 901}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,17,Q,LF进处理位时间,848,"{""text"": 848}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,18,R,重罐进站在LF待机位等待时间,817,"{""text"": 817}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,19,S,LF出处理位时间,848,"{""text"": 848}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,20,T,LF处理开始至结束时间,848,"{""text"": 848}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,21,U,LF重罐吊起时间,899,"{""text"": 899}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,22,V,LF处理结束至吊起时间,819,"{""text"": 819}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,23,W,RH设备号,644,"{""text"": 644}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,24,X,重罐吊起至RH旋转位时间,644,"{""text"": 644}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,25,Y,重罐吊起至RH旋转位时间,644,"{""text"": 644}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,26,Z,RH处理开始时间,602,"{""text"": 602}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,27,AA,RH处理结束时间,602,"{""text"": 602}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,28,AB,RH处理开始至结束时间,602,"{""text"": 602}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,29,AC,RH吊起时间,643,"{""text"": 643}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,30,AD,RH处理结束至重罐吊起时间,569,"{""text"": 569}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,31,AE,重罐从RH吊起至铸机接受位时间,642,"{""text"": 642}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,32,AF,连铸机设备号,1334,"{""text"": 1334}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,33,AG,吊至连铸机时间,1334,"{""text"": 1334}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,34,AH,开浇时间,1265,"{""text"": 1265}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,35,AI,重罐在铸机接受位等待时间,1253,"{""text"": 1253}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,36,AJ,停浇时间,1254,"{""text"": 1254}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,37,AK,浇铸开始至结束时间,1254,"{""text"": 1254}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,38,AL,空包在连铸位吊起时间,1322,"{""text"": 1322}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,39,AM,浇铸结束至空罐吊起时间,1235,"{""text"": 1235}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,40,AN,翻渣开始时间,958,"{""text"": 958}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,41,AO,空罐吊起至翻渣开始时间,958,"{""text"": 958}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,42,AP,翻渣结束时间,958,"{""text"": 958}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,43,AQ,翻渣开始至结束时间,958,"{""text"": 958}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,44,AR,翻渣作业后空包重量,956,"{""text"": 956}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,45,AS,铸余次数,1355,"{""text"": 1355}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,46,AT,铸余回收位置,367,"{""text"": 367}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,47,AU,铸余渣回收开始时间,351,"{""text"": 351}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,48,AV,铸余渣回收结束时间,351,"{""text"": 351}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,49,AW,铸余回收量,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,50,AX,铸余回收途径,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,51,AY,铸余大罐回收的熔炼号,351,"{""text"": 351}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,52,AZ,过渡平车到EF跨吊罐位时间,1019,"{""text"": 1019}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,53,BA,空罐放下过渡平车时间,1325,"{""text"": 1325}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,54,BB,翻罐结束至落罐结束时间,349,"{""text"": 349}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,55,BC,过渡平车至整备跨时间,977,"{""text"": 977}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,56,BD,翻罐结束至平板车开到EF跨吊罐位的时间(正常是负值),0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,57,BE,落罐结束至整备跨时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,58,BF,空罐放置热修位时间,1319,"{""text"": 1319}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,59,BG,热修位设备号,1319,"{""text"": 1319}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,60,BH,从热修位吊起时间,1323,"{""text"": 1323}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,61,BI,天车将包放置在过渡平车时间,430,"{""text"": 430}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,62,BJ,整备场搬出至上过渡平车时间,421,"{""text"": 421}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,63,BK,空罐在DE跨上过渡平车开至EF跨吊罐位时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,64,BL,空罐在DE跨上过渡平车开至EF跨吊罐位时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,65,BM,在吊罐位起吊时间,1081,"{""text"": 1081}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,66,BN,空罐在EF跨吊罐位等待时间,0,{},False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,67,BO,抵达C炉台车时间,415,"{""text"": 415}",False
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,68,BP,空罐从过渡平车至转炉钢包车座罐时间仅针对于C炉,408,"{""text"": 408}",False

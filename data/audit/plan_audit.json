@@ -1,0 +1,119 @@
+{
+  "source_file": "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls",
+  "source_sha256": "79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236",
+  "engine": {
+    "pandas": "3.1.1",
+    "xls_reader": "xlrd"
+  },
+  "checks": [
+    {
+      "check": "source_rows",
+      "value": 1321,
+      "expected": "inventory only",
+      "status": "info",
+      "meaning": "raw worksheet rows excluding header"
+    },
+    {
+      "check": "placeholder_rows_flag_minus_2",
+      "value": 55,
+      "expected": "preserve and exclude from operational heat counts",
+      "status": "info",
+      "meaning": "rows marked as non-operational placeholders"
+    },
+    {
+      "check": "operational_rows",
+      "value": 1266,
+      "expected": "source_rows - placeholder_rows",
+      "status": "info",
+      "meaning": "rows retained for operational checks; no rows deleted"
+    },
+    {
+      "check": "nonempty_operational_heat_ids",
+      "value": 1266,
+      "expected": "manual review if differs from operational_rows",
+      "status": "pass",
+      "meaning": "valid rows with a nonempty 熔炼号"
+    },
+    {
+      "check": "unique_operational_heat_ids",
+      "value": 1266,
+      "expected": "compare with nonempty_operational_heat_ids",
+      "status": "pass",
+      "meaning": "uniqueness checked only after excluding -2 placeholders"
+    },
+    {
+      "check": "duplicate_operational_heat_rows",
+      "value": 0,
+      "expected": 0,
+      "status": "pass",
+      "meaning": "number of operational rows participating in duplicate heat IDs"
+    },
+    {
+      "check": "unique_continuous_cast_ids",
+      "value": 152,
+      "expected": "descriptive",
+      "status": "info",
+      "meaning": "distinct 连连浇号 among non-placeholder rows"
+    },
+    {
+      "check": "tundish_change_vs_cast_sequence_mismatch_rows",
+      "value": 0,
+      "expected": 0,
+      "status": "pass",
+      "meaning": "operational rows where (更换中包 == 1) differs from (浇次号 == 1)"
+    },
+    {
+      "check": "tundish_change_rows",
+      "value": 205,
+      "expected": "review against sequence semantics",
+      "status": "info",
+      "meaning": "operational rows with 更换中包 == 1"
+    },
+    {
+      "check": "cast_sequence_1_rows",
+      "value": 205,
+      "expected": "review against source semantics",
+      "status": "info",
+      "meaning": "operational rows with 浇次号 == 1"
+    },
+    {
+      "check": "route_counts",
+      "value": "{\"L0\": 668, \"L0R0\": 70, \"R0\": 420, \"R0L0\": 108}",
+      "expected": "compute after excluding placeholders",
+      "status": "info",
+      "meaning": "counts by 精炼路径; placeholder rows are excluded"
+    },
+    {
+      "check": "converter_start_missing_operational",
+      "value": 0,
+      "expected": "inspect if nonzero",
+      "status": "pass",
+      "meaning": "missing/unparseable 转炉开始时间 among non-placeholder rows"
+    },
+    {
+      "check": "cast_end_missing_operational",
+      "value": 0,
+      "expected": "inspect if nonzero",
+      "status": "pass",
+      "meaning": "missing/unparseable 浇铸结束时间 among non-placeholder rows"
+    },
+    {
+      "check": "operational_start_min",
+      "value": "2026-09-25T00:35:37",
+      "expected": "descriptive",
+      "status": "info",
+      "meaning": "minimum parsed converter start time"
+    },
+    {
+      "check": "operational_cast_end_max",
+      "value": "2026-10-12T13:04:16",
+      "expected": "descriptive",
+      "status": "info",
+      "meaning": "maximum parsed cast end time"
+    }
+  ],
+  "notes": [
+    "This script reports source facts only; it does not repair rows or assign semantic meaning beyond documented field labels.",
+    "Duplicate heat IDs are reported with Excel row numbers and placeholder flags; do not treat placeholder collisions as operational duplicates."
+  ]
+}

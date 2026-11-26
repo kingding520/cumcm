@@ -1,0 +1,19 @@
+{
+  "source_workbooks": 12,
+  "sheets": 12,
+  "data_rows": 6758,
+  "findings": 2529,
+  "findings_by_rule": {
+    "3lf_missing_candidate_field": 646,
+    "bof_missing_steel_ladle_temp_id": 440,
+    "cast_end_before_empty_ladle_lift": 238,
+    "converter_tap_end_before_heavy_ladle_lift": 113,
+    "duplicate_header_name": 2,
+    "duplicate_heat_id_within_sheet": 299,
+    "lf_clear_before_lift": 115,
+    "rh_clear_before_lift": 143,
+    "rh_degas_start_equals_end": 533
+  },
+  "files_modified": 0,
+  "interpretation": "review candidates only; source inputs were not changed or repaired"
+}

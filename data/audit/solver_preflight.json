@@ -1,0 +1,56 @@
+{
+  "purpose": "installation/API smoke test with synthetic toys; not project results",
+  "python": "3.13.2",
+  "versions": {
+    "ortools": "9.15.6755",
+    "pyomo": "6.10.1",
+    "highspy": "1.16.0"
+  },
+  "tests": [
+    {
+      "solver": "OR-Tools CP-SAT",
+      "status": "OPTIMAL",
+      "wall_time_s": 0.002176,
+      "objective_makespan": 6,
+      "best_bound": 6.0,
+      "task_count": 4,
+      "machine_count": 2,
+      "schedule": [
+        {
+          "task": 0,
+          "machine": 1,
+          "start": 0,
+          "end": 3
+        },
+        {
+          "task": 1,
+          "machine": 0,
+          "start": 0,
+          "end": 2
+        },
+        {
+          "task": 2,
+          "machine": 0,
+          "start": 2,
+          "end": 6
+        },
+        {
+          "task": 3,
+          "machine": 1,
+          "start": 3,
+          "end": 4
+        }
+      ]
+    },
+    {
+      "solver": "Pyomo + HiGHS (appsi_highs)",
+      "status": "optimal",
+      "wall_time_s": 0.004693,
+      "objective": 24.666666666666664,
+      "x": 4.666666666666667,
+      "y": 2.6666666666666665,
+      "known_optimum": 24.666666666666668
+    }
+  ],
+  "all_passed": true
+}

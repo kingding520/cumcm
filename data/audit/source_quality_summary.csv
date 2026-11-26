@@ -1,0 +1,13 @@
+﻿source_file,source_sha256,sheet_name,data_rows,columns,duplicate_header_names,heat_id_nonempty_rows,heat_id_missing_rows,unique_nonempty_heat_ids,duplicate_heat_id_count,rows_with_duplicate_heat_id,temp_id_missing_rows,ladle_number_missing_rows
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#LF.xlsx,c982dbaa2f82886264729bf781534d00f968ab8e22a54a69b06b20c6fd40c2f7,LF精炼位1信息数据,471,27,,471,0,450,21,42,0,0
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx,19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b,RH精炼位1信息数据,336,29,,336,0,336,0,0,0,0
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#连铸.xlsx,1c3447b2b01bdb049b15d799501baac9a251a45e0d29d43413dbb70ba8cda004,连铸A信息数据,448,70,,448,0,447,1,2,0,0
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx,94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d,RH精炼位2信息数据,314,29,,314,0,312,2,4,0,0
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#连铸.xlsx,a095db4295f670b59f646a4409413b100d97235fd7d83f86fceeb6df65ffaff2,连铸B信息数据,349,70,,349,0,348,1,2,0,0
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#LF.xlsx,1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0,LF精炼位3信息数据,446,27,,446,0,422,24,48,0,0
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx,40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b,连铸C信息数据,379,70,,379,0,378,1,2,0,0
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx,288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a,转炉A信息数据,445,84,,445,0,445,0,0,3,3
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx,f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45,转炉B信息数据,471,84,,471,0,471,0,0,435,6
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx,ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec,转炉C信息数据,423,84,,423,0,423,0,0,2,2
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls,79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236,steel_tapping_plan_info(2),1321,42,,1321,0,1267,1,55,,
+question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx,dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a,工序信息数据,1355,68,空罐在DE跨上过渡平车开至EF跨吊罐位时间;重罐吊起至RH旋转位时间,1350,5,1278,72,144,,1
