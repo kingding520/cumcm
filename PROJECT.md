@@ -130,7 +130,7 @@
 | moves.csv | task_id、heat_id、temp_ladle_id、task_type、route_step、origin/destination、release_s/deadline_s、last_thermal_event_s、thermal_deadline_s、seat_earliest_s、load_t、eligible_cranes、source_ref | data/processed/ |
 | operations.csv | run_id、heat_id、equipment_id、berth_id、arrival_s、process_start_s/end_s、clear_s、switch_resource_id | data/runs/<run_id>/，规范输入另存 processed/ |
 | schedule.csv | run_id、scenario、algorithm、task_id、crane_id、empty_start_s、pickup_s/dropoff_s、wait_heat_s/wait_crane_s、travel_loaded_s/empty_s/evade_s、cast_delay_s | data/runs/<run_id>/ |
-| trajectory.csv | run_id、crane_id、seg_id、t_start_s/end_s、x_start/end、v_start/end、accel、gear、phase、load_t | data/runs/<run_id>/ |
+| trajectory.csv（场景1避让运行存为 trajectory.csv.gz，gzip 固定 mtime） | run_id、crane_id、seg_id、t_start_s/end_s、x_start/end、v_start/end、accel、gear、phase、load_t | data/runs/<run_id>/ |
 | metrics.json、violations.csv | 目标值、指标定义、样本数、违规明细、求解状态、界及适用范围、运行时间、超时和回退 | data/runs/<run_id>/ |
 | 配置与输入清单 | 输入哈希、代码/配置版本、seed、环境、命令、初始状态、资源能力与热窗 | code/configs/；运行时快照留在 run_id 目录 |
 | claims_to_runs.csv | 论文结论/数字到 run_id、file、key 的映射 | paper/ |

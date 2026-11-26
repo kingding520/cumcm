@@ -1,0 +1,170 @@
+{
+  "run_id": "scene1-yield-6C0754",
+  "geometry": {
+    "version": "ef-initial-v1",
+    "source": "code/configs/ef_initial_v1.json",
+    "clearance_m": 12.0,
+    "speed_limit_m_s": {
+      "empty_hook": 1.0,
+      "empty_ladle": 0.8,
+      "heavy_ladle": 0.6
+    },
+    "accel_m_s2": {
+      "empty_hook": 0.1,
+      "empty_ladle": 0.08,
+      "heavy_ladle": 0.05
+    }
+  },
+  "task_count": 18,
+  "legacy_serial_wait_min_previous_model": 109.48,
+  "serial_best_this_model": {
+    "algorithm": "serial_4#450",
+    "completed_tasks": 18,
+    "cranes_used": "4#450",
+    "makespan_min": 411.17,
+    "total_wait_min": 7.5,
+    "total_lateness_min": 0.0,
+    "yield_events": 2,
+    "min_gap_m": 12.34,
+    "required_gap_m": 12.0,
+    "gate": "pass",
+    "completed_all": true,
+    "deadlock": false,
+    "accepted": true
+  },
+  "best_accepted": {
+    "algorithm": "fcfs_nearest",
+    "completed_tasks": 18,
+    "cranes_used": "3#450;4#450",
+    "makespan_min": 411.17,
+    "total_wait_min": 0.52,
+    "total_lateness_min": 0.0,
+    "yield_events": 29,
+    "min_gap_m": 12.24,
+    "required_gap_m": 12.0,
+    "gate": "pass",
+    "completed_all": true,
+    "deadlock": false,
+    "accepted": true
+  },
+  "improvement_vs_best_serial_min": 6.98,
+  "candidates": [
+    {
+      "algorithm": "pipeline_roles",
+      "completed_tasks": 18,
+      "cranes_used": "3#450;4#450",
+      "makespan_min": 411.17,
+      "total_wait_min": 3.3,
+      "total_lateness_min": 0.0,
+      "yield_events": 11,
+      "min_gap_m": 12.35,
+      "required_gap_m": 12.0,
+      "gate": "pass",
+      "completed_all": true,
+      "deadlock": false,
+      "accepted": true
+    },
+    {
+      "algorithm": "pipeline_no_yield",
+      "completed_tasks": 1,
+      "cranes_used": "4#450",
+      "makespan_min": 1.97,
+      "total_wait_min": 0.52,
+      "total_lateness_min": 0.0,
+      "yield_events": 0,
+      "min_gap_m": 12.4,
+      "required_gap_m": 12.0,
+      "gate": "pass",
+      "completed_all": false,
+      "deadlock": true,
+      "accepted": false
+    },
+    {
+      "algorithm": "fcfs_nearest",
+      "completed_tasks": 18,
+      "cranes_used": "3#450;4#450",
+      "makespan_min": 411.17,
+      "total_wait_min": 0.52,
+      "total_lateness_min": 0.0,
+      "yield_events": 29,
+      "min_gap_m": 12.24,
+      "required_gap_m": 12.0,
+      "gate": "pass",
+      "completed_all": true,
+      "deadlock": false,
+      "accepted": true
+    },
+    {
+      "algorithm": "serial_4#450",
+      "completed_tasks": 18,
+      "cranes_used": "4#450",
+      "makespan_min": 411.17,
+      "total_wait_min": 7.5,
+      "total_lateness_min": 0.0,
+      "yield_events": 2,
+      "min_gap_m": 12.34,
+      "required_gap_m": 12.0,
+      "gate": "pass",
+      "completed_all": true,
+      "deadlock": false,
+      "accepted": true
+    },
+    {
+      "algorithm": "serial_3#450",
+      "completed_tasks": 18,
+      "cranes_used": "3#450",
+      "makespan_min": 410.35,
+      "total_wait_min": 8.32,
+      "total_lateness_min": 0.0,
+      "yield_events": 2,
+      "min_gap_m": 12.4,
+      "required_gap_m": 12.0,
+      "gate": "pass",
+      "completed_all": true,
+      "deadlock": false,
+      "accepted": true
+    },
+    {
+      "algorithm": "serial_5#450",
+      "completed_tasks": 18,
+      "cranes_used": "5#450",
+      "makespan_min": 408.83,
+      "total_wait_min": 9.83,
+      "total_lateness_min": 0.0,
+      "yield_events": 4,
+      "min_gap_m": 12.4,
+      "required_gap_m": 12.0,
+      "gate": "pass",
+      "completed_all": true,
+      "deadlock": false,
+      "accepted": true
+    },
+    {
+      "algorithm": "cp_sat_assignment",
+      "completed_tasks": 11,
+      "cranes_used": "3#450;4#450;5#450",
+      "makespan_min": 215.02,
+      "total_wait_min": 2.78,
+      "total_lateness_min": 0.0,
+      "yield_events": 531,
+      "min_gap_m": 12.28,
+      "required_gap_m": 12.0,
+      "gate": "pass",
+      "completed_all": false,
+      "deadlock": true,
+      "accepted": false
+    }
+  ],
+  "verification": {
+    "gate": "rail_model.verify_schedule, exact continuous-time, all five cranes",
+    "resolution": "1 s certified trajectory; the reported verdict uses that resolution",
+    "trajectory_artifact": "trajectory.csv.gz (gzip, fixed mtime); reload with read_trajectory_gz"
+  },
+  "notes": [
+    "Scenario-1 durations are zero-handling kinematic travel per contract-1.",
+    "Empty-ladle return is pure travel; slag/residual work is a separate operation.",
+    "Proactive yielding is executed by the simulator; the exact gate re-verifies it.",
+    "The 109.48 min figure came from the superseded observed-duration model and is not comparable.",
+    "With zero handling, one crane already absorbs a single cast: crane capacity is not the binding resource for 6 heats, so the meaningful contention test is a full day (step 2)."
+  ]
+}

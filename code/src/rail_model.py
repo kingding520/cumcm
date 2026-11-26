@@ -17,6 +17,7 @@ All parameters are provisional: see ``code/configs/scene1_rail_params.yml``.
 """
 from __future__ import annotations
 
+import bisect
 import math
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -181,6 +182,13 @@ def safe_profile(
 class Trajectory:
     crane_id: str
     segments: list[Segment] = field(default_factory=list)
+    _starts: list[float] | None = field(default=None, repr=False, compare=False)
+
+    def _index(self) -> list[float]:
+        """Cached sorted segment start times; segments must be time-ordered."""
+        if self._starts is None or len(self._starts) != len(self.segments):
+            self._starts = [seg.t_start for seg in self.segments]
+        return self._starts
 
     @property
     def t_start(self) -> float:
@@ -190,30 +198,37 @@ class Trajectory:
     def t_end(self) -> float:
         return max((s.t_end for s in self.segments), default=0.0)
 
+    def _seg_at(self, t: float) -> "Segment | None":
+        if not self.segments:
+            return None
+        idx = bisect.bisect_right(self._index(), t) - 1
+        if idx < 0:
+            return None
+        seg = self.segments[idx]
+        if t <= seg.t_end:
+            return seg
+        # t falls in a gap after this segment: treat as holding its end state.
+        return seg
+
     def x_at(self, t: float) -> float:
         if not self.segments:
             raise ValueError("empty trajectory")
         if t <= self.segments[0].t_start:
             return self.segments[0].x_start
-        for seg in self.segments:
-            if seg.t_start <= t <= seg.t_end:
-                return seg.x_at(t)
-        last = self.segments[-1]
-        return last.x_at(last.t_end)
+        seg = self._seg_at(t)
+        if seg is None:
+            return self.segments[0].x_start
+        return seg.x_at(min(t, seg.t_end))
 
     def v_at(self, t: float) -> float:
-        if not self.segments:
+        seg = self._seg_at(t)
+        if seg is None:
             return 0.0
-        for seg in self.segments:
-            if seg.t_start <= t <= seg.t_end:
-                return seg.v_at(t)
-        return 0.0
+        return seg.v_at(min(t, seg.t_end))
 
     def accel_at(self, t: float) -> float:
-        for seg in self.segments:
-            if seg.t_start <= t <= seg.t_end:
-                return seg.accel
-        return 0.0
+        seg = self._seg_at(t)
+        return 0.0 if seg is None else seg.accel
 
     def to_rows(self, run_id: str, scenario: str, algorithm: str, origin_s: float) -> list[dict[str, Any]]:
         rows: list[dict[str, Any]] = []

@@ -1,0 +1,8 @@
+﻿algorithm,completed_tasks,cranes_used,makespan_min,total_wait_min,total_lateness_min,yield_events,min_gap_m,required_gap_m,gate,completed_all,deadlock,accepted
+pipeline_roles,18,3#450;4#450,411.17,3.3,0.0,11,12.35,12.0,pass,True,False,True
+pipeline_no_yield,1,4#450,1.97,0.52,0.0,0,12.4,12.0,pass,False,True,False
+fcfs_nearest,18,3#450;4#450,411.17,0.52,0.0,29,12.24,12.0,pass,True,False,True
+serial_4#450,18,4#450,411.17,7.5,0.0,2,12.34,12.0,pass,True,False,True
+serial_3#450,18,3#450,410.35,8.32,0.0,2,12.4,12.0,pass,True,False,True
+serial_5#450,18,5#450,408.83,9.83,0.0,4,12.4,12.0,pass,True,False,True
+cp_sat_assignment,11,3#450;4#450;5#450,215.02,2.78,0.0,531,12.28,12.0,pass,False,True,False
