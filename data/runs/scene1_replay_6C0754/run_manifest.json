@@ -1,0 +1,40 @@
+{
+  "run_id": "scene1-replay-6C0754",
+  "cast_id": "6C0754",
+  "selection": {
+    "filter": "valid non-placeholder plan rows; sequence 1..N; one plan/actual caster mapping; unique operations rows; complete core actual timestamps",
+    "heat_ids": [
+      "26BD6452",
+      "26BD6453",
+      "26BD6454",
+      "26BD6455",
+      "26BD6456",
+      "26BD6457"
+    ],
+    "sequence": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "sources": {
+    "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/1#RH.xlsx": "19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b",
+    "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/2#RH.xlsx": "94e861297dabe2637b5b22797c97eec4b68dd27eab2f58be74aa24c091e02c1d",
+    "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/3#连铸.xlsx": "40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b",
+    "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx": "288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a",
+    "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx": "f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45",
+    "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx": "ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec",
+    "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls": "79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236",
+    "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx": "dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a"
+  },
+  "mode": "observed historical replay with fixed actual crane assignments/times; not an optimization",
+  "limitations": [
+    "No spatial rail-separation/continuous trajectory certification: required parameters are pending modeler confirmation.",
+    "One RH-vs-CCM temporary-ladle ID mismatch is flagged and not repaired.",
+    "RH acceptance marker can appear after RH processing-entry timestamp; both raw fields are retained and deadline checks are review-only.",
+    "90-minute/3-ton Tier-2 thresholds are provisional from the proposal."
+  ]
+}

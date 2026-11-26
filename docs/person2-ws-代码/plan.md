@@ -1,9 +1,9 @@
 # Person2 个人计划
 
 - 当前身份与分工：Person2（ws，代码手）；用户已明确确认该身份，公共职责见 [PROJECT.md](../../PROJECT.md) §3。
-- 当前阶段：已完成输入清点、全量源表只读质量/异常扫描、计划分母复核、`26BD6651` 样例链和 CP-SAT/Pyomo/HiGHS 环境冒烟；**全量实体修复、规范表、调度器尚未完成**。
-- 当前目标：基于真实输入实现可追溯实体关联和规范事件表，先交付完整浇次安全闭环，再扩展场景 1/2/3。
-- 当前代码与产物：`code/src/input_audit.py`、`plan_audit.py`、`trace_sample_heat.py`、`source_quality_audit.py`、`solver_preflight.py`；审计结果在 `data/audit/`；测试位于 `code/tests/`（7 项通过）。求解器 preflight 是合成玩具模型，不代表项目排产。
+- 当前阶段：已完成全源审计、计划表分母复核、结构/时间完整行基础统计及 `6C0754`（6 炉次）场景1历史回放最小数据闭环；统计目前按唯一熔炼号连接，不代表 Tier-1/Tier-2 实体关系全部通过。**全量实体修复、场景1优化调度和物理轨迹/安全认证尚未完成**。
+- 当前目标：先由建模手复核样例组中的实体/时钟异常和暂定 Tier-2 阈值；再将已核准的关系扩展至完整任务集，构建可验证的安全预约调度。
+- 当前代码与产物：新增 `code/src/clean_row_statistics.py`、`scenario1_historical_replay.py`；统计与回放产物见 `data/audit/section2_basic_stats.json` 和 `data/runs/scene1_replay_6C0754/`；测试位于 `code/tests/`（9 项通过）。场景1产物是固定行车指派/实际时刻历史回放，不代表优化结果。
 - 当前环境：`.research-lab/venv/bin/python`（Python 3.13.2）；已验证 pandas/openpyxl/xlrd。该环境 `pip` 命令脚本仍指向旧目录，安装包请用 `.research-lab/venv/bin/python -m pip`，勿依赖失效的 `venv/bin/pip` 启动脚本。
 
 ## 下一步

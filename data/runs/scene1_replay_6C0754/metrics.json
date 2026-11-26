@@ -1,0 +1,84 @@
+{
+  "run_id": "scene1-replay-6C0754",
+  "scenario": "1_deterministic_historical_replay",
+  "cast_id": "6C0754",
+  "heat_count": 6,
+  "heat_ids": [
+    "26BD6452",
+    "26BD6453",
+    "26BD6454",
+    "26BD6455",
+    "26BD6456",
+    "26BD6457"
+  ],
+  "planned_caster": "C",
+  "actual_caster_number": 3,
+  "route_counts": {
+    "R0": 6
+  },
+  "primary_move_count": 18,
+  "side_event_count": 6,
+  "cp_sat_fixed_replay_status": "OPTIMAL",
+  "same_crane_overlap_pairs": 0,
+  "tier1_temp_id_mismatch_heat_ids": [
+    "26BD6455"
+  ],
+  "tier2_fallback_failure_heat_ids": [],
+  "rh_accept_marker_after_process_start_heat_ids": [
+    "26BD6452",
+    "26BD6453",
+    "26BD6454",
+    "26BD6456"
+  ],
+  "actual_cast_gap_minutes": [
+    {
+      "from_heat": "26BD6452",
+      "to_heat": "26BD6453",
+      "gap_min": 1.8166666666666667
+    },
+    {
+      "from_heat": "26BD6453",
+      "to_heat": "26BD6454",
+      "gap_min": 1.6166666666666667
+    },
+    {
+      "from_heat": "26BD6454",
+      "to_heat": "26BD6455",
+      "gap_min": 1.7166666666666666
+    },
+    {
+      "from_heat": "26BD6455",
+      "to_heat": "26BD6456",
+      "gap_min": 2.783333333333333
+    },
+    {
+      "from_heat": "26BD6456",
+      "to_heat": "26BD6457",
+      "gap_min": 1.5333333333333334
+    }
+  ],
+  "thermal_age_rh_end_to_cast_start_minutes": {
+    "26BD6452": 9.983333333333333,
+    "26BD6453": 12.883333333333333,
+    "26BD6454": 11.416666666666666,
+    "26BD6455": 20.0,
+    "26BD6456": 24.866666666666667,
+    "26BD6457": 31.716666666666665
+  },
+  "plan_to_actual_cast_start_delay_minutes": {
+    "26BD6452": -0.9333333333333333,
+    "26BD6453": 3.8833333333333333,
+    "26BD6454": 12.2,
+    "26BD6455": 7.8,
+    "26BD6456": 14.0,
+    "26BD6457": 19.0
+  },
+  "crane_busy_minutes_by_observed_id": {
+    "3#450": 116.86666666666667,
+    "4#450": 14.35,
+    "5#450": 72.4
+  },
+  "weights_max_t": 421.3,
+  "spatial_safety": "not_assessed",
+  "trajectory": "not_generated; no physical positions/speeds/safety gaps are confirmed"
+}

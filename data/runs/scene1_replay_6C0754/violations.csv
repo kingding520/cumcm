@@ -1,0 +1,14 @@
+﻿run_id,check_id,status,count_or_value,details
+scene1-replay-6C0754,plan_sequence_1_to_n,pass,6,"cast_id=6C0754; sequence=[1, 2, 3, 4, 5, 6]"
+scene1-replay-6C0754,one_actual_caster_and_plan_mapping,pass,"planned=C,actual=3",mapping A/B/C -> 1/2/3
+scene1-replay-6C0754,primary_movement_task_coverage,pass,18/18,"three source-observed move legs per heat: BOF-RH, RH-CCM, CCM-empty-return"
+scene1-replay-6C0754,tier2_bof_rh_fallback,pass,6/6,"90 min / 3 t thresholds are provisional from the proposal, pending WJ confirmation"
+scene1-replay-6C0754,tier1_rh_ccm_temp_id,review,5/6,mismatch heats=['26BD6455']
+scene1-replay-6C0754,crane_handoff_labels,pass,6/6,mismatch heats=[]
+scene1-replay-6C0754,source_marker_deadlines,review,8,source destination marker compared with process/cast anchor; review time-base discrepancies
+scene1-replay-6C0754,observed_load_within_assigned_450t_rating,pass,0,recorded movement crane capacity check only; no design safety factor applied
+scene1-replay-6C0754,same_crane_temporal_nonoverlap,pass,0,[]
+scene1-replay-6C0754,shared_rail_spatial_safety,not_assessed,,"confirmed position map, initial positions, safety gaps and speed/acceleration parameters are not yet signed off"
+scene1-replay-6C0754,continuous_trajectory_validation,not_assessed,,this replay uses source event windows; it does not invent interpolated physical trajectories
+scene1-replay-6C0754,thermal_window_threshold,not_assessed,,per-heat RH-end-to-cast-start ages are reported; official per-heat threshold remains unconfirmed
+scene1-replay-6C0754,cp_sat_fixed_replay_resource_model,pass,OPTIMAL,"fixed historical intervals, observed crane assignments, same-crane NoOverlap only; no reoptimization"
