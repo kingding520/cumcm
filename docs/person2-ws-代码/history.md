@@ -18,3 +18,12 @@
 - 新增 `code/src/solver_preflight.py`，CP-SAT 2 资源/4 任务合成小模型得到 OPTIMAL、makespan=6、bound=6；Pyomo+HiGHS 合成 LP 得到 74/3。结果记录于 `data/audit/solver_preflight.json`，仅证明安装与调用可用，不是项目排产结果。
 - 新增 `code/tests/test_independent_audits.py`；全套 `python -m pytest code/tests -q` 为 7 passed。警告仅为来源 XLSX 样式缺省和 pandas 对 xlrd 引擎的弃用提示。
 - 仍未做实体自动修复、规范表、项目调度模型或六项调度边界验证；异常解释和字段口径交接见 handoff。
+
+## 2026-11-26｜完整行统计与单浇次场景1历史回放
+
+- 新增 `code/src/clean_row_statistics.py`，按显式、可追溯条件生成 `data/audit/clean_complete_heats.csv`、`basic_duration_stats.csv`、`duration_outlier_candidates.csv`、`cast_group_candidates.csv` 和 `section2_basic_stats.json`。过滤规则：排除 `配包flag=-2`；要求计划热号唯一、计划核心字段齐全且时间顺序有效；实际统计按单一唯一工序行和指标所需时间对取各自 N。原值均保留。
+- 统计 cohort：计划完整有效行 1266；工序表唯一热号行 1206，其中 1136 行匹配计划；核心实际时间完整、路线处理时间有效的 841 行。计划转炉时长 1266 条、固定 30 min；计划浇铸时长中位 40 min（N=1266）。实际出钢/LF/RH/CCM 时长中位数分别 5.63（N=1065）、36.92（N=751）、39.00（N=516）、40.65（N=1117）min；详细按路线统计和分母见 CSV。Tukey 1.5×IQR 只生成异常候选，不从统计中自动剔除；例如 LF 时间最大值 215.87 min 留待复核。**统计阶段仅按唯一熔炼号连接，没有将跨表 Tier-1/Tier-2 临时罐号校验作为完整行条件**，不能据此声称所有实体匹配已验证。
+- 选择 `连连浇号=6C0754`，计划序列 1–6、6 个 R0 炉次、计划 C 线映射实际 3# 连铸。新增 `code/src/scenario1_historical_replay.py`，生成 `data/runs/scene1_replay_6C0754/` 下 moves/schedule/operations/side_events/metrics/violations/run_manifest。共18个主移动段及6个附属事件；观察行车固定时刻的 CP-SAT 同车不重叠模型 OPTIMAL、0 个重叠。
+- 回放中发现并保留：26BD6455 的 RH/CCM 临时罐号不一致；4 炉 RH “接受位”时间标记晚于处理开始；8 个来源标记相对下游截止需复核。Tier-2 90min/3t 候选规则 6/6 通过，但仍是方案暂定阈值。热龄、连铸间隙和计划偏差只报告观察值，不按未确认阈值判定合规。
+- 物理共享轨道安全与真实连续轨迹**没有**认证或生成；当前回放是历史实际基线，不是 FCFS/EDF 优化结果。缺少经建模手确认的初始位置、轨道安全间距、速度/加速度等参数，已在 metrics/violations 明示 not_assessed。
+- 新增 `code/tests/test_stats_and_scenario1.py`；全套 `python -m pytest code/tests -q`：9 passed。警告为 WPS 工作簿样式缺省及 pandas/xlrd 引擎弃用提示。

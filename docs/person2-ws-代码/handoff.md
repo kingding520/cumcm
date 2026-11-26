@@ -27,8 +27,18 @@
 - `code/src/solver_preflight.py` 已跑通 CP-SAT 2 资源/4 任务合成模型（OPTIMAL）及 Pyomo+HiGHS 合成 LP（74/3）；**仅为依赖/API 冒烟，非项目调度结果**。记录在 `data/audit/solver_preflight.json`。
 - 全源扫描输出 `data/audit/source_quality_summary.csv`、`source_quality_findings.csv`、`source_quality_audit.json`；12 份工作簿、6758 行，2529 条 review candidates，源文件哈希前后不变。
 
+## 2026-11-26｜基础统计与单浇次回放交接
+
+| 接收人 | 状态 | 内容与下一步 | 完成依据 |
+|---|---|---|---|
+| Person1（建模） | 待复核 | 完整历史统计已就绪；检查 `duration_outlier_candidates.csv`，尤其 LF 非负完整时间对最大 215.87 min（N=751、median=36.92、P90=47.68），决定是否按数据来源/工艺规则细分，而不是直接截尾。对 `6C0754` 中 26BD6455 RH/CCM 临时罐号不一致及4个 RH 接受标记晚于处理开始的时序冲突给出实体/时钟解释。 | `section2_basic_stats.json`、`clean_complete_heats.csv`、`scenario1_replay_6C0754/violations.csv` |
+| Person1（建模） | 待确认 | 90 min / 3 t Tier-2 仍为暂定阈值；本组6/6通过。请确认后再将其写入正式匹配配置和场景1门禁。 | `scenario1_replay_6C0754/metrics.json` 和 `run_manifest.json` |
+| Person3（方案/论文） | 可使用、待核对 | Section 2 初步统计已输出计划与实际、分路线、逐指标 N 和异常候选；引用数字前须标注各自分母，不把候选标记说成已修复数据。统计按唯一熔炼号连接，未通过全量 Tier-1/Tier-2 临时罐号校验，论文暂勿把它描述为完全实体核验后的最终统计。 | `data/audit/basic_duration_stats.csv` 与 `section2_basic_stats.json` |
+
+- 当前样例选择：连连浇号 6C0754，26BD6452–26BD6457，R0 路线、C 线映射实际 3#CCM。CP-SAT 只验证固定实际区间下同车不重叠；共享轨道空间防碰撞、真实轨迹和优化派车均未完成。
+
 ### 未完成与协作请求
 
-- M1-01（完整浇次闭环）仍在进行：目前仅验证单炉跨表实体链和事件时间轴，尚未生成完整浇次 moves/schedule/trajectory/metrics，也未运行安全调度。
-- M1-02 六类调度案例仍待实现；当前 7 个测试覆盖数据登记、计划统计、样例关联、源表异常扫描和求解器安装冒烟，不是项目调度验证。
+- M1-01（完整浇次闭环）仍在进行：`6C0754` 已有 6 炉次历史回放 moves/schedule/metrics/violations，CP-SAT 固定时刻同车 NoOverlap 检查通过；仍未生成或验证物理 trajectory，也未运行行车重新指派/优化。
+- M1-02 六类调度边界仍待实现；当前 9 个测试覆盖数据登记、计划统计、样例实体链、全源异常扫描、基础统计、单浇次历史回放和求解器安装冒烟，不是完整调度模型测试。
 - 收到字段语义与匹配契约确认后，Person2 继续全量 Tier-1/Tier-2 实体解析；不确定记录会保留原值、规则与置信度，不静默删除。
