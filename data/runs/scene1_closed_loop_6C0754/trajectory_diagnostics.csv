@@ -1,0 +1,6 @@
+﻿algorithm,trajectory_segments,peak_speed_px_s,segments_above_cap,idle_minutes,loaded_minutes,empty_minutes,track_violations
+observed_historical,133,20.676,10,626.86,58.56,45.31,0
+fcfs,139,8.634,0,920.65,39.66,16.08,0
+edf_nearest,136,8.634,0,861.1,39.66,16.08,0
+cp_sat_exact_setup,144,8.635,0,981.23,39.61,22.33,0
+conservative_serial,143,8.635,0,345.87,39.61,19.7,0

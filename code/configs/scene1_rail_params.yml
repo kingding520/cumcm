@@ -1,0 +1,144 @@
+# Scenario-1 single-cast closed loop: provisional parameter set
+#
+# IMPORTANT STATUS LABELS
+#   confirmed_by_modeler: false  -> every value below is provisional
+#   Nothing here is a signed-off physical parameter. Values are either inherited
+#   from the proposal's initial review (Person3 §3.2) or derived by this script
+#   from the observed 6C0754 cast. They must be replaced after Person1 confirms
+#   geometry, speed/acceleration, safety gaps and initial crane positions.
+
+provenance:
+  coordinates: "inherited: docs/person3-wcl-论文/01_数学建模方案.md §3.2 relative pixel coordinates"
+  travel_time: "inherited: q0.10 OD regression t_min = 2.574 + 2.947*(dx/1000 px), R^2=0.9158"
+  safety_gap_px: "provisional scenario value; physical scale kappa (m/px) unconfirmed"
+  accel: "provisional scenario value"
+  initial_positions: "assumption; not present in source data"
+  confirmed_by_modeler: false
+
+# 1-D relative rail coordinate (px), west -> east.
+stations:
+  BOF-A: 1445
+  BOF-B: 1290
+  BOF-C: 1130
+  RH1: 880
+  RH2: 645
+  LF1: 1940
+  LF3: 555
+  CCM1: 885
+  CCM2: 1115
+  CCM3: 2115
+  transfer_car: 2400   # proposal gives 2280-2500 band; midpoint used, see notes
+  slag_bay: 2400
+  home_2#150: 375
+  home_1#150: 2570
+
+# Task origin/destination name -> station key.
+location_map:
+  BOF-B: BOF-B
+  BOF-A: BOF-A
+  BOF-C: BOF-C
+  RH: RH1
+  CCM-C: CCM3
+  CCM-B: CCM2
+  CCM-A: CCM1
+  transfer_car: transfer_car
+
+# E-F span cranes in strict physical order west -> east (proposal §2.1).
+cranes:
+  - id: "2#150"
+    capacity_t: 150.0
+    min_x: 375
+    max_x: 2570
+  - id: "4#450"
+    capacity_t: 450.0
+    min_x: 555
+    max_x: 2400
+  - id: "3#450"
+    capacity_t: 450.0
+    min_x: 555
+    max_x: 2400
+  - id: "5#450"
+    capacity_t: 450.0
+    min_x: 555
+    max_x: 2400
+  - id: "1#150"
+    capacity_t: 150.0
+    min_x: 375
+    max_x: 2570
+
+# Initial crane positions: explicit scenario assumptions.
+initial_positions:
+  spread:
+    "2#150": 375
+    "4#450": 880
+    "3#450": 1290
+    "5#450": 2115
+    "1#150": 2570
+  west_clustered:
+    "2#150": 375
+    "4#450": 700
+    "3#450": 900
+    "5#450": 1100
+    "1#150": 2570
+  east_clustered:
+    "2#150": 375
+    "4#450": 1900
+    "3#450": 2050
+    "5#450": 2200
+    "1#150": 2570
+  # Parked-west staging used by the conservative single-crane policy: the two
+  # inactive 450t cranes wait west of the working span [880, 2400] while keeping
+  # the strict physical order 4#450 < 3#450 < 5#450.
+  staged_serial:
+    "2#150": 375
+    "4#450": 555
+    "3#450": 620
+    "5#450": 680
+    "1#150": 2570
+default_initial_position_scenario: spread
+
+# Motion model.
+motion:
+  # Provisional values chosen so the trapezoidal profile is cruise-dominated and
+  # consistent with the inherited empirical mean speeds (5.66 px/s loaded,
+  # 7.35 px/s empty after the empty-speed factor). A crane that accelerates over
+  # a few seconds of a multi-minute move is cruise-dominated in reality too.
+  accel_px_s2: 1.5
+  v_max_px_s: 9.0
+  handling_min_per_leg: 2.574  # inherited regression intercept, split half/half at pickup/drop
+  gear_ratio_edges: [0.2, 0.4, 0.6, 0.8, 1.0]  # provisional gear mapping v/v_max -> gear 1..5
+
+# Inherited empirical travel-time model (minutes).
+travel_model:
+  intercept_min: 2.574
+  slope_min_per_1000px: 2.947
+  # Empty repositioning is faster than a loaded leg. The default below is the
+  # smallest round value that makes the observed 6C0754 crane chain physically
+  # reproducible (required >= 196.3/154.0 = 1.275). It is provisional and is
+  # swept in the sensitivity report; replace it with a proper empty-travel
+  # calibration when telemetry is available.
+  empty_speed_factor: 1.3
+  empty_speed_factor_sweep: [1.0, 1.1, 1.2, 1.3, 1.4, 1.5]
+
+# Safety gap scenarios, expressed in the same relative px coordinate.
+safety_gap_px:
+  tight: 25
+  base: 50
+  wide: 100
+default_safety_gap: base
+
+# Scheduler settings.
+scheduling:
+  heavy_capable_cranes: ["4#450", "3#450", "5#450"]
+  cp_sat_time_limit_s: 20.0
+  objective_lateness_weight: 5.0
+  objective_empty_travel_weight: 0.2
+  # Conservative serial policy (PROJECT.md decision 1: single-crane serial
+  # reservations are reported as a separate, safe-but-restrictive algorithm).
+  serial_crane: "5#450"
+  serial_initial_scenario: staged_serial
+
+notes:
+  - "Crane initial positions are absent from the source tables; results are reported per scenario."
+  - "Safety gap is expressed in relative px because kappa (m/px) is unconfirmed."
+  - "Empty-ladle return legs include slag/residual processing; they are split into stationary dwell + travel."

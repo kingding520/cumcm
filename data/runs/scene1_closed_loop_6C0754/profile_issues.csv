@@ -1,0 +1,6 @@
+﻿crane_id,task_id,issue,severity,detail
+3#450,26BD6453:RH_CCM,speed_cap_exceeded,info,implied peak 1.06x provisional cap (9.56 px/s)
+3#450,26BD6453:RH_CCM,speed_cap_exceeded,info,cruise end speed 9.560 px/s above cap 9.0
+3#450,26BD6455:CCM_EMPTY_RETURN,speed_cap_exceeded,info,implied peak 2.30x provisional cap (20.68 px/s)
+3#450,26BD6456:CCM_EMPTY_RETURN,speed_cap_exceeded,info,implied peak 2.30x provisional cap (20.68 px/s)
+3#450,26BD6457:CCM_EMPTY_RETURN,speed_cap_exceeded,info,implied peak 2.30x provisional cap (20.68 px/s)

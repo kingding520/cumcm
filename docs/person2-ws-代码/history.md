@@ -27,3 +27,15 @@
 - 回放中发现并保留：26BD6455 的 RH/CCM 临时罐号不一致；4 炉 RH “接受位”时间标记晚于处理开始；8 个来源标记相对下游截止需复核。Tier-2 90min/3t 候选规则 6/6 通过，但仍是方案暂定阈值。热龄、连铸间隙和计划偏差只报告观察值，不按未确认阈值判定合规。
 - 物理共享轨道安全与真实连续轨迹**没有**认证或生成；当前回放是历史实际基线，不是 FCFS/EDF 优化结果。缺少经建模手确认的初始位置、轨道安全间距、速度/加速度等参数，已在 metrics/violations 明示 not_assessed。
 - 新增 `code/tests/test_stats_and_scenario1.py`；全套 `python -m pytest code/tests -q`：9 passed。警告为 WPS 工作簿样式缺省及 pandas/xlrd 引擎弃用提示。
+
+## 2026-11-26｜M1-01 单浇次闭环：轨迹 + 防碰撞门禁 + 优化对比
+
+- 新增 `code/src/rail_model.py`：分段常加速（梯形/巡航主导）轨迹构造 + **精确**连续时间相邻行车间距校验。相对间距在每段时间内为二次函数，故除端点外还检查内部极值点（对应方案命题 2b），不使用采样网格做安全判定。
+- 新增 `code/src/scenario1_closed_loop.py`：在 `6C0754`（6 炉、18 任务）上生成 5 种候选方案（观测历史回放、FCFS、EDF-Nearest、CP-SAT 精确空驶建模、保守单机串行），逐一生成 `trajectory_*.csv` 并送入独立门禁，产出 `optimization_comparison.csv`、`collision_matrix.csv`、`collision_pairs_base.csv`、`empty_speed_sensitivity.csv`、`trajectory_diagnostics.csv`、`profile_issues.csv`、`leg_calibration.csv`、`closed_loop_summary.json`。
+- 新增 `code/configs/scene1_rail_params.yml`：相对像素站坐标、行车物理顺序与能力、初始位置情景、运动学与安全间距情景，全部标注 `confirmed_by_modeler: false`，来源逐项注明（继承方案 §3.2 / 本浇次观测 / 情景假设）。
+- **验收结论**：观测回放、FCFS、EDF-Nearest、CP-SAT 精确空驶建模四种三机并行方案全部被门禁判为违规（相邻行车最小间距 -1235 ~ -1520 px，即发生跨越），仅保守单机串行通过（+60 px ≥ 50 px）。原因是在不可跨越共享轨道上，本浇次任务从 RH(880) 到 CCM3(2115) 的跨越必须借助主动避让或合法换车点，而未建模。空驶速度系数在 1.0–1.5 全扫描下结论不变，说明该结论不依赖这一临时参数。
+- **效率代价（同任务集、同标定）**：保守串行总任务等待 109.48 min、迟到 18.37 min；FCFS 等待 21.92 min、迟到 12.09 min；CP-SAT 精确空驶模型 33.65/12.08。即安全串行相对 FCFS 多 87.6 min 等待，这一差额正是主动避让/换车建模的潜在收益空间（尚待建模确认）。
+- **标定对照**：观测中位 BOF→RH 4.675 min（继承回归 3.782，残差 +0.893）；RH→CCM 7.083（回归 6.213，+0.870）；CCM 空包→渡车 **16.017**（回归 3.414，**+12.603**）。最后一项表明重包 OD 回归不能套用于空包回程，空包腿须单列或拆分翻渣/铸余作业。
+- 轨迹自检：5 份 trajectory 共 133–144 段，phase ∈ {loaded, empty, idle}，gear ∈ 1–5，x 全程 375–2570 且在各自轨道界内，0 越界；三机并行方案峰值速度 ≤ 8.64 px/s（上限 9.0）；观测回放因空包回程含翻渣/铸余，有 10 段峰值达 20.68 px/s（2.3×上限），故观测回放不作为物理有效轨迹，仅作对照。
+- 新增 `code/tests/test_scene1_closed_loop.py`（13 项）：覆盖剖面的时间/位移精确性、运动学一致性、档位范围、**端点安全但内部极值违规**的命题 2b 反例、安全通过/跨越判定、闭环产物完整性、逐炉工序先后、JSON 可序列化。全套 `python -m pytest code/tests -q`：**22 passed**。
+- 未做：全量 17.5 天 ETL（按要求等待 wj 确认）、三维/横向几何、主动避让与合法换车建模、150t 辅车策略、随机与故障场景。

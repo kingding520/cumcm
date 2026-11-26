@@ -1,0 +1,4 @@
+﻿route_step,n,observed_median_min,observed_min_min,observed_max_min,abs_dx_px,inherited_regression_min,regression_residual_min,used_duration_min,duration_source
+BOF_to_RH,6,4.675,4.45,14.35,410.0,3.7823,0.8927,4.675,observed median of this cast (n small; provisional)
+CCM_empty_to_transfer_car,6,16.0167,10.6833,39.6167,285.0,3.4139,12.6028,16.0167,observed median of this cast (n small; provisional)
+RH_to_CCM,6,7.0833,4.8333,13.35,1235.0,6.2135,0.8698,7.0833,observed median of this cast (n small; provisional)
