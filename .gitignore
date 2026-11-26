@@ -1,2 +1,51 @@
 # 代码手agent工具
 .research-lab
+
+# Windows local Research Lab installation and scratch files
+/research-lab/
+/tmp/
+
+# Python environments and caches
+.venv/
+.venv-*/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Notebook and local editor state
+.ipynb_checkpoints/
+.vscode/
+.idea/
+
+# Local environment configuration (keep examples)
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Office lock files and operating-system metadata
+~$*
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# LaTeX intermediate files; retain sources, PDF, figures and run logs
+*.aux
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.run.xml
+*.synctex.gz
+*.toc
+
+# Keep original data, data/audit/, data/runs/, code and paper deliverables.
+# Do not blanket-ignore CSV, JSON, XLS/XLSX, PDF or execution logs.
