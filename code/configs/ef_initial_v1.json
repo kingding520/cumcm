@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "geometry_version": "ef-initial-v1",
+  "parameter_basis": "engineering_initial",
+  "length_unit": "m",
+  "time_unit": "s",
+  "load_unit": "t",
+  "source_figure": {
+    "docx": "question/B题：炼钢厂钢包周转与排产优化问题/B题：炼钢厂钢包周转与排产优化问题.docx",
+    "member": "word/media/image1.png",
+    "sha256": "591916b6311f6e325acec18e436ca59a4409f930b3cb13838126dc2639850315"
+  },
+  "coordinate_transform": {
+    "pixel_origin": 300,
+    "meters_per_pixel": 0.1
+  },
+  "rail": {
+    "min_m": 0,
+    "max_m": 240
+  },
+  "stations": [
+    {
+      "id": "LF3",
+      "u_px": 555,
+      "x_m": 25.5,
+      "basis": "figure_approx",
+      "active": true
+    },
+    {
+      "id": "RH2",
+      "u_px": 645,
+      "x_m": 34.5,
+      "basis": "figure_approx",
+      "active": true
+    },
+    {
+      "id": "RH1",
+      "u_px": 880,
+      "x_m": 58.0,
+      "basis": "figure_approx",
+      "active": true
+    },
+    {
+      "id": "CCM1",
+      "u_px": 885,
+      "x_m": 58.5,
+      "basis": "figure_approx",
+      "active": true
+    },
+    {
+      "id": "CCM2",
+      "u_px": 1115,
+      "x_m": 81.5,
+      "basis": "figure_approx",
+      "active": true
+    },
+    {
+      "id": "BOF_C",
+      "u_px": 1130,
+      "x_m": 83.0,
+      "basis": "figure_approx",
+      "active": true
+    },
+    {
+      "id": "BOF_B",
+      "u_px": 1290,
+      "x_m": 99.0,
+      "basis": "figure_approx",
+      "active": true
+    },
+    {
+      "id": "BOF_A",
+      "u_px": 1445,
+      "x_m": 114.5,
+      "basis": "figure_approx",
+      "active": true
+    },
+    {
+      "id": "LF2_OFFLINE",
+      "u_px": 1730,
+      "x_m": 143.0,
+      "basis": "figure_approx",
+      "active": false
+    },
+    {
+      "id": "LF1",
+      "u_px": 1940,
+      "x_m": 164.0,
+      "basis": "figure_approx",
+      "active": true
+    },
+    {
+      "id": "CART3",
+      "u_px": 1940,
+      "x_m": 164.0,
+      "basis": "figure_approx",
+      "active": true
+    },
+    {
+      "id": "CCM3",
+      "u_px": 2115,
+      "x_m": 181.5,
+      "basis": "figure_approx",
+      "active": true
+    },
+    {
+      "id": "SLAG_Z1",
+      "u_px": 2310,
+      "x_m": 201.0,
+      "basis": "engineering_initial",
+      "active": true
+    },
+    {
+      "id": "SLAG_Z2",
+      "u_px": 2380,
+      "x_m": 208.0,
+      "basis": "engineering_initial",
+      "active": true
+    },
+    {
+      "id": "CART2",
+      "u_px": 2420,
+      "x_m": 212.0,
+      "basis": "figure_approx",
+      "active": true
+    },
+    {
+      "id": "SLAG_Z3",
+      "u_px": 2450,
+      "x_m": 215.0,
+      "basis": "engineering_initial",
+      "active": true
+    },
+    {
+      "id": "CART1",
+      "u_px": 2490,
+      "x_m": 219.0,
+      "basis": "figure_approx",
+      "active": true
+    },
+    {
+      "id": "MAINT_E",
+      "u_px": 2570,
+      "x_m": 227.0,
+      "basis": "figure_approx",
+      "active": true
+    }
+  ],
+  "cranes": [
+    {
+      "id": "2#150",
+      "capacity_t": 150,
+      "order": 1,
+      "q0_m": 7.5,
+      "v0_m_s": 0,
+      "u_px": 375,
+      "length_m": 8,
+      "load0_t": 0,
+      "reach_m": [
+        0,
+        240
+      ]
+    },
+    {
+      "id": "4#450",
+      "capacity_t": 450,
+      "order": 2,
+      "q0_m": 114.5,
+      "v0_m_s": 0,
+      "u_px": 1445,
+      "length_m": 8,
+      "load0_t": 0,
+      "reach_m": [
+        0,
+        240
+      ]
+    },
+    {
+      "id": "3#450",
+      "capacity_t": 450,
+      "order": 3,
+      "q0_m": 137.0,
+      "v0_m_s": 0,
+      "u_px": 1670,
+      "length_m": 8,
+      "load0_t": 0,
+      "reach_m": [
+        0,
+        240
+      ]
+    },
+    {
+      "id": "5#450",
+      "capacity_t": 450,
+      "order": 4,
+      "q0_m": 197.5,
+      "v0_m_s": 0,
+      "u_px": 2275,
+      "length_m": 8,
+      "load0_t": 0,
+      "reach_m": [
+        0,
+        240
+      ]
+    },
+    {
+      "id": "1#150",
+      "capacity_t": 150,
+      "order": 5,
+      "q0_m": 227.0,
+      "v0_m_s": 0,
+      "u_px": 2570,
+      "length_m": 8,
+      "load0_t": 0,
+      "reach_m": [
+        0,
+        240
+      ]
+    }
+  ],
+  "clearance_m": 4,
+  "min_center_distance_m": 12,
+  "speed_limit_m_s": {
+    "empty_hook": 1.0,
+    "empty_ladle": 0.8,
+    "heavy_ladle": 0.6
+  },
+  "accel_m_s2": {
+    "empty_hook": 0.1,
+    "empty_ladle": 0.08,
+    "heavy_ladle": 0.05
+  },
+  "decel_m_s2": {
+    "empty_hook": 0.1,
+    "empty_ladle": 0.08,
+    "heavy_ladle": 0.05
+  },
+  "gear_speed_ratios": [
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "slow_zone": {
+    "half_width_m": 5,
+    "speed_ratio": 0.4,
+    "apply_to": [
+      "BOF_A",
+      "BOF_B",
+      "BOF_C",
+      "LF1",
+      "LF3",
+      "RH1",
+      "RH2",
+      "CCM1",
+      "CCM2",
+      "CCM3",
+      "CART1",
+      "CART2",
+      "CART3",
+      "SLAG_Z1",
+      "SLAG_Z2",
+      "SLAG_Z3"
+    ]
+  },
+  "handling_s": {
+    "scenario1_pickup": 0,
+    "scenario1_dropoff": 0,
+    "scenario2_pickup": 30,
+    "scenario2_dropoff": 30
+  },
+  "baseline_service_cranes": [
+    "4#450",
+    "3#450",
+    "5#450"
+  ],
+  "collision_scope": "all_five_cranes",
+  "station_alias_required_for": [
+    "SLAG_Z1",
+    "SLAG_Z2",
+    "SLAG_Z3"
+  ],
+  "startup_profile": "synthetic_empty_hook_snapshot"
+}

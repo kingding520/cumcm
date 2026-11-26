@@ -1,0 +1,129 @@
+{
+  "source_hashes": {
+    "工序时间信息.xlsx": "dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a",
+    "3#LF.xlsx": "1bd19d6012740d3b00f75982f7a77b7c10c651f5bfd11db3364015b6086c1df0",
+    "1#RH.xlsx": "19bc686615a2e2c73b5a3680e4013f6628c82a019216d4b612da7940a2fa029b",
+    "3#连铸.xlsx": "40daeba0fc2067a7c4d6fe1b46fe58ea9e7307db3b2defcdfbb903547a10716b",
+    "B炉.xlsx": "f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45"
+  },
+  "long_lf_records": [
+    {
+      "file": "3#LF.xlsx",
+      "excel_row": 86,
+      "熔炼号": "26CD5324",
+      "钢包号": "28",
+      "LF精炼工位号": "2",
+      "精炼处理开始时间": "2026-10-08 23:21:00",
+      "精炼处理结束时间": "2026-10-09 02:11:44",
+      "duration_min": 170.73333333333332
+    },
+    {
+      "file": "3#LF.xlsx",
+      "excel_row": 87,
+      "熔炼号": "26CD5323",
+      "钢包号": "22",
+      "LF精炼工位号": "1",
+      "精炼处理开始时间": "2026-10-08 21:07:31",
+      "精炼处理结束时间": "2026-10-09 00:43:23",
+      "duration_min": 215.86666666666667
+    },
+    {
+      "file": "3#LF.xlsx",
+      "excel_row": 236,
+      "熔炼号": "26BD6396",
+      "钢包号": "08",
+      "LF精炼工位号": "2",
+      "精炼处理开始时间": "2026-10-02 21:31:05",
+      "精炼处理结束时间": "2026-10-03 00:18:09",
+      "duration_min": 167.06666666666666
+    }
+  ],
+  "sample_6455": {
+    "1#RH.xlsx": [
+      {
+        "excel_row": 148,
+        "钢包号": "35",
+        "临时罐号": "x179112209298720769",
+        "重包到RH接受位时间": "2026-10-05 01:57:45",
+        "进处理位时间": "2026-10-05 02:02:48",
+        "出处理位时间": "2026-10-05 02:43:25",
+        "重包从RH吊起时间": "2026-10-05 02:52:13",
+        "进入重量": "410.9",
+        "RH起吊重包重量": "412.2"
+      }
+    ],
+    "3#连铸.xlsx": [
+      {
+        "excel_row": 165,
+        "钢包号": "35",
+        "临时罐号": "x179113552487720769",
+        "重包到铸机接受位座包时间": "2026-10-05 03:01:07",
+        "铸机接受位重包放下重量": "411.1"
+      }
+    ],
+    "B炉.xlsx": [
+      {
+        "excel_row": 204,
+        "钢水罐号": "35.0",
+        "钢水罐临时罐号": "nan",
+        "出钢结束时间": "2026-10-05 01:31:54",
+        "钢水罐出钢重量": "410.9"
+      }
+    ]
+  },
+  "rh_marker_conflicts": [
+    {
+      "heat_id": "26BD6456",
+      "master_excel_row": 555,
+      "arrival_ts": "2026-10-05 02:44:39",
+      "process_start_ts": "2026-10-05 02:44:20",
+      "arrival_after_process_start_s": 19.0
+    },
+    {
+      "heat_id": "26BD6454",
+      "master_excel_row": 562,
+      "arrival_ts": "2026-10-05 01:23:43",
+      "process_start_ts": "2026-10-05 01:21:46",
+      "arrival_after_process_start_s": 117.0
+    },
+    {
+      "heat_id": "26BD6453",
+      "master_excel_row": 563,
+      "arrival_ts": "2026-10-05 00:27:14",
+      "process_start_ts": "2026-10-05 00:26:16",
+      "arrival_after_process_start_s": 58.0
+    },
+    {
+      "heat_id": "26BD6452",
+      "master_excel_row": 566,
+      "arrival_ts": "2026-10-04 23:47:41",
+      "process_start_ts": "2026-10-04 23:45:01",
+      "arrival_after_process_start_s": 160.0
+    }
+  ],
+  "duplicate_columns": {
+    "X": {
+      "position": 24,
+      "name": "rh_rotation_arrival_ts",
+      "unit": "timestamp"
+    },
+    "Y": {
+      "position": 25,
+      "name": "lift_to_rh_rotation_duration_s_raw",
+      "unit": "s"
+    },
+    "BK": {
+      "position": 63,
+      "name": "empty_de_to_ef_col63_raw"
+    },
+    "BL": {
+      "position": 64,
+      "name": "empty_de_to_ef_col64_raw"
+    }
+  },
+  "duplicate_column_duration_check": {
+    "paired": 644,
+    "within_1s": 566,
+    "max_abs_s": 16664.0
+  }
+}

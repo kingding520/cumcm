@@ -1,0 +1,67 @@
+{
+  "version": "contract-v1",
+  "units": {
+    "time": "s",
+    "load": "t"
+  },
+  "matching": {
+    "time_gate_s": 5400,
+    "mass_residual_gate_t": 3,
+    "unique_candidate_required": true,
+    "one_to_one_per_route_step": true,
+    "same_heat_and_ladle_required": true,
+    "sensitivity_time_gate_s": [
+      3600,
+      5400,
+      7200
+    ],
+    "sensitivity_mass_gate_t": [
+      2,
+      3,
+      5
+    ],
+    "time_nonnegative_required": true
+  },
+  "scene2": {
+    "horizon_s": 7200,
+    "decision_period_s": 60,
+    "optimization_scenarios": 20,
+    "evaluation_scenarios": 100,
+    "seed": 20261126,
+    "cvar_alpha": 0.9,
+    "risk_weight": 1,
+    "split": {
+      "train": [
+        "2026-09-25",
+        "2026-10-04"
+      ],
+      "validation": [
+        "2026-10-05",
+        "2026-10-07"
+      ],
+      "test": [
+        "2026-10-08",
+        "2026-10-11"
+      ]
+    },
+    "duration_model": "plan_mean_times_mean_one_empirical_factor"
+  },
+  "scene3": {
+    "decision_period_s": 60,
+    "commitment_s": 60,
+    "solve_budget_s": 5,
+    "failure_duration_s": [
+      900,
+      1800,
+      3600
+    ],
+    "ready_delay_s": [
+      300,
+      600,
+      1200
+    ],
+    "repair_time_visibility": "observed_estimate_only",
+    "preemption": "resume_by_default",
+    "fallback": "validated_plan_or_controlled_stop"
+  }
+}
