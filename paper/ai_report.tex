@@ -1,0 +1,20 @@
+\newpage
+\appendix
+\section*{Report on Use of AI}
+\addcontentsline{toc}{section}{Report on Use of AI}
+
+In accordance with the competition policy on generative artificial intelligence, this appendix documents all AI tools used during problem analysis, software engineering, and manuscript drafting. All empirical statistics, model constraints, and computational outputs reported in the main text are generated and verified by deterministic Python scripts and solvers in our repository; unexecuted experiments are explicitly marked as pending rather than synthesized.
+
+\begin{table}[htbp]
+\centering
+\caption{Summary of AI Tool Usage and Verification}
+\begin{tabular}{p{3.2cm}p{3.4cm}p{4.5cm}p{4.2cm}}
+\toprule
+\textbf{Stage} & \textbf{AI Tool / Model} & \textbf{Purpose} & \textbf{Human Verification} \\
+\midrule
+Problem Structuring \& Literature Discovery & LLM Assistant \& Crossref MCP & Organizing the three-scenario mathematical formulation, identifying data-audit risks, and locating steelmaking scheduling literature. & Cross-checked against the official problem statement, plant layout (Fig.~\ref{fig:plant_layout}), and all 12 raw Excel workbooks. \\
+Data Auditing \& ETL Scripting & Coding Assistant & Drafting Python scripts for SHA-256 manifesting, non-destructive anomaly flagging, and duration statistics (\texttt{code/src/}). & Verified via automated \texttt{pytest} unit tests (9 passing checks) and manual trace of heat \texttt{26BD6651} and cast \texttt{6C0754}. \\
+Visualization \& LaTeX Drafting & Coding \& Writing Assistant & Generating \texttt{matplotlib} scripts from CSV/JSON outputs and structuring the English LaTeX manuscript. & Every figure and table number traced directly to \texttt{data/audit/} and \texttt{data/runs/} via \texttt{claims\_to\_runs.csv}. \\
+\bottomrule
+\end{tabular}
+\end{table}

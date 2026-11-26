@@ -41,3 +41,10 @@
 - 保留作者归属、模型决策与真实当前阶段；规划中的待执行内容未改写为已完成。
 - 按现有 person1-wj-建模、person2-ws-代码、person3-wcl-论文 目录更新公共索引与本人的计划链接。
 - 02 文档增加公共计划维护入口；本人的交接同步当前职责与公共规划位置。
+
+## 2026-11-26 17:00–20:00｜英文论文骨架、Fig 1–5 实证出图与全仓规划瘦身
+
+- 提取题面内嵌原图至 `paper/figures/fig1_plant_layout_raw.png`、`fig2_mes_gantt_raw.png`。
+- 编写 `code/src/viz/generate_paper_figures.py`，基于 `data/audit/` 与 `data/runs/scene1_replay_6C0754/`、`data/runs/scene1_closed_loop_6C0754/` 生成矢量图 `fig3_data_audit_durations.pdf`、`fig4_replay_6C0754_gantt.pdf` 与 `fig5_closed_loop_6C0754.pdf`。
+- 建立 `paper/main.tex`（25 页美赛英文结构，含一页 Summary Sheet、目录与 Sections 1–8，未运行槽位以 `\pending{...}` 显式标注）、`paper/refs.bib`、`paper/ai_report.tex`、`paper/claims_to_runs.csv`、`paper/figure_manifest.csv`；通过纯 ASCII、括号平衡及插图路径检查。
+- 结合组织者最新口径（无唯一标准答案、过渡平车轨道位置与数量可自定义）及最新 pull 进度，全面修订 `PROJECT.md`：锁定 `code/configs/ef_initial_v1.json` 为统一基准物理配置，暂停 LBBD/Copula/ALNS/mmflow/MLflow 冗余项，新增过渡平车数量（2/3/4）与西移选址灵敏度规划，并修复 `PROJECT.md` 断链与第 12 节过期状态。

@@ -1,0 +1,6 @@
+figure_id,title,file_path,source_script,bound_data_source,status
+Fig1,Plant layout and E-F bay crane schematic,paper/figures/fig1_plant_layout_raw.png,extracted from problem docx,question/B题：炼钢厂钢包周转与排产优化问题/B题：炼钢厂钢包周转与排产优化问题.docx,ready
+Fig2,MES heat-flow Gantt interface,paper/figures/fig2_mes_gantt_raw.png,extracted from problem docx,question/B题：炼钢厂钢包周转与排产优化问题/B题：炼钢厂钢包周转与排产优化问题.docx,ready
+Fig3,Planned vs. actual stage durations and route mix,paper/figures/fig3_data_audit_durations.pdf,code/src/viz/generate_paper_figures.py,data/audit/basic_duration_stats.csv & plan_audit.json,ready
+Fig4,Observed crane replay Gantt and drift for cast 6C0754,paper/figures/fig4_replay_6C0754_gantt.pdf,code/src/viz/generate_paper_figures.py,data/runs/scene1_replay_6C0754/,ready
+Fig5,6C0754 closed-loop 5-policy comparison and space-time trajectories,paper/figures/fig5_closed_loop_6C0754.pdf,code/src/viz/generate_paper_figures.py,data/runs/scene1_closed_loop_6C0754/,ready

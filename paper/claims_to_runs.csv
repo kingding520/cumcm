@@ -1,0 +1,16 @@
+claim_id,section,statement_summary,source_file,key_or_field,verified_value
+C01,Summary/Sec2,Raw tapping plan rows and -2 placeholders,data/audit/plan_audit.json,source_rows / placeholder_rows_flag_minus_2,1321 / 55
+C02,Summary/Sec2,Operational heats and unique casts,data/audit/plan_audit.json,operational_rows / unique_continuous_cast_ids,1266 / 152
+C03,Sec2,Tundish change equals cast seq 1,data/audit/plan_audit.json,tundish_change_rows / mismatch,205 / 0
+C04,Sec2/Fig3,Valid route counts L0/R0/R0L0/L0R0,data/audit/plan_audit.json,route_counts,668 / 420 / 108 / 70
+C05,Sec2/Fig3,Source audit raw rows and review flags,data/audit/source_quality_audit.json,total_rows / review_candidates,6758 / 2529
+C06,Sec2,Duplicate heat IDs in summary table,data/audit/source_quality_summary.csv,duplicate_heat_id_count (工序时间信息.xlsx),72
+C07,Sec2,RH zero-span degassing rows,docs/person2-ws-代码/handoff.md,1#/2#RH start==end,533
+C08,Sec2,3#LF missing lift time and crane rows,docs/person2-ws-代码/handoff.md,3lf_missing_candidate_field,323
+C09,Sec2/Tab1,Median observed durations (Tap/LF/RH/Cast),data/audit/basic_duration_stats.csv,median (ALL),5.63 / 36.92 / 39.00 / 40.65 min
+C10,Sec4/Fig4,Cast 6C0754 replay counts and CP-SAT status,data/runs/scene1_replay_6C0754/metrics.json,heat_count / primary_move_count / status,6 / 18 / OPTIMAL (0 overlaps)
+C11,Sec4/Fig4,Cast 6C0754 crane busy minutes,data/runs/scene1_replay_6C0754/metrics.json,crane_busy_minutes_by_observed_id,3#450: 116.87; 5#450: 72.40; 4#450: 14.35
+C12,Sec4/Fig4,Cast 6C0754 cast-start delay and thermal age range,data/runs/scene1_replay_6C0754/metrics.json,plan_to_actual_cast_start_delay / thermal_age,-0.93 to +19.00 min / 9.98 to 31.72 min
+C13,Sec4/Fig4,Cast 6C0754 heavy and empty weights,data/runs/scene1_replay_6C0754/moves.csv,load_t,405.5-421.3 t (heavy) / 137.0-149.9 t (empty)
+C14,Sec4/Tab2/Fig5,Cast 6C0754 5-policy wait and min gap,data/runs/scene1_closed_loop_6C0754/optimization_comparison.csv,total_task_wait_min / min_gap_px_base_config,"Obs 204.12 (-1235); FCFS 21.92 (-1520); EDF 21.92 (-1235); CP-SAT 33.65 (-1520); Serial 109.48 (+60 PASS)"
+C15,Sec4,Cast 6C0754 empty-return calibration residual,data/runs/scene1_closed_loop_6C0754/leg_calibration.csv,regression_residual_min,"BOF_RH +0.89; RH_CCM +0.87; CCM_empty +12.60 min"
