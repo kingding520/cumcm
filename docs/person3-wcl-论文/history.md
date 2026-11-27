@@ -55,3 +55,9 @@
 - 更新 `code/src/viz/generate_paper_figures.py` 生成 `paper/figures/fig6_yield_6C0754.pdf/.png`（7 方案对比 + 1 s 分辨率五车认证轨迹，最小间距 12.24 m）。
 - 更新 `paper/main.tex` 摘要与 Section 4.4（Table 3 + Fig. 6），写入主动避让 `0.52 min` vs 最优串行 `7.50 min`（-93.1%）、无避让 1/18 死锁与几何盲 11/18 死锁对比，明确单浇次两机边界。
 - 同步更新 `paper/claims_to_runs.csv`（C16–C18）与 `paper/figure_manifest.csv`（Fig 6）。
+
+## 2026-11-27 10:30｜完成全量三场景结果回填与 Fig 7–9 矢量出图
+
+- 更新 `code/src/viz/generate_paper_figures.py`，生成 `fig7_scene1_day_layout_aux.pdf/.png`、`fig8_scene2_stochastic_risk.pdf/.png`、`fig9_scene3_fault_recovery.pdf/.png`。
+- 回填 `paper/main.tex` 全部 `\pending{...}` 槽位（覆盖 Summary Sheet、KPI 速览表、Section 4.5 整日平车/150t、Section 5 场景 2 滚动随机、Section 6 场景 3 故障脆弱性、Section 7 独立校验、Section 8 管理建议），明确标注 63.8% 匹配覆盖率、整日预约保守上界及 L2 替代否决等科学边界。
+- 同步更新 `paper/claims_to_runs.csv`（C19–C23）与 `paper/figure_manifest.csv`（Fig 7–9）。

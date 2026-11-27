@@ -16,6 +16,10 @@ AUDIT_DIR = ROOT / "data" / "audit"
 REPLAY_DIR = ROOT / "data" / "runs" / "scene1_replay_6C0754"
 CLOSED_LOOP_DIR = ROOT / "data" / "runs" / "scene1_closed_loop_6C0754"
 YIELD_DIR = ROOT / "data" / "runs" / "scene1_yield_6C0754"
+DAY_DIR = ROOT / "data" / "runs" / "scene1_day"
+AUX_DIR = ROOT / "data" / "runs" / "scene1_aux"
+S2_DIR = ROOT / "data" / "runs" / "scene2"
+S3_DIR = ROOT / "data" / "runs" / "scene3"
 FIG_DIR = ROOT / "paper" / "figures"
 
 # Okabe-Ito colorblind-safe palette bound semantically to cranes & stages
@@ -409,10 +413,171 @@ def plot_yield_6c0754() -> None:
     save_both(fig, "fig6_yield_6C0754")
 
 
+def plot_scene1_day_layout_aux() -> None:
+    cart = list(csv.DictReader((DAY_DIR / "cart_layout_sensitivity.csv").open(encoding="utf-8-sig")))
+    aux = list(csv.DictReader((AUX_DIR / "aux_sensitivity.csv").open(encoding="utf-8-sig")))
+
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12.0, 4.5), gridspec_kw={"width_ratios": [1.35, 1.0]})
+
+    variants = ["COUNT_2E", "BASE_3E", "COUNT_4E", "WEST_3_80", "WEST_3_85", "WEST_3_90"]
+    vlabels = ["2 East\nCarts", "3 East\n(Base)", "4 East\nCarts", "West\n80 m", "West\n85 m", "West\n90 m"]
+    by_vd = {(r["variant"], r["day"]): r for r in cart}
+
+    x = np.arange(len(variants))
+    w = 0.36
+    w09 = [float(by_vd[(v, "2026-09-28")]["total_wait_min"]) for v in variants]
+    w10 = [float(by_vd[(v, "2026-10-02")]["total_wait_min"]) for v in variants]
+
+    b1 = ax1.bar(x - w / 2, w09, width=w, color=COLORS["4#450"], alpha=0.88, label="Normal Day (2026-09-28, 197 tasks)")
+    b2 = ax1.bar(x + w / 2, w10, width=w, color=COLORS["3#450"], alpha=0.90, label="Peak Day (2026-10-02, 287 tasks)")
+    for rect, val in zip(b1, w09):
+        ax1.text(rect.get_x() + rect.get_width() / 2, val + 30, f"{val:.0f}", ha="center", va="bottom", fontsize=7.0, color=COLORS["4#450"])
+    for rect, val in zip(b2, w10):
+        ax1.text(rect.get_x() + rect.get_width() / 2, val + 30, f"{val:.0f}", ha="center", va="bottom", fontsize=7.0, color="#B26B00")
+
+    ax1.set_xticks(x)
+    ax1.set_xticklabels(vlabels, fontsize=8.0)
+    ax1.set_ylabel("Conservative Reservation Wait (min)")
+    ax1.set_ylim(0, 2480)
+    ax1.set_title("(a) Transfer-Car Count & Westward Relocation Sensitivity")
+    ax1.legend(frameon=False, loc="upper left", fontsize=7.8)
+
+    # Panel (b): 150t Auxiliary Crane Threshold Sweep
+    aux_labels = ["Disabled\n(3×450t)", "100 t", "120 t", "140 t"]
+    by_td = {(r["aux_threshold_t"], r["day"]): r for r in aux}
+    keys = ["", "100.0", "120.0", "140.0"]
+    a09 = [float(by_td[(k, "2026-09-28")]["total_wait_min"]) for k in keys]
+    a10 = [float(by_td[(k, "2026-10-02")]["total_wait_min"]) for k in keys]
+
+    xa = np.arange(len(keys))
+    ab1 = ax2.bar(xa - w / 2, a09, width=w, color=COLORS["5#450"], alpha=0.88, label="Normal Day (09-28)")
+    ab2 = ax2.bar(xa + w / 2, a10, width=w, color=COLORS["3#450"], alpha=0.88, label="Peak Day (10-02)")
+    for rect, val in zip(ab1, a09):
+        ax2.text(rect.get_x() + rect.get_width() / 2, val + 20, f"{val:.1f}", ha="center", va="bottom", fontsize=7.2)
+    for rect, val in zip(ab2, a10):
+        ax2.text(rect.get_x() + rect.get_width() / 2, val + 20, f"{val:.1f}", ha="center", va="bottom", fontsize=7.2)
+
+    ax2.annotate(
+        "2#150 takes 1 task:\n+10.2 min outer-rail wait\n(Peak day: 0 aux tasks)",
+        xy=(1 - w / 2, 486.2),
+        xytext=(0.8, 860),
+        arrowprops=dict(arrowstyle="->", color="#222222", lw=1.0),
+        fontsize=7.5,
+        bbox=dict(boxstyle="round,pad=0.3", facecolor="#F7F7F7", edgecolor="#BBBBBB"),
+    )
+    ax2.set_xticks(xa)
+    ax2.set_xticklabels(aux_labels, fontsize=8.0)
+    ax2.set_ylabel("Total Wait (min)")
+    ax2.set_ylim(0, 1400)
+    ax2.set_title("(b) 150 t Auxiliary Crane Offload Sweep (100–140 t)")
+    ax2.legend(frameon=False, loc="upper right", fontsize=7.8)
+
+    fig.tight_layout()
+    save_both(fig, "fig7_scene1_day_layout_aux")
+
+
+def plot_scene2_stochastic_risk() -> None:
+    m09 = {r["policy"]: r for r in csv.DictReader((S2_DIR / "scenario_metrics_2026-09-28.csv").open(encoding="utf-8-sig"))}
+    m10 = {r["policy"]: r for r in csv.DictReader((S2_DIR / "scenario_metrics_2026-10-02.csv").open(encoding="utf-8-sig"))}
+
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(11.8, 4.4))
+    policies = ["mean_plan", "conservative_plan", "rolling_mean", "rolling_risk"]
+    plabels = ["Mean\n(Open-Loop)", "Conservative\n(Open-Loop)", "Rolling\nMean", "Rolling\nCVaR Risk"]
+
+    for ax, data, title in [
+        (ax1, m09, "(a) Normal Day (2026-09-28): Open-Loop vs. Rolling"),
+        (ax2, m10, "(b) Peak Day (2026-10-02): Open-Loop vs. Rolling"),
+    ]:
+        x = np.arange(len(policies))
+        w = 0.25
+        means = [float(data[p]["mean_lateness_min"]) for p in policies]
+        p95s = [float(data[p]["p95_lateness_min"]) for p in policies]
+        cvars = [float(data[p]["cvar90_lateness_min"]) for p in policies]
+
+        b1 = ax.bar(x - w, means, width=w, color=COLORS["4#450"], alpha=0.9, label="Mean Lateness")
+        b2 = ax.bar(x, p95s, width=w, color=COLORS["3#450"], alpha=0.9, label="P95 Lateness")
+        b3 = ax.bar(x + w, cvars, width=w, color=COLORS["alert"], alpha=0.88, label="CVaR90 Lateness")
+
+        for bars, col in [(b1, COLORS["4#450"]), (b2, "#B26B00"), (b3, COLORS["alert"])]:
+            for rect in bars:
+                val = rect.get_height()
+                ax.text(rect.get_x() + rect.get_width() / 2, val + 8, f"{val:.0f}", ha="center", va="bottom", fontsize=6.8, color=col)
+
+        ax.set_xticks(x)
+        ax.set_xticklabels(plabels, fontsize=8.0)
+        ax.set_ylabel("Lateness (minutes)")
+        ax.set_ylim(0, max(cvars) * 1.18)
+        ax.set_title(title)
+        ax.legend(frameon=False, loc="upper right", fontsize=7.6)
+
+    fig.tight_layout()
+    save_both(fig, "fig8_scene2_stochastic_risk")
+
+
+def plot_scene3_fault_recovery() -> None:
+    r09 = list(csv.DictReader((S3_DIR / "recovery_metrics_2026-09-28.csv").open(encoding="utf-8-sig")))
+    r10 = list(csv.DictReader((S3_DIR / "recovery_metrics_2026-10-02.csv").open(encoding="utf-8-sig")))
+
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12.2, 4.6), gridspec_kw={"width_ratios": [1.1, 1.15]})
+
+    order = [
+        ("crane", "4#450", "Crane 4#450\n(30m)"),
+        ("rail_break", "rail[150,165]", "Rail Break\n[150,165] (60m)"),
+        ("crane", "3#450", "Crane 3#450\n(60m)"),
+        ("refining", "LF3", "LF3 Fault\n(60m)"),
+        ("caster", "CCM3", "CCM3 Fault\n(60m)"),
+        ("converter", "BOF_B", "BOF-B Fault\n(30m)"),
+        ("refining", "RH1", "RH1 Fault\n(60m)"),
+        ("ready_delay", "ready", "Ready Delay\n(10m)"),
+    ]
+    d09 = {(r["kind"], r["target"]): r for r in r09}
+    d10 = {(r["kind"], r["target"]): r for r in r10}
+
+    x = np.arange(len(order))
+    w = 0.37
+    s09 = [100.0 * float(d09[(k, t)]["service_rate"]) for k, t, _ in order]
+    s10 = [100.0 * float(d10[(k, t)]["service_rate"]) for k, t, _ in order]
+
+    b1 = ax1.bar(x - w / 2, s09, width=w, color=COLORS["4#450"], alpha=0.88, label="Normal Day (09-28)")
+    b2 = ax1.bar(x + w / 2, s10, width=w, color=COLORS["3#450"], alpha=0.90, label="Peak Day (10-02)")
+    for rect, val in zip(b1, s09):
+        if val < 99.9:
+            ax1.text(rect.get_x() + rect.get_width() / 2, val + 1.2, f"{val:.1f}%", ha="center", va="bottom", fontsize=5.9, color=COLORS["4#450"], fontweight="bold")
+    for rect, val in zip(b2, s10):
+        if val < 99.9:
+            ax1.text(rect.get_x() + rect.get_width() / 2, val + 5.2, f"{val:.1f}%", ha="center", va="bottom", fontsize=5.9, color=COLORS["alert"], fontweight="bold")
+
+    ax1.axhline(100.0, color="#666666", linestyle=":", linewidth=0.9)
+    ax1.set_xticks(x)
+    ax1.set_xticklabels([lbl for _, _, lbl in order], fontsize=7.1, rotation=20, ha="right")
+    ax1.set_ylabel("Task Completion Service Rate (%)")
+    ax1.set_ylim(0, 114)
+    ax1.set_title("(a) Single-Point Vulnerability: Service Rate Under Faults")
+    ax1.legend(frameon=False, loc="lower right", fontsize=7.6)
+
+    # Panel (b): Delta Lateness (min) for 100%-served vs topology-blocked scenarios
+    dl09 = [float(d09[(k, t)]["delta_lateness_min"]) for k, t, _ in order]
+    dl10 = [float(d10[(k, t)]["delta_lateness_min"]) for k, t, _ in order]
+
+    ax2.bar(x - w / 2, dl09, width=w, color=COLORS["5#450"], alpha=0.88, label="Normal Day (09-28)")
+    ax2.bar(x + w / 2, dl10, width=w, color=COLORS["alert"], alpha=0.88, label="Peak Day (10-02)")
+    ax2.set_xticks(x)
+    ax2.set_xticklabels([lbl for _, _, lbl in order], fontsize=7.1, rotation=20, ha="right")
+    ax2.set_ylabel("Total Loss Delta vs. Fault-Free (min)")
+    ax2.set_title("(b) Total Recovery Loss Delta (Incl. 60 min/Unserved Penalty)")
+    ax2.legend(frameon=False, loc="upper right", fontsize=7.6)
+
+    fig.tight_layout()
+    save_both(fig, "fig9_scene3_fault_recovery")
+
+
 if __name__ == "__main__":
     setup_style()
     plot_data_audit_durations()
     plot_replay_6c0754()
     plot_closed_loop_6c0754()
     plot_yield_6c0754()
+    plot_scene1_day_layout_aux()
+    plot_scene2_stochastic_risk()
+    plot_scene3_fault_recovery()
     print("Generated figures in", FIG_DIR)

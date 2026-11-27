@@ -4,6 +4,14 @@
 
 当前用户为 Person3（wcl），本目录四份方案及 `paper/` 英文论文骨架为 Person3 成果；Person1（wj）建模与 Person2（ws）代码产物按各自目录保留。
 
+## 2026-11-27 10:35｜论文全量合龙与最终收口交接
+
+| 接收人 | 状态 | 内容与下一步 | 完成依据 |
+|---|---|---|---|
+| **Person2（ws / 代码）** | **主线算例全齐，待最后 2 项收口** | 1. 补跑正式 **145 t 辅车对照**（`--aux-threshold 145.0` 替换占位 100–140 t）；<br>2. 确认 **`code/run_all.py`** 一键复现入口跑通、全套 **`pytest` 保持 green**；<br>3. 不再新增复杂模型，注意保留 `63.8%` 匹配覆盖率与保守上界口径。 | `data/runs/scene1_aux/`、`code/run_all.py` |
+| **Person1（wj / 建模）** | **待审校 PDF** | 中午 `paper/` 上 Overleaf 编译出 PDF 后，请审校第 3–8 节公式符号、物理边界（平车西移添堵、`4#450` 单点脆弱性、L2 替代否决）与第 8 节管理建议。 | `paper/main.tex`、`claims_to_runs.csv` |
+| **Person3（wcl / 论文）** | **已完成正文合龙，待试编译** | 已生成 **Fig 1–9** 并填满 `paper/main.tex` 全部 `\pending` 槽位（0 残留、纯 ASCII、23 条声明绑定 `claims_to_runs.csv`），中午传 Overleaf 编译查 25 页上限。 | `paper/main.tex`、`paper/figures/` |
+
 ## 2026-11-26 19:30｜赛题口径、配置统一与规划瘦身同步
 
 | 接收人 | 状态 | 内容与下一步 | 完成依据 |
