@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import csv
+import gzip
 import json
 from pathlib import Path
 
@@ -14,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[3]
 AUDIT_DIR = ROOT / "data" / "audit"
 REPLAY_DIR = ROOT / "data" / "runs" / "scene1_replay_6C0754"
 CLOSED_LOOP_DIR = ROOT / "data" / "runs" / "scene1_closed_loop_6C0754"
+YIELD_DIR = ROOT / "data" / "runs" / "scene1_yield_6C0754"
 FIG_DIR = ROOT / "paper" / "figures"
 
 # Okabe-Ito colorblind-safe palette bound semantically to cranes & stages
@@ -315,9 +317,102 @@ def plot_closed_loop_6c0754() -> None:
     save_both(fig, "fig5_closed_loop_6C0754")
 
 
+def plot_yield_6c0754() -> None:
+    comp = list(csv.DictReader((YIELD_DIR / "comparison_yield.csv").open(encoding="utf-8-sig")))
+
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12.0, 4.6), gridspec_kw={"width_ratios": [1.05, 1.25]})
+
+    # Panel (a): 7-candidate comparison under ef_initial_v1.json
+    label_map = {
+        "fcfs_nearest": "FCFS-Nearest\n(Yield)",
+        "pipeline_roles": "Pipeline\n(Yield)",
+        "serial_4#450": "Serial\n(4#450)",
+        "serial_3#450": "Serial\n(3#450)",
+        "serial_5#450": "Serial\n(5#450)",
+        "cp_sat_assignment": "CP-SAT\n(Blind)",
+        "pipeline_no_yield": "Pipeline\n(No Yield)",
+    }
+    order = ["fcfs_nearest", "pipeline_roles", "serial_4#450", "serial_3#450", "serial_5#450", "cp_sat_assignment", "pipeline_no_yield"]
+    by_alg = {r["algorithm"]: r for r in comp}
+    ordered = [by_alg[k] for k in order]
+
+    labels = [label_map[r["algorithm"]] for r in ordered]
+    waits = [float(r["total_wait_min"]) for r in ordered]
+    done = [int(r["completed_tasks"]) for r in ordered]
+    yields = [int(r["yield_events"]) for r in ordered]
+    accepted = [r["accepted"].strip().lower() == "true" for r in ordered]
+
+    x = np.arange(len(ordered))
+    colors = [COLORS["5#450"] if ok else COLORS["alert"] for ok in accepted]
+    bars = ax1.bar(x, waits, width=0.58, color=colors, alpha=0.88, edgecolor="white")
+
+    for rect, w, d, yld, ok in zip(bars, waits, done, yields, accepted):
+        status = f"{w:.2f}m\n({d}/18, y={yld})" if ok else f"DEADLOCK\n({d}/18, y={yld})"
+        ax1.text(
+            rect.get_x() + rect.get_width() / 2,
+            w + 0.35,
+            status,
+            ha="center",
+            va="bottom",
+            fontsize=6.8,
+            color="#114B3A" if ok else COLORS["alert"],
+            fontweight="bold",
+        )
+
+    ax1.annotate(
+        "-6.98 min (-93.1%)\nvs. best serial",
+        xy=(0, 1.35),
+        xytext=(0.15, 5.8),
+        arrowprops=dict(arrowstyle="->", color="#222222", lw=1.1),
+        fontsize=7.6,
+        fontweight="bold",
+        bbox=dict(boxstyle="round,pad=0.3", facecolor="#E8F6F0", edgecolor=COLORS["5#450"]),
+    )
+    ax1.set_xticks(x)
+    ax1.set_xticklabels(labels, fontsize=7.6)
+    ax1.set_ylabel("Total Task Wait (minutes)")
+    ax1.set_ylim(0, 12.2)
+    ax1.set_title("(a) Proactive Yielding vs. Serial & Deadlock (ef-initial-v1)")
+
+    # Panel (b): Certified 5-Crane Space-Time Trajectory (fcfs_nearest, min gap 12.24 m)
+    crane_colors = {
+        "2#150": "#7A7D9B",
+        "4#450": COLORS["4#450"],
+        "3#450": COLORS["3#450"],
+        "5#450": COLORS["5#450"],
+        "1#150": "#999933",
+    }
+    crane_pts: dict[str, tuple[list[float], list[float]]] = {c: ([], []) for c in crane_colors}
+    with gzip.open(YIELD_DIR / "trajectory.csv.gz", "rt", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for idx, row in enumerate(reader):
+            cid = row["crane_id"]
+            if cid not in crane_pts:
+                continue
+            # Keep every 10s or any moving/non-idle segment to preserve all motion peaks cleanly
+            if row["phase"] != "idle" or idx % 10 == 0:
+                crane_pts[cid][0].append(float(row["t_start_s"]) / 60.0)
+                crane_pts[cid][1].append(float(row["x_start"]))
+
+    for cid, (ts, xs) in crane_pts.items():
+        lw = 1.6 if cid in ("4#450", "3#450") else 1.1
+        ls = "-" if cid in ("4#450", "3#450") else "--"
+        ax2.plot(ts, xs, color=crane_colors[cid], linewidth=lw, linestyle=ls, alpha=0.92, label=cid)
+
+    ax2.set_xlabel("Elapsed Time (minutes)")
+    ax2.set_ylabel("Rail Position x (meters, West → East)")
+    ax2.set_ylim(0, 240)
+    ax2.set_title("(b) Certified 5-Crane Non-Crossing Trajectory (min gap = 12.24 m ≥ 12 m)")
+    ax2.legend(frameon=False, loc="center right", fontsize=7.5, ncol=2)
+
+    fig.tight_layout()
+    save_both(fig, "fig6_yield_6C0754")
+
+
 if __name__ == "__main__":
     setup_style()
     plot_data_audit_durations()
     plot_replay_6c0754()
     plot_closed_loop_6c0754()
+    plot_yield_6c0754()
     print("Generated figures in", FIG_DIR)

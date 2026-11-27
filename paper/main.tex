@@ -47,7 +47,7 @@
 In integrated steelmaking--refining--continuous casting (SCC) plants, molten steel is transported across converters (BOF), secondary refining stations (LF, RH), and continuous casters (CCM) by overhead cranes sharing a single runway. Analysis of 12 production workbooks (17.5 days; 6,758 raw rows; 1,321 tapping plans including 55 \texttt{-2} placeholders and 1,266 operational heats across 152 casts) reveals that \emph{inter-stage queueing rather than crane transit} dominates cycle time: nominal plans embed fixed 15--30~min inter-stage buffers, whereas median observed tapping, LF, RH, and casting durations are 5.63, 36.92, 39.00, and 40.65~min, respectively, and inter-heat caster gaps in cast \texttt{6C0754} compress to 1.53--2.78~min. Non-destructive auditing further uncovers 2,529 candidate anomalies---including 72 duplicate heat IDs in the summary log, 533 zero-span RH degassing timestamps, 323 missing lift records in \texttt{3\#LF}, and empty-ladle return weights reaching 137.0--149.9~t (explaining why 150~t auxiliary cranes are bypassed in favor of 450~t cranes on the E--F bay).
 
 \noindent\textbf{Unified Framework \& Scenario 1 (Deterministic Baseline).}
-We establish a unified heat-event network coupled with single-track non-crossing crane scheduling along the verified west-to-east E--F crane sequence $\text{2\#150} \prec \text{4\#450} \prec \text{3\#450} \prec \text{5\#450} \prec \text{1\#150}$. The task set captures four coupled move classes: forward heavy-ladle transfers (405.5--421.3~t), post-casting empty returns (direct, slag-dumping, or residue-recovery branches to transfer cars \texttt{1\#--3\#}), converter-C empty-ladle supply, and dual-heat cast-residue recovery. Under a lexicographic objective---(1) collision-free safety and cast continuity, (2) minimum heat waiting, and (3) minimum crane travel---we prove that enforcing separation at trajectory breakpoints is necessary and sufficient for continuous-time safety under constant speeds. On historical replay of cast \texttt{6C0754} (6 heats, 18 primary moves), \texttt{3\#450} absorbs 116.87~min of crane duty versus 72.40~min on \texttt{5\#450} and 14.35~min on \texttt{4\#450}, while cast-start delay drifts from $-0.93$~min to $+19.00$~min and thermal age escalates from 9.98 to 31.72~min. \pending{Insert full-day EDF vs. rolling CP-SAT wait/runtime reductions and 150~t offload boundary.}
+We establish a unified heat-event network coupled with single-track non-crossing crane scheduling along the verified west-to-east E--F crane sequence $\text{2\#150} \prec \text{4\#450} \prec \text{3\#450} \prec \text{5\#450} \prec \text{1\#150}$. The task set captures four coupled move classes: forward heavy-ladle transfers (405.5--421.3~t), post-casting empty returns (direct, slag-dumping, or residue-recovery branches to transfer cars \texttt{1\#--3\#}), converter-C empty-ladle supply, and dual-heat cast-residue recovery. Under a lexicographic objective---(1) collision-free safety and cast continuity, (2) minimum heat waiting, and (3) minimum crane travel---we prove that enforcing separation at trajectory breakpoints is necessary and sufficient for continuous-time safety under constant speeds. On historical replay of cast \texttt{6C0754} (6 heats, 18 primary moves), \texttt{3\#450} absorbs 116.87~min of crane duty versus 72.40~min on \texttt{5\#450} and 14.35~min on \texttt{4\#450}, while cast-start delay drifts from $-0.93$~min to $+19.00$~min and thermal age escalates from 9.98 to 31.72~min. Under the unified \texttt{ef-initial-v1} kinematic profile ($D=12.0$~m, zero switching dwell), enabling proactive yielding cuts waiting from 7.50~min (best safe serial) down to \textbf{0.52~min} (\textbf{$-93.1\%$}, 18/18 tasks, 0~lateness, 12.24~m min clearance), whereas disabling yielding deadlocks after 1/18 task. \pending{Insert full-day multi-cast and 150~t / transfer-car sensitivity results.}
 
 \noindent\textbf{Scenario 2 (Multi-Gear Kinematics \& Stochastic Processing).}
 To address stochastic processing times, acceleration/braking, discrete crane gears, and spatial slow-down zones, we formulate a forward--backward $v^2(x)$ velocity-envelope trajectory builder paired with chronological day-block bootstrapping and a non-anticipative rolling Sample Average Approximation with Conditional Value-at-Risk ($\text{SAA-CVaR}_\alpha$) on critical cast-readiness tardiness. \pending{Insert out-of-sample P95 wait, cast-break rate, and paired policy cost difference.}
@@ -68,8 +68,8 @@ All schedules are audited by an independent continuous-time trajectory verifier.
 \textbf{Metric} & \textbf{Scenario 1 (Deterministic)} & \textbf{Scenario 2 (Stochastic)} & \textbf{Scenario 3 (Fault Recovery)} \\
 \midrule
 Sample / Scope & Cast \texttt{6C0754} (6 heats) / Full day & Out-of-sample test blocks & 4 fault classes (15/30/60~min) \\
-Wait / Tardiness & Cast drift $+19.0$~min (replay); \pending{Opt} & \pending{Mean / P95 wait} & \pending{Recovery delay} \\
-Safety & 0 same-crane overlaps; \pending{Track audit} & \pending{0 collisions} & \pending{0 collisions; infeas. flag} \\
+Wait / Tardiness & 0.52~min wait (yielding) vs.\ 7.50~min (serial); \pending{Full day} & \pending{Mean / P95 wait} & \pending{Recovery delay} \\
+Safety & 12.24~m $\ge$ 12~m (30/30 tests pass); \pending{Full day} & \pending{0 collisions} & \pending{0 collisions; infeas. flag} \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -259,7 +259,42 @@ Conservative Serial (\texttt{5\#450}) & 109.48 & 18.37 & 403.73 & $+60.0$ & 0.02
   \label{fig:closed_loop_6c0754}
 \end{figure}
 
-\pending{Insert unified ef\_initial\_v1.json proactive-yielding three-crane safe schedule on 6C0754, full-day comparison, and 150~t offload boundary.}
+\subsection{Certified Proactive-Yielding Dispatch Under \texttt{ef-initial-v1}}
+Switching to the unified metric configuration \texttt{ef-initial-v1} ($D = 12.0$~m, speeds $0.60/0.80/1.00$~m/s, zero Scenario-1 switching dwell) and enabling explicit proactive yielding resolves the multi-crane collision bottleneck on cast \texttt{6C0754} (Table~\ref{tab:yield_6c0754}, Fig.~\ref{fig:yield_6c0754}; \texttt{run\_id: scene1-yield-6C0754}, 1~s resolution certified trajectory):
+\begin{itemize}[leftmargin=1.5em,itemsep=2pt]
+  \item \textbf{93.1\% Wait Reduction Over Best Safe Serial:} \texttt{fcfs\_nearest} completes all 18 tasks with zero cast lateness, 12.24~m minimum inter-crane clearance ($\ge 12.0$~m), 29 yield maneuvers, and only \textbf{0.52~min} total task waiting---a \textbf{6.98~min (93.1\%)} reduction compared with the best safe single-crane serial schedule (\texttt{serial\_4\#450}, 7.50~min). Note that this zero-dwell kinematic comparison is evaluated separately from the 109.48~min observation-dwell serial benchmark in Table~\ref{tab:closed_loop_6c0754}.
+  \item \textbf{Necessity of Proactive Yielding \& Geometric Awareness:} Disabling yielding on the identical pipeline (\texttt{pipeline\_no\_yield}) deadlocks after 1/18 task. Conversely, geometry-blind CP-SAT crane assignment (\texttt{cp\_sat\_assignment}) attempts to force \texttt{5\#450} into the mid-bay, triggering 531 yield events and deadlocking at 11/18 tasks.
+  \item \textbf{Single-Cast Two-Crane Frontier:} Because empty returns from \texttt{CCM3} (181.5~m) must be lifted by the delivering crane without an artificial mid-air handoff stand, \texttt{4\#450} and \texttt{3\#450} naturally form the active two-crane frontier on an isolated single cast, while true three-crane parallelism emerges at the full-day multi-cast level.
+\end{itemize}
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Proactive-Yielding vs.\ Serial and Deadlock Benchmarks on Cast \texttt{6C0754} (\texttt{ef-initial-v1}, $D=12.0$~m)}
+\label{tab:yield_6c0754}
+\begin{tabular}{lcrrrrrl}
+\toprule
+\textbf{Algorithm} & \textbf{Done} & \textbf{Wait (min)} & \textbf{Lateness (min)} & \textbf{Yields} & \textbf{Min Gap (m)} & \textbf{Cranes Used} & \textbf{Status} \\
+\midrule
+\texttt{fcfs\_nearest} (Yield) & 18/18 & \textbf{0.52} & 0.00 & 29 & 12.24 & \texttt{3\#450; 4\#450} & \textcolor{green!50!black}{Accepted} \\
+\texttt{pipeline\_roles} (Yield) & 18/18 & 3.30 & 0.00 & 11 & 12.35 & \texttt{3\#450; 4\#450} & \textcolor{green!50!black}{Accepted} \\
+\texttt{serial\_4\#450} & 18/18 & 7.50 & 0.00 & 2 & 12.34 & \texttt{4\#450} & \textcolor{green!50!black}{Accepted} \\
+\texttt{serial\_3\#450} & 18/18 & 8.32 & 0.00 & 2 & 12.40 & \texttt{3\#450} & \textcolor{green!50!black}{Accepted} \\
+\texttt{serial\_5\#450} & 18/18 & 9.83 & 0.00 & 4 & 12.40 & \texttt{5\#450} & \textcolor{green!50!black}{Accepted} \\
+\texttt{cp\_sat\_assignment} & 11/18 & 2.78 & 0.00 & 531 & 12.28 & \texttt{3\#/4\#/5\#450} & \textcolor{red!70!black}{Deadlock} \\
+\texttt{pipeline\_no\_yield} & 1/18 & 0.52 & 0.00 & 0 & 12.40 & \texttt{4\#450} & \textcolor{red!70!black}{Deadlock} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.96\textwidth]{figures/fig6_yield_6C0754.pdf}
+  \caption{(a) Proactive-yielding wait reduction (0.52~min vs.\ 7.50~min serial) and no-yield / geometry-blind deadlocks; (b) certified 1~s-resolution five-crane non-crossing trajectory under \texttt{fcfs\_nearest} (min gap 12.24~m $\ge$ 12.0~m).}
+  \label{fig:yield_6c0754}
+\end{figure}
+
+\pending{Insert full-day multi-cast three-crane parallel schedule, 150~t auxiliary crane offload boundary, and transfer-car count/location sensitivity results.}
 
 % ============================================================================
 % SECTION 5: SCENARIO 2

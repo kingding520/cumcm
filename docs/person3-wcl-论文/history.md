@@ -49,3 +49,9 @@
 - 建立 `paper/main.tex`（25 页美赛英文结构，含一页 Summary Sheet、目录与 Sections 1–8，未运行槽位以 `\pending{...}` 显式标注）、`paper/refs.bib`、`paper/ai_report.tex`、`paper/claims_to_runs.csv`、`paper/figure_manifest.csv`；通过纯 ASCII、括号平衡及插图路径检查。
 - 结合组织者最新口径（无唯一标准答案、过渡平车轨道位置与数量可自定义）及最新 pull 进度，全面修订 `PROJECT.md`：锁定 `code/configs/ef_initial_v1.json` 为统一基准物理配置，暂停 LBBD/Copula/ALNS/mmflow/MLflow 冗余项，新增过渡平车数量（2/3/4）与西移选址灵敏度规划，并修复 `PROJECT.md` 断链与第 12 节过期状态。
 - 完成全仓一致性收口检查：同步更新本目录 `plan.md`、`handoff.md`、`history.md` 与 `04_三天实战时间规划`（v1.2）；确认 `PROJECT.md` 与 `person3/` 0 断链、`paper/main.tex` 纯 ASCII 且 Fig 1–5 完整就绪，具备直接提交条件。
+
+## 2026-11-27 09:05｜接入 `scene1_yield_6C0754` 主动避让成果（Fig 6 & Section 4.4）
+
+- 更新 `code/src/viz/generate_paper_figures.py` 生成 `paper/figures/fig6_yield_6C0754.pdf/.png`（7 方案对比 + 1 s 分辨率五车认证轨迹，最小间距 12.24 m）。
+- 更新 `paper/main.tex` 摘要与 Section 4.4（Table 3 + Fig. 6），写入主动避让 `0.52 min` vs 最优串行 `7.50 min`（-93.1%）、无避让 1/18 死锁与几何盲 11/18 死锁对比，明确单浇次两机边界。
+- 同步更新 `paper/claims_to_runs.csv`（C16–C18）与 `paper/figure_manifest.csv`（Fig 6）。

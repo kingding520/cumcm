@@ -14,3 +14,6 @@ C12,Sec4/Fig4,Cast 6C0754 cast-start delay and thermal age range,data/runs/scene
 C13,Sec4/Fig4,Cast 6C0754 heavy and empty weights,data/runs/scene1_replay_6C0754/moves.csv,load_t,405.5-421.3 t (heavy) / 137.0-149.9 t (empty)
 C14,Sec4/Tab2/Fig5,Cast 6C0754 5-policy wait and min gap,data/runs/scene1_closed_loop_6C0754/optimization_comparison.csv,total_task_wait_min / min_gap_px_base_config,"Obs 204.12 (-1235); FCFS 21.92 (-1520); EDF 21.92 (-1235); CP-SAT 33.65 (-1520); Serial 109.48 (+60 PASS)"
 C15,Sec4,Cast 6C0754 empty-return calibration residual,data/runs/scene1_closed_loop_6C0754/leg_calibration.csv,regression_residual_min,"BOF_RH +0.89; RH_CCM +0.87; CCM_empty +12.60 min"
+C16,Summary/Sec4/Tab3/Fig6,Cast 6C0754 proactive yielding vs serial wait and clearance,data/runs/scene1_yield_6C0754/comparison_yield.csv,total_wait_min / min_gap_m,"fcfs_nearest 0.52 min (18/18, 12.24m, y=29) vs serial_4#450 7.50 min (18/18, 12.34m)"
+C17,Sec4/Tab3/Fig6,Cast 6C0754 no-yield and blind CP-SAT deadlocks,data/runs/scene1_yield_6C0754/comparison_yield.csv,completed_tasks / deadlock,"pipeline_no_yield 1/18 deadlock; cp_sat_assignment 11/18 deadlock (531 yields)"
+C18,Sec4/Fig6,Certified 1s resolution trajectory verification,data/runs/scene1_yield_6C0754/yield_summary.json,best_accepted,"18/18 tasks, 0 lateness, min_gap 12.24m >= 12.0m"
