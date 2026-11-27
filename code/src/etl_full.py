@@ -331,6 +331,22 @@ def build_operations(heats: list[dict], ops: pd.DataFrame) -> list[dict]:
     return rows
 
 
+def empty_ladle_weight(ops_row: pd.Series) -> tuple[float | None, str | None]:
+    """Real empty-ladle weight after casting, with an explicit provenance tag.
+
+    Preferred: the post-slag (after residue removal) empty ladle weight. Direct-to-cart
+    heats never slag, so that column is empty for them; the ladle weight measured on
+    the cart (``钢包车上空包重量``) is the honest fallback. A missing value stays
+    ``None`` — the old code substituted 0 t, which silently passed every weight gate.
+    """
+    for column, tag in (("翻渣作业后空包重量", "after_slag_empty_ladle"),
+                        ("钢包车上空包重量", "cart_empty_ladle")):
+        value = to_float(ops_row.get(column))
+        if value is not None and value > 0:
+            return value, tag
+    return None, None
+
+
 def build_moves(heats: list[dict], ops: pd.DataFrame) -> list[dict]:
     """Scenario-1 movement tasks, with the three-stage empty-return split."""
     moves: list[dict] = []
@@ -360,6 +376,7 @@ def build_moves(heats: list[dict], ops: pd.DataFrame) -> list[dict]:
             p, d = to_dt(pickup), to_dt(deadline)
             if p is None or d is None:
                 return
+            load_value, load_source = empty_ladle_weight(orow) if phase_type != "TRAVEL_HEAVY" else (to_float(load_t), "tap_heavy")
             moves.append({
                 "task_id": f"{heat['heat_id']}:{step}", "heat_id": heat["heat_id"],
                 "cast_id": heat["cast_id"], "route_step": step, "task_type": task_type,
@@ -367,7 +384,9 @@ def build_moves(heats: list[dict], ops: pd.DataFrame) -> list[dict]:
                 "origin": origin, "destination": destination,
                 "release_time": p.strftime("%Y-%m-%d %H:%M:%S"),
                 "deadline_time": d.strftime("%Y-%m-%d %H:%M:%S"),
-                "load_t": to_float(load_t) or 0.0, "ladle_id": heat["ladle_id"],
+                "load_t": load_value if load_value is not None else to_float(load_t),
+                "load_source": load_source,
+                "ladle_id": heat["ladle_id"],
                 "cart_id": cart if destination.startswith("CART") else None,
                 "source": f"{OPS_FILE.relative_to(ROOT)}#row{int(orow['excel_row'])}",
             })
@@ -399,7 +418,7 @@ def build_moves(heats: list[dict], ops: pd.DataFrame) -> list[dict]:
                 orow.get("空罐放下过渡平车时间"), orow.get("翻渣作业后空包重量"), "TRAVEL_TO_CART")
         else:
             add("CCM_to_CART", "empty", ccm, cart, empty_start,
-                orow.get("空罐放下过渡平车时间"), 0.0, "TRAVEL_TO_CART")
+                orow.get("空罐放下过渡平车时间"), None, "TRAVEL_TO_CART")
     return moves
 
 

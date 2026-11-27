@@ -96,16 +96,29 @@ def test_scene3_artifacts_report_every_fault_family() -> None:
         assert 0.0 <= row["service_rate"] <= 1.0
 
 
-def test_scene3_crane_and_rail_faults_reduce_service() -> None:
+def test_scene3_outages_are_repaired_and_rescheduled() -> None:
+    """A finite outage must be recovered from, not treated as a permanent block.
+
+    Since the obstruction is released at the repair time, service returns to 100%
+    (unlike the old permanent-block model) and the cost shows up as delay instead.
+    """
     files = sorted(RUNS3.glob("scene3_summary_*.json"))
     if not files:
         pytest.skip("scene3 not generated")
     summary = json.loads(files[0].read_text(encoding="utf-8"))
-    rows = {row["kind"]: row for row in summary["scenarios"] if row["kind"] != "none"}
-    cranes = [r for k, r in rows.items() if k == "crane"]
-    assert cranes and cranes[0]["service_rate"] < 1.0
-    rail = [r for k, r in rows.items() if k == "rail_break"]
-    assert rail and rail[0]["service_rate"] < 1.0
+    obstructed = [r for r in summary["scenarios"] if r["kind"] in {"crane", "rail_break"}]
+    assert obstructed
+    for row in obstructed:
+        assert row["service_rate"] == 1.0, "repaired outage must not lose service"
+        assert row["outage_min"] is not None and row["outage_min"] > 0
+        assert row["phase1_served"] is not None and row["phase3_served"] is not None
+        # the outage costs delay, and recovery is measured against the baseline plan
+        assert row["max_delay_h"] >= 0.0
+        assert row["recovery_time_h"] >= 0.0
+    # a 30 min outage must cost less delay than a 60 min outage on the same crane family
+    short = next(r for r in obstructed if r["outage_min"] and abs(r["outage_min"] - 30) < 1)
+    long = next(r for r in obstructed if r["outage_min"] and abs(r["outage_min"] - 60) < 1)
+    assert short["max_delay_h"] <= long["max_delay_h"] + 1e-6
 
 
 def test_scene3_three_level_recovery_is_recorded() -> None:

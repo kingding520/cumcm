@@ -1,0 +1,7 @@
+﻿policy,mean_lateness_min,p95_lateness_min,cvar90_lateness_min,zero_lateness_share
+mean_plan,221.1,521.01,835.39,0.0
+optimistic_plan,256.25,562.3,933.15,0.0
+conservative_plan,221.1,521.01,835.39,0.0
+rolling_mean,37.2,132.19,180.04,0.22
+rolling_risk,39.02,134.98,185.39,0.17
+saa_cvar,37.2,132.19,180.04,0.22

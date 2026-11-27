@@ -49,14 +49,15 @@ class Fault:
 
 
 def _scheduler(geometry: ef.Geometry, blocked: list[tuple[float, float]] | None = None,
-               pinned: dict[str, float] | None = None) -> sr.ReservationScheduler:
+               pinned: dict[str, float] | None = None,
+               initial_positions: dict[str, float] | None = None) -> sr.ReservationScheduler:
     """Scheduler wired to the same crane-capability policy as the scenario-1 day run.
 
     Without this the baseline would silently let the 150 t cranes take empty-ladle
     legs, which no longer matches the contractual capability rule.
     """
     return sr.ReservationScheduler(
-        geometry, blocked=blocked, pinned=pinned,
+        geometry, blocked=blocked, pinned=pinned, initial_positions=initial_positions,
         capability=lambda crane, task: day_mod.capable(crane, task, day_mod.CAPACITY_POLICY))
 
 
@@ -180,6 +181,79 @@ def controlled_stop(geometry: ef.Geometry, base: dict[str, Any],
             "note": "controlled stop: no feasible recovery plan for these tasks"}
 
 
+def recover_with_repair(geometry: ef.Geometry, tasks: list[dict[str, Any]], fault: Fault,
+                        stop_x: float | None, blocked: list[tuple[float, float]]) -> dict[str, Any]:
+    """Three-phase recovery: normal -> obstructed until repair -> re-planned after repair.
+
+    The crane is only pinned **during** the outage window ``[start, start + duration)``.
+    Treating it as dead from time zero (as a naive two-phase split would) inflates every
+    earlier task; that was the bug this function replaces.
+    """
+    start_s = fault.start_s
+    repair_end = fault.start_s + fault.duration_s
+    pre = [t for t in tasks if t["release_s"] < start_s]
+    during = [t for t in tasks if start_s <= t["release_s"] < repair_end]
+    post = [t for t in tasks if t["release_s"] >= repair_end]
+
+    r_pre = _scheduler(geometry).run(pre)
+    positions = {c.crane_id: c.x for c in r_pre["cranes"]}
+    offset_pre = max((r["dropoff_s"] for r in r_pre["records"]), default=0.0)
+    unserved_pre = [t for t in pre if t["task_id"] not in {r["task_id"] for r in r_pre["records"]}]
+
+    pinned = {fault.target: stop_x} if (fault.kind == "crane" and stop_x is not None) else None
+    shifted_during = [{**t, "release_s": max(0.0, t["release_s"] - start_s),
+                       "deadline_s": t["deadline_s"] - start_s} for t in during + unserved_pre]
+    r_during = _scheduler(geometry, blocked=blocked, pinned=pinned,
+                          initial_positions=positions).run(shifted_during)
+    positions2 = {c.crane_id: c.x for c in r_during["cranes"]}
+    offset = max(offset_pre, repair_end,
+                 start_s + max((r["dropoff_s"] for r in r_during["records"]), default=0.0))
+    unserved_during = [t for t in during + unserved_pre
+                       if t["task_id"] not in {r["task_id"] for r in r_during["records"]}]
+
+    shifted_post = [{**t, "release_s": max(0.0, t["release_s"] - offset),
+                     "deadline_s": t["deadline_s"] - offset} for t in post + unserved_during]
+    r_post = _scheduler(geometry, initial_positions=positions2).run(shifted_post)
+
+    merged = list(r_pre["records"])
+    for record in r_during["records"]:
+        merged.append({**record, "pickup_s": record["pickup_s"] + start_s,
+                       "dropoff_s": record["dropoff_s"] + start_s,
+                       "finish_s": record["finish_s"] + start_s})
+    for record in r_post["records"]:
+        merged.append({**record, "pickup_s": record["pickup_s"] + offset,
+                       "dropoff_s": record["dropoff_s"] + offset,
+                       "finish_s": record["finish_s"] + offset})
+    return {"records": merged, "cranes": r_post["cranes"],
+            "rejected": r_pre["rejected"] + r_during["rejected"] + r_post["rejected"],
+            "repair_end_s": repair_end,
+            "phase1_served": len(r_pre["records"]),
+            "phase2_served": len(r_during["records"]),
+            "phase3_served": len(r_post["records"]),
+            "retried": len(unserved_pre) + len(unserved_during)}
+
+
+def recovery_curve(records: list[dict[str, Any]], bucket_h: float = 2.0) -> list[dict[str, Any]]:
+    """Cumulative service share per time bucket - the shape of the recovery."""
+    if not records:
+        return []
+    total = len(records)
+    end = max(r["dropoff_s"] for r in records)
+    buckets: list[dict[str, Any]] = []
+    finish = bucket_h * 3600.0
+    while finish <= end + bucket_h * 3600.0:
+        served = [r for r in records if r["dropoff_s"] <= finish]
+        buckets.append({
+            "hour": round(finish / 3600.0, 1),
+            "served": len(served),
+            "service_share": round(len(served) / total, 3),
+            "mean_wait_min": round(sum(r["wait_s"] for r in served) / len(served) / 60.0, 1) if served else 0.0,
+            "late_min": round(sum(r["lateness_s"] for r in served) / 60.0, 1),
+        })
+        finish += bucket_h * 3600.0
+    return buckets
+
+
 def recover(geometry: ef.Geometry, tasks: list[dict[str, Any]], fault: Fault,
             frozen_positions: dict[str, float], blocked: list[tuple[float, float]]) -> dict[str, Any]:
     scheduler = _scheduler(geometry, blocked=blocked, pinned=frozen_positions)
@@ -213,7 +287,12 @@ def evaluate(geometry: ef.Geometry, base: dict[str, Any], fault: Fault,
     # window violation (production loss), which is what level 2 tries to reduce.
     LATENESS_TOLERANCE_MIN = 60.0
     level = 1
-    recovered = recover(geometry, tasks, fault, frozen, blocked)
+    repair = None
+    if fault.kind in {"crane", "rail_break"} and fault.duration_s > 0:
+        repair = recover_with_repair(geometry, tasks, fault, frozen.get(fault.target), blocked)
+        recovered = repair
+    else:
+        recovered = recover(geometry, tasks, fault, frozen, blocked)
     served = {r["task_id"] for r in recovered["records"]}
     unserved = [t["task_id"] for t in tasks if t["task_id"] not in served]
     violations = sum(1 for r in recovered["records"]
@@ -251,6 +330,17 @@ def evaluate(geometry: ef.Geometry, base: dict[str, Any], fault: Fault,
     penalty = len(unserved) * NOMINAL_UNSERVED_MIN
     total_loss = late + penalty
     makespan = max((r["dropoff_s"] for r in recovered["records"]), default=0.0) / 3600.0
+    # Recovery is measured against the *baseline* schedule, not against zero: a task is
+    # back on plan once it lands within RECOVERY_TOL_MIN of where it would have been.
+    RECOVERY_TOL_MIN = 15.0
+    baseline_by_task = {r["task_id"]: r["dropoff_s"] for r in base["records"]}
+    lag = {r["task_id"]: r["dropoff_s"] - baseline_by_task.get(r["task_id"], r["dropoff_s"])
+           for r in recovered["records"]}
+    max_delay_h = max((v for v in lag.values() if v > 0), default=0.0) / 3600.0
+    off_plan = [r for r in recovered["records"]
+                if lag.get(r["task_id"], 0.0) > RECOVERY_TOL_MIN * 60.0]
+    back_on_time = max((r["dropoff_s"] for r in off_plan), default=fault.start_s)
+    recovery_time_h = max(0.0, (back_on_time - fault.start_s)) / 3600.0
     reassigned = sum(1 for r in recovered["records"]
                      if r["crane_id"] != next((b["crane_id"] for b in base["records"]
                                                if b["task_id"] == r["task_id"]), r["crane_id"]))
@@ -269,10 +359,18 @@ def evaluate(geometry: ef.Geometry, base: dict[str, Any], fault: Fault,
         "delta_lateness_min": round(total_loss - base["lateness_min"], 1),
         "service_rate": round(len(recovered["records"]) / len(tasks), 3),
         "makespan_h": round(makespan, 2),
-        "recovery_time_h": round(max(0.0, makespan - base["makespan_h"]), 2),
+        "recovery_time_h": round(recovery_time_h, 2),
+        "max_delay_h": round(max_delay_h, 2),
+        "off_plan_tasks": len(off_plan),
         "reassigned_tasks": reassigned,
         "time_shift_min": round(shift, 1),
         "fallbacks": len(recovered["rejected"]),
+        # outage duration vs the clock time at which the crane is released
+        "outage_min": round(fault.duration_s / 60.0, 1) if repair else None,
+        "repair_end_clock_min": round(repair["repair_end_s"] / 60.0, 1) if repair else None,
+        "phase1_served": repair["phase1_served"] if repair else None,
+        "phase2_served": repair["phase2_served"] if repair else None,
+        "phase3_served": repair["phase3_served"] if repair else None,
         "recovery_level": level,
         "substituted_tasks": substituted,
         "substitution_tried": tried,
@@ -299,6 +397,15 @@ def run_day(day: str, out_dir: Path = OUT_DIR) -> dict[str, Any]:
             "tasks": tasks}
     contract = json.loads(CONTRACT.read_text(encoding="utf-8"))
     rows = [evaluate(geometry, base, fault) for fault in fault_scenarios(geometry, base, contract)]
+    curve_rows: list[dict[str, Any]] = []
+    for fault in fault_scenarios(geometry, base, contract):
+        if fault.kind not in {"crane", "rail_break"}:
+            continue
+        frozen = {fault.target: geometry.crane(fault.target).q0_m} if fault.kind == "crane" else {}
+        blocked = [tuple(fault.detail["interval"])] if fault.kind == "rail_break" else []
+        recovery = recover_with_repair(geometry, base["tasks"], fault, frozen.get(fault.target), blocked)
+        for bucket in recovery_curve(recovery["records"]):
+            curve_rows.append({"scenario": f"{fault.kind}:{fault.target}", **bucket})
     rows.insert(0, {"kind": "none", "target": "-", "start_min": 0.0, "duration_min": 0.0,
                     "status": "FOUND_FEASIBLE", "physical_unsafe_initial": "",
                     "served": len(base["records"]), "unserved": 0,
@@ -308,15 +415,22 @@ def run_day(day: str, out_dir: Path = OUT_DIR) -> dict[str, Any]:
                     "makespan_h": round(base["makespan_h"], 2), "recovery_time_h": 0.0,
                     "reassigned_tasks": 0, "time_shift_min": 0.0, "fallbacks": 0,
                     "recovery_level": 1, "substituted_tasks": 0, "substitution_tried": 0,
-                    "controlled_stop_tasks": 0, "window_violations": 0})
+                    "controlled_stop_tasks": 0, "window_violations": 0,
+                    "outage_min": None, "repair_end_clock_min": None,
+                    "phase1_served": None, "phase2_served": None,
+                    "phase3_served": None, "max_delay_h": 0.0, "off_plan_tasks": 0})
     out_dir.mkdir(parents=True, exist_ok=True)
     columns = ["kind", "target", "start_min", "duration_min", "status", "physical_unsafe_initial",
                "served", "unserved", "service_rate", "lateness_min", "unserved_penalty_min",
                "total_loss_min", "delta_lateness_min", "makespan_h", "recovery_time_h",
                "reassigned_tasks", "time_shift_min", "fallbacks", "recovery_level",
                "substituted_tasks", "substitution_tried", "controlled_stop_tasks",
-               "window_violations"]
+               "window_violations", "outage_min", "repair_end_clock_min",
+               "phase1_served", "phase2_served",
+               "phase3_served", "max_delay_h", "off_plan_tasks"]
     write_csv(out_dir / f"recovery_metrics_{day}.csv", rows, columns)
+    if curve_rows:
+        write_csv(out_dir / f"recovery_curve_{day}.csv", curve_rows, list(curve_rows[0].keys()))
     summary = {"day": day, "heats": meta["heats"], "casts": meta["casts"], "tasks": len(tasks),
                "baseline": {"lateness_min": round(base["lateness_min"], 1),
                             "makespan_h": round(base["makespan_h"], 2)},

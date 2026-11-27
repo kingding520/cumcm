@@ -1,0 +1,93 @@
+{
+  "day": "2026-10-10",
+  "heats": 53,
+  "casts": 7,
+  "tasks": 236,
+  "seed": 20261126,
+  "optimisation_scenarios": 20,
+  "evaluation_scenarios": 100,
+  "alpha": 0.9,
+  "risk_weight": 1.0,
+  "anchor_deterministic": {
+    "tasks": 236,
+    "completed": 236,
+    "wait_mean_min": 3.57,
+    "wait_p95_min": 12.34,
+    "lateness_sum_min": 568.1,
+    "cast_interrupt_rate": 0.4746,
+    "window_violation_rate": 0.4746,
+    "makespan_h": 25.31
+  },
+  "gear_envelope": [
+    {
+      "state": "heavy_ladle",
+      "gear": 5,
+      "cruise_m_s": 0.6,
+      "analytic_s": 149.5,
+      "integrated_s": 207.14,
+      "slow_zone_ahead": 114.5,
+      "braking_fits": true
+    },
+    {
+      "state": "empty_ladle",
+      "gear": 5,
+      "cruise_m_s": 0.8,
+      "analytic_s": 113.12,
+      "integrated_s": 154.72,
+      "slow_zone_ahead": 114.5,
+      "braking_fits": true
+    }
+  ],
+  "internal_scores": {
+    "mean_plan": 504.86,
+    "optimistic_plan": 504.86,
+    "conservative_plan": 504.86,
+    "rolling_mean": 148.42,
+    "rolling_risk": 153.03
+  },
+  "selected_candidate": "rolling_mean",
+  "policies": {
+    "mean_plan": {
+      "mean_lateness_min": 172.4,
+      "p95_lateness_min": 383.16,
+      "cvar90_lateness_min": 464.2,
+      "zero_lateness_share": 0.0
+    },
+    "optimistic_plan": {
+      "mean_lateness_min": 172.4,
+      "p95_lateness_min": 383.16,
+      "cvar90_lateness_min": 464.2,
+      "zero_lateness_share": 0.0
+    },
+    "conservative_plan": {
+      "mean_lateness_min": 172.4,
+      "p95_lateness_min": 383.16,
+      "cvar90_lateness_min": 464.2,
+      "zero_lateness_share": 0.0
+    },
+    "rolling_mean": {
+      "mean_lateness_min": 38.33,
+      "p95_lateness_min": 125.41,
+      "cvar90_lateness_min": 168.93,
+      "zero_lateness_share": 0.0
+    },
+    "rolling_risk": {
+      "mean_lateness_min": 38.78,
+      "p95_lateness_min": 130.56,
+      "cvar90_lateness_min": 168.38,
+      "zero_lateness_share": 0.0
+    },
+    "saa_cvar": {
+      "mean_lateness_min": 38.33,
+      "p95_lateness_min": 125.41,
+      "cvar90_lateness_min": 168.93,
+      "zero_lateness_share": 0.0
+    }
+  },
+  "degenerate_zero_noise": {
+    "anchor_lateness_min": 568.1,
+    "reference_file": "data/runs/scene1_day/2026-10-10_BASE_3E/day_comparison.csv",
+    "reference_lateness_min": null,
+    "matches_scene1_day": null
+  }
+}

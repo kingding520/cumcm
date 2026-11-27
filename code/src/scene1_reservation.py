@@ -73,7 +73,8 @@ def corridor(x0: float, x1: float, gap: float) -> tuple[float, float]:
 class ReservationScheduler:
     def __init__(self, geometry: ef.Geometry, blocked: list[tuple[float, float]] | None = None,
                  pinned: dict[str, float] | None = None,
-                 capability: Any = None) -> None:
+                 capability: Any = None,
+                 initial_positions: dict[str, float] | None = None) -> None:
         self.geometry = geometry
         # Scenario-3 hooks: intervals a crane may not enter or cross, and cranes
         # frozen at a position (a failed crane keeps occupying the rail).
@@ -86,6 +87,10 @@ class ReservationScheduler:
             CranePlan(c.id, idx, geometry.crane(c.id).q0_m, geometry.crane(c.id).capacity_t)
             for idx, c in enumerate(sorted(geometry.cranes, key=lambda c: c.order))
         ]
+        if initial_positions:
+            for crane in self.cranes:
+                if crane.crane_id in initial_positions:
+                    crane.x = float(initial_positions[crane.crane_id])
         self.by_id = {c.crane_id: c for c in self.cranes}
         self.reservations: list[Reservation] = []
         self.rejected: list[dict[str, Any]] = []
