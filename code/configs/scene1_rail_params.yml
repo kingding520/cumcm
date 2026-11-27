@@ -1,11 +1,16 @@
-# Scenario-1 single-cast closed loop: provisional parameter set
+# Historical scenario-1 comparison parameters (superseded).
+# Formal runs use code/configs/ef_initial_v1.json via ef_model.load_geometry.
+# The unconfirmed labels below describe the historical comparison only;
+# they are not prerequisites for ETL or the current scenario-1/2/3 programs.
+usage_status: legacy_comparison_only
+superseded_by: code/configs/ef_initial_v1.json
 #
 # IMPORTANT STATUS LABELS
 #   confirmed_by_modeler: false  -> every value below is provisional
-#   Nothing here is a signed-off physical parameter. Values are either inherited
+#   Nothing here is the adopted baseline. Values are either inherited
 #   from the proposal's initial review (Person3 §3.2) or derived by this script
-#   from the observed 6C0754 cast. They must be replaced after Person1 confirms
-#   geometry, speed/acceleration, safety gaps and initial crane positions.
+#   from the observed 6C0754 cast. Retained to reproduce that comparison;
+#   the adopted geometry, motion and initial state are in ef_initial_v1.json.
 
 provenance:
   coordinates: "inherited: docs/person3-wcl-论文/01_数学建模方案.md §3.2 relative pixel coordinates"
