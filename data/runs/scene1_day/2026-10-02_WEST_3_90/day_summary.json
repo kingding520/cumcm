@@ -1,0 +1,28 @@
+{
+  "day": "2026-10-02",
+  "cart_layout": "WEST_3_90",
+  "heats": 59,
+  "casts": 11,
+  "tasks": 287,
+  "geometry_version": "ef-initial-v1+WEST_3_90",
+  "result": {
+    "variant": "WEST_3_90",
+    "day": "2026-10-02",
+    "tasks": 287,
+    "completed": 287,
+    "cranes_used": "3#450:73;4#450:184;5#450:30",
+    "makespan_h": 26.13,
+    "overtime_h": 2.13,
+    "total_wait_min": 2154.2,
+    "mean_wait_min": 7.51,
+    "p95_wait_min": 24.3,
+    "total_lateness_min": 1738.4,
+    "yield_moves": 133,
+    "rejected_trials": 0,
+    "min_gap_m": 12.5,
+    "aux_threshold_t": null,
+    "gate": "pass",
+    "completed_all": true,
+    "accepted": true
+  }
+}

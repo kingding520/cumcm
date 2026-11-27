@@ -1,0 +1,28 @@
+{
+  "day": "2026-10-02",
+  "cart_layout": "BASE_3E",
+  "heats": 59,
+  "casts": 11,
+  "tasks": 287,
+  "geometry_version": "ef-initial-v1+BASE_3E",
+  "result": {
+    "variant": "BASE_3E",
+    "day": "2026-10-02",
+    "tasks": 287,
+    "completed": 287,
+    "cranes_used": "3#450:67;4#450:194;5#450:26",
+    "makespan_h": 26.13,
+    "overtime_h": 2.13,
+    "total_wait_min": 1158.1,
+    "mean_wait_min": 4.04,
+    "p95_wait_min": 13.9,
+    "total_lateness_min": 786.9,
+    "yield_moves": 131,
+    "rejected_trials": 0,
+    "min_gap_m": 12.5,
+    "aux_threshold_t": 140.0,
+    "gate": "pass",
+    "completed_all": true,
+    "accepted": true
+  }
+}

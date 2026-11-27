@@ -1,0 +1,28 @@
+{
+  "day": "2026-09-28",
+  "cart_layout": "COUNT_4E",
+  "heats": 48,
+  "casts": 12,
+  "tasks": 197,
+  "geometry_version": "ef-initial-v1+COUNT_4E",
+  "result": {
+    "variant": "COUNT_4E",
+    "day": "2026-09-28",
+    "tasks": 197,
+    "completed": 197,
+    "cranes_used": "3#450:40;4#450:134;5#450:23",
+    "makespan_h": 25.65,
+    "overtime_h": 1.65,
+    "total_wait_min": 561.1,
+    "mean_wait_min": 2.85,
+    "p95_wait_min": 9.7,
+    "total_lateness_min": 330.8,
+    "yield_moves": 112,
+    "rejected_trials": 0,
+    "min_gap_m": 12.5,
+    "aux_threshold_t": null,
+    "gate": "pass",
+    "completed_all": true,
+    "accepted": true
+  }
+}

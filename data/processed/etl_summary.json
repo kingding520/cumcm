@@ -1,0 +1,48 @@
+{
+  "contract": "contract-v1",
+  "time_gate_s": 5400,
+  "mass_gate_t": 3.0,
+  "sources": {
+    "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/出钢计划表单.xls": "79384f5d152e83a97cb93880f3925dbe3efcca4f36bee21d183d93992ad79236",
+    "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/工序时间信息.xlsx": "dae5966eafb9476a604def7c54a205b7020440ed255e4664ccfb001e4929e16a",
+    "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/A炉.xlsx": "288e72721c184faabfb75465d0a80a7787a51d57660596a7b2ba5bc959e91f3a",
+    "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/B炉.xlsx": "f7170160c364e3c6eaa700861d5e398f8161f3d2e1c4aa841846632a7fe07e45",
+    "question/B题：炼钢厂钢包周转与排产优化问题/附数据文件/C炉.xlsx": "ca06e5d994b9c1e6af21b556a47e20dd6fbd98f264f19d179c7d7b58f4bc42ec"
+  },
+  "match_reasons": {
+    "UNRESOLVED|time=NOT_ASSESSED|mass=NOT_ASSESSED": 114,
+    "UNRESOLVED|time=FAIL|mass=PASS": 154,
+    "UNRESOLVED|time=FAIL|mass=FAIL": 163,
+    "MATCHED_UNIQUE|time=PASS|mass=PASS": 756,
+    "MATCHED_UNIQUE|time=FAIL;PASS|mass=FAIL;PASS": 44,
+    "UNRESOLVED|time=PASS|mass=FAIL": 31,
+    "MATCHED_UNIQUE|time=PASS|mass=NOT_ASSESSED": 6,
+    "UNRESOLVED|time=NOT_ASSESSED|mass=FAIL": 9,
+    "MATCHED_UNIQUE|time=NOT_ASSESSED|mass=PASS": 7,
+    "UNRESOLVED|time=FAIL|mass=NOT_ASSESSED": 2,
+    "MATCHED_UNIQUE|time=FAIL;PASS|mass=PASS": 14,
+    "UNRESOLVED|time=FAIL|mass=FAIL;PASS": 4,
+    "MATCHED_UNIQUE|time=NOT_ASSESSED|mass=NOT_ASSESSED": 10,
+    "MATCHED_UNIQUE|time=PASS|mass=FAIL;PASS": 4,
+    "UNRESOLVED|time=FAIL;PASS|mass=FAIL;PASS": 1,
+    "MATCHED_UNIQUE|time=FAIL;NOT_ASSESSED|mass=FAIL;NOT_ASSESSED": 1,
+    "MATCHED_UNIQUE|time=NOT_ASSESSED|mass=FAIL;PASS": 1
+  },
+  "counts": {
+    "plan_heats": 1321,
+    "ops_rows": 1350,
+    "heats": 1321,
+    "matched_unique": 843,
+    "ambiguous": 0,
+    "unresolved": 478,
+    "operations": 3407,
+    "moves": 3764,
+    "conflicts": 478
+  },
+  "notes": [
+    "Tier-2 uses heat number + time gate + mass gate + unique candidate.",
+    "Mass residual compares furnace tap weight against the operations heavy-ladle weight.",
+    "Cart assignment follows caster->cart (1#/2#/3#); the source has no cart id per heat.",
+    "Unresolved/ambiguous heats are reported, never silently matched or dropped."
+  ]
+}

@@ -1,0 +1,2 @@
+﻿variant,day,tasks,completed,cranes_used,makespan_h,overtime_h,total_wait_min,mean_wait_min,p95_wait_min,total_lateness_min,yield_moves,rejected_trials,min_gap_m,aux_threshold_t,gate,completed_all,accepted
+WEST_3_85,2026-09-28,197,197,3#450:48;4#450:126;5#450:23,25.64,1.64,482.5,2.45,8.9,276.2,107,0,12.5,,pass,True,True

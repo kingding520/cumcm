@@ -1,0 +1,3 @@
+﻿role,day,matched_heats,casts,casts_with_moves,routes,casters,rule
+normal,2026-09-28,48,12,12,LF|LF-RH|RH|RH-LF,A|B|C,closest to median of eligible days (48 heats)
+peak,2026-10-02,59,11,11,LF|RH|RH-LF,A|B|C,maximum matched heats among eligible days

@@ -75,6 +75,7 @@ def build_tasks(geometry: ef.Geometry, replay_dir: Path = REPLAY_DIR) -> list[di
             "deadline_s": parse_ts(row["deadline_time"]) - t_origin,
             "load_t": float(row["load_t"]),
             "travel_s": geometry.travel_seconds(x_from, x_to, state),
+            "hold_s": 0.0,
         })
     base = min(t["release_s"] for t in tasks)
     for task in tasks:
@@ -188,6 +189,7 @@ def simulate(
     assignment: dict[str, str],
     allow_yield: bool = True,
     horizon_s: float = 60000.0,
+    motion_policy: str = "simultaneous",
 ) -> dict[str, Any]:
     ids = geometry.crane_ids()
     runs = {cid: CraneRun(cid, geometry.crane(cid).q0_m) for cid in ids}
@@ -215,9 +217,50 @@ def simulate(
                 crane.open_leg(t)
 
         targets: dict[str, float] = {}
+        mover = None
+        if motion_policy == "serialized":
+            # Contract rule: reserve + execute the empty-hook retreat first, then let
+            # the main crane traverse. Only one crane moves at any instant.
+            candidates = []
+            for idx, cid in enumerate(ids):
+                crane = runs[cid]
+                goal = crane.goal()
+                if goal is None or abs(goal - crane.x) < 1e-9:
+                    continue
+                direction = 1.0 if goal > crane.x else -1.0
+                blocked = False
+                if direction > 0 and idx + 1 < len(ids):
+                    blocked = runs[ids[idx + 1]].x - crane.x < gap + 1e-6
+                if direction < 0 and idx > 0:
+                    blocked = crane.x - runs[ids[idx - 1]].x < gap + 1e-6
+                candidates.append((blocked, priority(crane), idx, cid))
+            if candidates:
+                clear = [c for c in candidates if not c[0]]
+                if clear:
+                    mover = min(clear, key=lambda c: (c[1], c[2]))[3]
+                else:
+                    # everyone blocked: let the highest-priority requestor push its neighbour
+                    blocked = min(candidates, key=lambda c: (c[1], c[2]))
+                    _, _, idx, cid = blocked
+                    crane = runs[cid]
+                    goal = crane.goal()
+                    n_idx = idx + 1 if goal > crane.x else idx - 1
+                    if 0 <= n_idx < len(ids):
+                        other = runs[ids[n_idx]]
+                        if not other.hauling():
+                            mover = other.crane_id
+                        else:
+                            mover = crane.crane_id
+                    else:
+                        mover = crane.crane_id
+
         for idx, cid in enumerate(ids):
             crane = runs[cid]
             goal = crane.goal()
+            if motion_policy == "serialized" and mover is not None and cid != mover:
+                crane.v = 0.0
+                targets[cid] = crane.x
+                continue
             state = crane.state_now()
             accel = geometry.accel_m_s2[state]
             cap = geometry.speed_cap(state, crane.x)
@@ -400,6 +443,8 @@ def build_trajectories(geometry: ef.Geometry, sim: dict[str, Any],
         while i < len(trace) - 1:
             t0, x0, v0, phase, task_id, load_t = trace[i]
             j = i + 1
+            # Full resolution (the certified form) keeps one segment per step: only
+            # that reconstruction is exactly faithful to the simulated motion.
             if compress:
                 # Merge only when every step has the *same displacement*, so the
                 # merged segment is exactly collinear with the logged positions.

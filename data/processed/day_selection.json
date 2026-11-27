@@ -1,0 +1,36 @@
+{
+  "eligible_days": 18,
+  "calendar_days": 18,
+  "median_matched_heats_on_eligible_days": 48.0,
+  "min_heats_threshold": 10,
+  "selection": [
+    {
+      "role": "normal",
+      "day": "2026-09-28",
+      "matched_heats": 48,
+      "casts": 12,
+      "casts_with_moves": 12,
+      "routes": "LF|LF-RH|RH|RH-LF",
+      "casters": "A|B|C",
+      "rule": "closest to median of eligible days (48 heats)"
+    },
+    {
+      "role": "peak",
+      "day": "2026-10-02",
+      "matched_heats": 59,
+      "casts": 11,
+      "casts_with_moves": 11,
+      "routes": "LF|RH|RH-LF",
+      "casters": "A|B|C",
+      "rule": "maximum matched heats among eligible days"
+    }
+  ],
+  "span": {
+    "first": "2026-09-25",
+    "last": "2026-10-12"
+  },
+  "notes": [
+    "Days are calendar dates of the planned tap start.",
+    "Only matched (MATCHED_UNIQUE) heats are counted; unresolved heats are excluded and reported."
+  ]
+}

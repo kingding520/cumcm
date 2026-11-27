@@ -1,0 +1,479 @@
+﻿kind,heat_id,route,ops_rows,evidence,decision
+no_ops_row_for_heat,26AD6491,L0R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26CD4985,L0,1354,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6492,L0R0,1352,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26BD6185,L0,1353,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6493,L0R0,1350,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6494,L0,1348,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6500,R0,1330,PASS/FAIL,left unresolved
+no_ops_row_for_heat,-2,R0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,26AD6496,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26BD6190,L0,1339,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6498,L0,1336,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6497,L0,1338,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,-2,R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26BD6195,L0,1323,FAIL/PASS,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6502,L0R0,1321,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6503,L0R0,1318,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6505,L0,1314,FAIL/PASS,left unresolved
+no_candidate_in_gate,26CD4997,L0,1315,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6504,L0,1317,PASS/FAIL,left unresolved
+no_candidate_in_gate,26CD4999,L0,1309,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6506,L0,1310,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6509,L0,1301,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6510,L0,1298,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,26AD6508,L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26BD6202,R0,1300,PASS/FAIL,left unresolved
+no_candidate_in_gate,26AD6511,L0,1295,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6512,L0,1290,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,-2,R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6515,L0R0,1278,FAIL/PASS,left unresolved
+no_candidate_in_gate,26CD5010,L0,1275,FAIL/PASS,left unresolved
+no_ops_row_for_heat,26AD6518,L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,26AD6520,R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26CD5015,L0R0,1261,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6521,R0,1262,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6522,L0,1259,NOT_ASSESSED/FAIL,left unresolved
+no_candidate_in_gate,26AD6523,R0,1256,PASS/FAIL,left unresolved
+no_candidate_in_gate,26AD6524,R0,1253,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6525,L0,1251,NOT_ASSESSED/FAIL,left unresolved
+no_candidate_in_gate,26AD6526,L0,1248,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,26AD6529,R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6528,L0,1240,FAIL/PASS,left unresolved
+no_candidate_in_gate,26CD5022,L0,1238,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6530,R0,1236,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26BD6224,L0,1237,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6531,R0,1234,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6532,R0,1231,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6533,R0,1228,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6534,R0,1226,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6535,R0,1222,FAIL/PASS,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6537,L0,1218,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26CD5029,L0,1214,FAIL/PASS,left unresolved
+no_candidate_in_gate,26BD6233,L0,1209,FAIL/PASS,left unresolved
+no_candidate_in_gate,26BD6234,L0,1207,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6540,L0,1206,FAIL/PASS,left unresolved
+no_ops_row_for_heat,26AD6541,L0R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26BD6244,R0,1180,FAIL/PASS,left unresolved
+no_ops_row_for_heat,-2,L0R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6543,L0,1198,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26BD6238,L0R0,1196,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6544,L0,1197,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26BD6239,L0R0,1194,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26BD6240,L0R0,1191,FAIL/PASS,left unresolved
+no_candidate_in_gate,26BD6241,L0R0,1189,FAIL/PASS,left unresolved
+no_ops_row_for_heat,26AD6545,R0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,26AD6547,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26BD6243,R0,1183,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6548,L0,1184,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26BD6245,R0,1177,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6550,R0,1178,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6549,L0,1181,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6551,R0,1175,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,26AD6553,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6554,L0R0,1166,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6560,L0,1149,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6555,R0,1164,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26BD6250,L0R0,1160,FAIL/PASS,left unresolved
+no_candidate_in_gate,26CD5047,L0,1159,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6556,L0R0,1161,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6557,L0R0,1158,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6558,L0R0,1155,FAIL/PASS,left unresolved
+no_candidate_in_gate,26BD6252,R0,1154,FAIL/PASS,left unresolved
+no_candidate_in_gate,26BD6253,R0,1151,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6559,L0,1152,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26BD6254,R0,1148,FAIL/NOT_ASSESSED,left unresolved
+no_candidate_in_gate,26BD6255,R0,1146,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6561,L0,1145,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,26AD6564,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6565,L0,1135,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6566,L0,1130,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6567,L0,1129,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,-2,L0R0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,26AD6570,R0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,26AD6573,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6574,L0,1107,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6575,L0,1103,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6576,R0,1101,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6577,R0,1097,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6578,R0,1095,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6579,R0,1090,FAIL/PASS,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,-2,L0R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6581,L0R0,1086,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6582,R0,1084,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6604,R0,1018,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6585,R0,1072;1075,FAIL/FAIL;FAIL/PASS,left unresolved
+no_candidate_in_gate,26BD6279,R0,1071,FAIL/PASS,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,26AD6586,R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6587,R0,1068,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6588,R0,1064,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6589,R0,1060,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6590,L0,1059,NOT_ASSESSED/FAIL,left unresolved
+no_candidate_in_gate,26BD6288,L0,1048,PASS/FAIL,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,26AD6611,R0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6595,L0,1043,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26BD6292,L0,1034,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26BD6293,L0,1033,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26BD6290,L0,1040,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6596,R0,1042,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6597,R0,1038,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26CD5087,L0,1035,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6598,R0,1036,PASS/FAIL,left unresolved
+no_candidate_in_gate,26BD6294,L0,1030,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6599,R0,1032,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6600,L0,1029,NOT_ASSESSED/FAIL,left unresolved
+no_candidate_in_gate,26BD6295,L0,1028,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6601,L0,1027,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6602,L0,1024,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26BD6296,L0,1025,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26BD6297,L0,1022,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6603,L0,1021,FAIL/PASS,left unresolved
+no_ops_row_for_heat,26AD6607,L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6608,L0,1004,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6609,L0,1003,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6612,R0,993,PASS/FAIL,left unresolved
+no_candidate_in_gate,26AD6613,R0,990,PASS/FAIL,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,26AD6615,L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,-2,R0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,26AD6620,R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6621,R0,968,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6622,R0,964,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6623,R0,962,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6624,R0,959,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6625,R0,955,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6626,R0,953,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6627,R0,951,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6628,L0,948,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6629,L0,944,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6631,R0,937,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6632,R0,933,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6633,R0,931,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6635,L0,923,FAIL/PASS,left unresolved
+no_ops_row_for_heat,26AD6636,R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6637,R0,921,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6638,R0,919,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6639,R0,917,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,26BD6337,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26BD6339,R0L0,905,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26CD5125,R0L0,902,FAIL/PASS,left unresolved
+no_ops_row_for_heat,-2,R0L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,26AD6643,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6644,L0,899,FAIL/PASS,left unresolved
+no_ops_row_for_heat,-2,R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26BD6342,L0,893,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6646,R0,894,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26BD6343,L0,890,FAIL/PASS,left unresolved
+no_candidate_in_gate,26BD6344,L0,887,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6647,R0,891,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6648,R0,888,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6649,R0,886,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6651,L0,880,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,-2,R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26BD6348,L0,876,PASS/FAIL,left unresolved
+no_candidate_in_gate,26AD6653,R0,874,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6654,R0,872,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26CD5136,L0,868,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6658,R0,856,PASS/FAIL,left unresolved
+no_candidate_in_gate,26CD5139,L0,861,FAIL/PASS,left unresolved
+no_candidate_in_gate,26BD6353,L0,860,FAIL/PASS,left unresolved
+no_candidate_in_gate,26CD5140,L0,857,FAIL/PASS,left unresolved
+no_candidate_in_gate,26BD6354,L0,858,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26BD6355,L0,855,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,26AD6660,R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26BD6356,L0,852,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6661,R0,850,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26BD6357,L0,848,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26BD6358,R0L0,845,PASS/FAIL,left unresolved
+no_candidate_in_gate,26BD6359,R0,843,FAIL/PASS,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26BD6360,R0,841,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26BD6361,R0,838,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6665,L0,837,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6667,R0,831,PASS/FAIL,left unresolved
+no_candidate_in_gate,26AD6666,L0,833,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26CD5149,L0,830,FAIL/PASS,left unresolved
+no_candidate_in_gate,26CD5150,L0,827,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6668,R0,828,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26BD6363,L0,829,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6669,L0,826,NOT_ASSESSED/FAIL,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6673,L0,811,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6676,L0,805,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6677,L0,801,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6678,L0,799,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6679,L0,797,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6680,L0,794,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6681,L0,791,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,26AD6683,R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6684,R0,781,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6685,R0,777,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6686,R0L0,774,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6687,L0,772,PASS/FAIL,left unresolved
+no_candidate_in_gate,26AD6688,R0,769,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6689,R0,766,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6690,R0,764,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26CD5172,L0,765,FAIL/PASS,left unresolved
+no_candidate_in_gate,26CD5173,L0,762,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6691,R0,761,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6692,R0,758,FAIL/PASS,left unresolved
+no_ops_row_for_heat,26AD6694,L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,26AD6700,R0L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,26AD6702,L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,-2,R0L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6705,L0,716,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6706,R0,715,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6707,R0L0,712,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6708,R0L0,709,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6709,R0L0,706,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,26AD6712,R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6713,L0,694,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26BD6411,R0L0,683,FAIL/PASS,left unresolved
+no_ops_row_for_heat,26AD6715,R0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,26AD6717,R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6718,L0R0,677,NOT_ASSESSED/FAIL,left unresolved
+no_ops_row_for_heat,-2,R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6719,L0R0,675,FAIL/NOT_ASSESSED,left unresolved
+no_candidate_in_gate,26AD6720,L0R0,672,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6721,L0R0,669,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,-2,L0R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6725,R0,657,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6723,R0,663,PASS/FAIL,left unresolved
+no_candidate_in_gate,26AD6724,R0,660,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26CD5208,L0,654,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6726,R0,656,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6727,R0,652,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6728,R0,648,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26BD6425,L0,642,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6731,L0,636,FAIL/PASS,left unresolved
+no_candidate_in_gate,26CD5220,L0,620,PASS/FAIL,left unresolved
+no_ops_row_for_heat,-2,R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6736,L0,622,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6737,L0,619,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6738,L0,613;616,FAIL/PASS;PASS/FAIL,left unresolved
+no_ops_row_for_heat,26AD6739,L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,-2,R0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,26AD6743,R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6744,R0,600,PASS/FAIL,left unresolved
+no_candidate_in_gate,26BD6440,L0,598,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6745,R0,597,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6746,R0,595,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6747,R0,593,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6748,R0,591,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6749,L0,589,NOT_ASSESSED/FAIL,left unresolved
+no_candidate_in_gate,26BD6447,L0,583,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6751,R0,584,FAIL/PASS,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,26AD6754,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26CD5229,L0,575,FAIL/PASS,left unresolved
+no_ops_row_for_heat,-2,R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26CD5230,L0,572,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6755,R0,570,PASS/FAIL,left unresolved
+no_candidate_in_gate,26CD5232,L0,568,FAIL/PASS,left unresolved
+no_candidate_in_gate,26CD5233,L0,565,FAIL/PASS,left unresolved
+no_candidate_in_gate,26BD6458,R0,551,FAIL/PASS,left unresolved
+no_candidate_in_gate,26CD5237,L0,550,FAIL/PASS,left unresolved
+no_candidate_in_gate,26CD5238,L0,547,FAIL/PASS,left unresolved
+no_ops_row_for_heat,26AD6761,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6762,R0,544,PASS/FAIL,left unresolved
+no_ops_row_for_heat,26BD6464,L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26CD5240,R0,542,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6763,R0,543,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26CD5241,R0,539,FAIL/PASS,left unresolved
+no_ops_row_for_heat,26AD6766,R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6771,R0,520,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,26AD6769,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26BD6467,R0,525,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6770,R0,523,PASS/FAIL,left unresolved
+no_candidate_in_gate,26BD6468,R0,522,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6773,L0,514,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6774,R0,512,PASS/FAIL,left unresolved
+no_candidate_in_gate,26AD6776,L0,502,FAIL/PASS,left unresolved
+no_ops_row_for_heat,-2,R0L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,26AD6781,R0L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26CD5256,R0L0,485,FAIL/PASS,left unresolved
+no_ops_row_for_heat,26AD6783,R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26CD5257,R0L0,481,FAIL/PASS,left unresolved
+no_ops_row_for_heat,26AD6786,R0L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6787,L0,476,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6788,L0,473,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6790,L0,468,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6789,L0,470,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,26AD6792,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6793,L0,456;459,FAIL/FAIL;FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6795,L0,452,FAIL/PASS,left unresolved
+no_candidate_in_gate,26CD5264,R0L0,450,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6796,L0,449,FAIL/PASS,left unresolved
+no_candidate_in_gate,26CD5265,L0,447,FAIL/PASS,left unresolved
+no_ops_row_for_heat,26AD6797,R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26CD5266,L0,444,FAIL/PASS,left unresolved
+no_candidate_in_gate,26BD6497,L0,445,FAIL/PASS,left unresolved
+no_candidate_in_gate,26BD6498,L0,443,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6798,R0,446,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26CD5267,L0,441,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6799,R0,442,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6800,R0,439,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6801,R0,437,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6802,R0,435,FAIL/PASS,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,-2,R0L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26BD6505,L0,422,FAIL/PASS,left unresolved
+no_ops_row_for_heat,26AD6809,R0L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,26AD6811,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6812,L0,403,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,26AD6814,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26CD5284,L0,390,FAIL/PASS,left unresolved
+no_candidate_in_gate,26CD5285,L0,388,FAIL/PASS,left unresolved
+no_ops_row_for_heat,26AD6818,R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6819,R0L0,378,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6820,R0L0,375,PASS/FAIL,left unresolved
+no_candidate_in_gate,26AD6821,R0L0,373,PASS/FAIL,left unresolved
+no_candidate_in_gate,26AD6822,R0L0,370,PASS/FAIL,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6823,R0L0,368,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6824,R0L0,365,PASS/FAIL,left unresolved
+no_candidate_in_gate,26CD5294,L0,363,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6825,R0L0,362,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6826,R0L0,359;360,FAIL/PASS,left unresolved
+no_candidate_in_gate,26CD5323,L0,267,FAIL/PASS,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6829,L0,351,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6832,R0,344,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26BD6531,L0,345,FAIL/PASS,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6833,R0,340,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26BD6532,L0,343,FAIL/PASS,left unresolved
+no_candidate_in_gate,26CD5299,L0,342,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6835,L0,335,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6836,R0L0,333,PASS/FAIL,left unresolved
+no_candidate_in_gate,26AD6837,R0L0,330,FAIL/PASS,left unresolved
+no_candidate_in_gate,26CD5306,L0,320,PASS/FAIL,left unresolved
+no_ops_row_for_heat,26AD6840,R0L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6841,R0L0,318,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6842,R0L0,314,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,26AD6844,R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6845,R0,305,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6846,R0,302,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26CD5314,L0,297,FAIL/PASS,left unresolved
+no_candidate_in_gate,26BD6546,L0,298,FAIL/PASS,left unresolved
+no_ops_row_for_heat,26AD6848,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6849,L0,291;293,FAIL/FAIL;FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6850,L0,288,FAIL/PASS,left unresolved
+no_candidate_in_gate,26BD6550,L0,286,FAIL/PASS,left unresolved
+no_ops_row_for_heat,26AD6853,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26CD5320,L0,278,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6855,R0,275,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6856,R0,271,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6857,R0,268,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6858,R0L0,265,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6859,R0L0,263,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26CD5326,L0,258,FAIL/PASS,left unresolved
+no_candidate_in_gate,26BD6563,L0,249,FAIL/PASS,left unresolved
+no_candidate_in_gate,26BD6559,R0,260,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6860,R0L0,261,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6861,R0,259,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6862,R0,256,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6863,R0,255,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6864,R0,253,PASS/FAIL,left unresolved
+no_candidate_in_gate,26AD6865,R0L0,251,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6866,R0,250,PASS/FAIL,left unresolved
+no_candidate_in_gate,26AD6867,R0,247,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26BD6565,L0,243,FAIL/PASS,left unresolved
+no_candidate_in_gate,26BD6566,L0,240,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6868,R0,244,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6869,R0,241,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6870,R0,239,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,-2,R0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,-2,R0L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26CD5348,L0,197,FAIL/PASS,left unresolved
+no_candidate_in_gate,26BD6578,R0L0,214,FAIL/PASS,left unresolved
+no_ops_row_for_heat,-2,R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6872,L0,196,FAIL/PASS,left unresolved
+no_ops_row_for_heat,26AD6873,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6874,R0L0,192,PASS/FAIL,left unresolved
+no_candidate_in_gate,26AD6875,R0L0,190,PASS/FAIL,left unresolved
+no_candidate_in_gate,26AD6876,R0L0,188,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6877,R0L0,184,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6878,R0L0,178;181,FAIL/PASS,left unresolved
+no_ops_row_for_heat,26AD6879,R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6880,R0,172,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26BD6596,L0,170,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6881,R0,171,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26BD6597,L0,168,PASS/FAIL,left unresolved
+no_candidate_in_gate,26AD6882,R0,167,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6883,R0,165,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6884,R0,162,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6885,R0,159,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6886,L0,156,NOT_ASSESSED/FAIL,left unresolved
+no_candidate_in_gate,26CD5363,L0,148,FAIL/PASS,left unresolved
+no_candidate_in_gate,26CD5364,L0,147,FAIL/PASS,left unresolved
+no_candidate_in_gate,26CD5365,L0,144,FAIL/PASS,left unresolved
+no_ops_row_for_heat,26AD6888,L0R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26CD5369,L0,132,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6891,L0,131,FAIL/PASS,left unresolved
+no_ops_row_for_heat,26AD6892,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6893,L0,127,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6894,L0,124,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26BD6618,L0,114,FAIL/PASS,left unresolved
+no_ops_row_for_heat,26AD6896,L0R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6897,L0R0,112,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,26AD6900,L0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6901,L0,102,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6902,L0,98,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6903,L0,96,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,26AD6907,L0R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26CD5386,L0,79,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6908,R0,81,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6909,R0,78,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6910,R0,76,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26BD6633,L0,72,FAIL/PASS,left unresolved
+no_candidate_in_gate,26BD6634,L0R0,70,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6911,R0,73,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6912,R0,71,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6913,L0R0,69,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6914,L0R0,65,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6916,L0,60,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6915,L0,63,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26BD6637,L0,61,FAIL/PASS,left unresolved
+no_candidate_in_gate,26CD5391,L0,57,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6917,L0,58,FAIL/PASS,left unresolved
+no_candidate_in_gate,26CD5393,L0,51,FAIL/PASS,left unresolved
+no_ops_row_for_heat,26AD6920,L0R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26AD6926,L0,30,NOT_ASSESSED/FAIL,left unresolved
+no_candidate_in_gate,26AD6927,L0,27,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6928,L0,22;24,FAIL/FAIL;FAIL/PASS,left unresolved
+no_ops_row_for_heat,26AD6929,L0R0,none,heat absent from operations table,left unresolved
+no_candidate_in_gate,26CD5403,L0,20,FAIL/PASS,left unresolved
+no_candidate_in_gate,26CD5404,L0,17,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6930,L0,18,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26CD5405,L0,13,FAIL/PASS,left unresolved
+no_candidate_in_gate,26AD6931,L0,14,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6932,L0,12,FAIL/FAIL,left unresolved
+no_candidate_in_gate,26AD6933,L0,9,FAIL/FAIL,left unresolved
+no_ops_row_for_heat,-2,L0,none,heat absent from operations table,left unresolved
+no_ops_row_for_heat,26BD6659,L0,none,heat absent from operations table,left unresolved

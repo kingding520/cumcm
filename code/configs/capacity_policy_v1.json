@@ -1,0 +1,22 @@
+{
+  "version": "capacity-policy-v1",
+  "status": "awaiting_wj_weight_threshold",
+  "heavy_min_capacity_t": 450,
+  "aux_cranes": ["2#150", "1#150"],
+  "aux_capacity_t": 150,
+  "aux_allowed_task_types": [
+    "TRAVEL_TO_SITE",
+    "TRAVEL_TO_CART",
+    "SITE_OPERATION"
+  ],
+  "aux_max_load_t": null,
+  "provenance": {
+    "heavy_min_capacity_t": "04_场景1逐炉次吊运任务与硬约束 §5: 3#/4#/5# are 450 t, 1#/2# are 150 t",
+    "aux_max_load_t": "PENDING modelling decision (wj). null keeps the 150 t cranes out of service; set a number to enable them for the task types above whose recorded load is at or below it.",
+    "aux_allowed_task_types": "Stage-1 placeholder derived from the ETL stage names; wj should confirm which stage types a 150 t crane may ever serve."
+  },
+  "notes": [
+    "The 150 t cranes are physically able to lift an empty hook (no load) and, depending on the pending threshold, some empty-ladle legs whose recorded load is around 130-146 t.",
+    "Enabling the aux cranes must not bypass the stage-1 safety gate: every produced plan is still checked by rail_model.verify_schedule."
+  ]
+}

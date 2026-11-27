@@ -1,0 +1,2 @@
+﻿variant,day,tasks,completed,cranes_used,makespan_h,overtime_h,total_wait_min,mean_wait_min,p95_wait_min,total_lateness_min,yield_moves,rejected_trials,min_gap_m,aux_threshold_t,gate,completed_all,accepted
+COUNT_4E,2026-10-02,287,287,3#450:68;4#450:193;5#450:26,26.14,2.14,1441.4,5.02,16.1,1039.9,137,0,12.5,,pass,True,True
