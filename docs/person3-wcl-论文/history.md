@@ -66,3 +66,10 @@
 
 - 将 `data/runs/scene1_aux/aux_sensitivity_wcl145.csv` 接入 `fig7_scene1_day_layout_aux` 与 `paper/main.tex` Table 4（`AUX_145t`）、`claims_to_runs.csv`（C21）。
 - 在 `paper/main.tex` Section 3 补齐《核心符号总表》（Table 2），在 Section 7 写入 `code/run_all.py` 一键复现说明，并将 Summary Sheet 调紧为 `\small` / `\footnotesize` 防首摘要溢页、Table 4 调为 `\scriptsize` 防右出界。
+
+## 2026-11-27｜维护 Agent：仓库成果与竞赛竞争力评审
+
+- 阅读现有论文、ETL 和三场景摘要、主要调度/随机/故障实现及团队交接；查询 COMAP 官方奖项说明作为评价口径。
+- 确认已有 ETL 843 条唯一匹配、两天整日算例、18 任务 Yield 示例、随机与故障对照、英文稿和图源。
+- 核对发现：整日运行串行化且任务截止被放宽；场景2滚动执行没有连续轨道避让，迟到率被重复当作断浇/热窗率；故障恢复按初始位置锁车后重排整日，缺故障时段解除与完整在线冻结；论文相应表述超出实现。
+- 本次为阅读与静态核对，未运行测试、重新求解或改动代码、数据及论文。

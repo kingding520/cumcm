@@ -459,7 +459,7 @@ def plot_scene1_day_layout_aux() -> None:
         ax2.text(rect.get_x() + rect.get_width() / 2, val + 20, f"{val:.1f}", ha="center", va="bottom", fontsize=7.2)
 
     ax2.annotate(
-        "2#150 takes 1 task:\n+10.2 min outer-rail wait\n(Peak day: 0 aux tasks)",
+        "0 t placeholder task:\n+10.2 min outer-rail wait\n(Peak day: 0 aux tasks)",
         xy=(1 - w / 2, 486.2),
         xytext=(0.8, 860),
         arrowprops=dict(arrowstyle="->", color="#222222", lw=1.0),
@@ -522,9 +522,9 @@ def plot_scene3_fault_recovery() -> None:
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12.2, 4.6), gridspec_kw={"width_ratios": [1.1, 1.15]})
 
     order = [
-        ("crane", "4#450", "Crane 4#450\n(30m)"),
-        ("rail_break", "rail[150,165]", "Rail Break\n[150,165] (60m)"),
-        ("crane", "3#450", "Crane 3#450\n(60m)"),
+        ("crane", "4#450", "Crane 4#450\n(Blocked)"),
+        ("rail_break", "rail[150,165]", "Rail Break\n[150,165]"),
+        ("crane", "3#450", "Crane 3#450\n(Blocked)"),
         ("refining", "LF3", "LF3 Fault\n(60m)"),
         ("caster", "CCM3", "CCM3 Fault\n(60m)"),
         ("converter", "BOF_B", "BOF-B Fault\n(30m)"),

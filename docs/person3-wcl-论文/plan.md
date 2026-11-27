@@ -15,3 +15,7 @@
 
 - `paper/main.tex` 中所有已填数字均绑定 `data/audit/` 与 `data/runs/scene1_replay_6C0754/`、`data/runs/scene1_closed_loop_6C0754/`，未完成实验均显式标记 `\pending{...}`。
 - 组织者明确校赛无唯一标准答案、过渡平车轨道位置与数量可自定义；已在论文 Section 3 写明东侧 3 轨基准假设，并在 Section 7/8 预留数量与西移选址灵敏度分析。
+
+## 2026-11-27 当前评审接续
+
+优先与 Person1/Person2 统一三场景的空间/生产约束、原始截止与故障事件状态；待重跑后同步摘要和对照结论。评审项见本人 handoff 的“本轮成果评审接续”，评审执行记录见 history。

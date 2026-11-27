@@ -1,0 +1,81 @@
+\begin{thebibliography}{10}
+
+\bibitem{rockafellar2000optimization}
+R.~T. Rockafellar and S.~Uryasev, ``Optimization of conditional
+  value-at-risk,'' {\em Journal of Risk}, vol.~2, pp.~21--42, 2000.
+
+\bibitem{liu2021ladle}
+W.~Liu {\em et~al.}, ``Ladle intelligent re-scheduling method in
+  steelmaking--refining--continuous casting production process based on {BP}
+  neural network working condition estimation,'' {\em Research Square
+  Preprint}, 2021.
+\newblock Accessed via Crossref metadata.
+
+\bibitem{tang2001review}
+L.~Tang, J.~Liu, A.~Rong, and Z.~Yang, ``A review of planning and scheduling
+  systems and methods for integrated steel production,'' {\em European Journal
+  of Operational Research}, vol.~133, no.~1, pp.~1--20, 2001.
+
+\bibitem{tang2000mathematical}
+L.~X. Tang, J.~Y. Liu, A.~Y. Rong, and Z.~H. Yang, ``A mathematical programming
+  model for scheduling steelmaking--continuous casting production,'' {\em
+  European Journal of Operational Research}, vol.~120, no.~2, pp.~423--435,
+  2000.
+
+\bibitem{xuan2007scheduling}
+H.~Xuan and L.~X. Tang, ``Scheduling a hybrid flowshop with batch production at
+  the last stage,'' {\em Computers \& Operations Research}, vol.~34, no.~9,
+  pp.~2718--2733, 2007.
+
+\bibitem{sun2025integrated}
+L.~Sun, M.~Li, Z.~Song, T.~Fu, X.~Hao, Y.~Li, J.~Liu, N.~Matsveichuk, and
+  Y.~Sotskov, ``An integrated {MILP} model for scheduling of
+  steelmaking--continuous casting with cranes,'' {\em IEEE Robotics and
+  Automation Letters}, vol.~10, no.~10, pp.~10426--10433, 2025.
+
+\bibitem{peterson2014crane}
+B.~Peterson, I.~Harjunkoski, S.~Hoda, and J.~N. Hooker, ``Exact and heuristic
+  methods for scheduling multiple cranes on a shared track,'' {\em Computers \&
+  Chemical Engineering}, vol.~66, pp.~136--148, 2014.
+
+\bibitem{zhu2006crane}
+Y.~Zhu and A.~Lim, ``Crane scheduling with non-crossing constraint,'' {\em
+  Journal of the Operational Research Society}, vol.~57, no.~12,
+  pp.~1464--1471, 2006.
+
+\bibitem{lim2007mparallel}
+A.~Lim, B.~Rodrigues, and Z.~Xu, ``A $m$-parallel crane scheduling problem with
+  a non-crossing constraint,'' {\em Naval Research Logistics}, vol.~54, no.~2,
+  pp.~115--127, 2007.
+
+\bibitem{shin2026advances}
+W.-J. Shin and H.-J. Kim, ``Advances in multi-crane scheduling: Extended
+  non-interference modeling and temporal-constraint-based valid inequalities,''
+  {\em European Journal of Operational Research}, pp.~35--47, 2026.
+
+\bibitem{li2020simulation}
+N.~Li, J.~Wang, Q.~Ke, and D.~Jiang, ``Simulation-based solution for a dynamic
+  multi-crane-scheduling problem in a steelmaking shop,'' {\em International
+  Journal of Production Research}, vol.~58, no.~19, pp.~5818--5836, 2020.
+
+\bibitem{ortools}
+L.~Perron and V.~Furnon, ``{OR-Tools} {CP-SAT} solver.'' Google Research, 2024.
+
+\bibitem{kleywegt2002sample}
+A.~J. Kleywegt, A.~Shapiro, and T.~Homem-de Mello, ``The sample average
+  approximation method for stochastic discrete optimization,'' {\em SIAM
+  Journal on Optimization}, vol.~12, no.~2, pp.~479--502, 2002.
+
+\bibitem{ye2014robust}
+Y.~Ye, J.~Li, Z.~Li, Q.~Tang, X.~Xiao, and C.~A. Floudas, ``Robust optimization
+  and stochastic programming approaches for medium-term production scheduling
+  of a large-scale steelmaking continuous casting process under demand
+  uncertainty,'' {\em Computers \& Chemical Engineering}, vol.~66,
+  pp.~165--185, 2014.
+
+\bibitem{wang2017dynamic}
+H.~Wang, L.~Tang, and G.~Wang, ``Dynamic scheduling in steelmaking--continuous
+  casting production for continuous caster breakdown,'' {\em International
+  Journal of Production Research}, vol.~55, no.~10, pp.~2763--2781, 2017.
+
+\end{thebibliography}

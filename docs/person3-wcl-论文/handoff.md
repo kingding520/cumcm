@@ -32,3 +32,12 @@
 | M2-02 | Person3 / 论文 | **已落地** | `claims_to_runs.csv`（C01–C15）与 `figure_manifest.csv`（Fig 1–5）已建立 |
 | M3-01 | Person1 / 建模 | **核心已交付** | 补完主动避让规则与平车灵敏度物理边界即可收口 |
 | M3-02 | Person2 / 代码 | **首轮已对接** | `scene1_replay_6C0754` 与 `scene1_closed_loop_6C0754` 已写入论文，待全量与场景 2/3 `run_id` |
+
+## 2026-11-27｜本轮成果评审接续
+
+| 接收人 | 状态 | 内容与操作 |
+|---|---|---|
+| Person2（代码）、Person1（建模） | 待核验修正 | scene1_day.py::day_tasks 放宽 deadline；整日接受条件未含生产/热窗完整验证。保留原始截止并独立报告不可行与迟到。 |
+| Person2（代码） | 待核验修正 | scene2_stochastic.py::rolling_execute 不建避让，与安全预约基线的约束不同；统一空间和生产约束后重跑配对评价。metrics 中迟到率不可同时作为断浇率和热窗率。 |
+| Person2、Person1 | 待核验修正 | scene3_disruption.py 的 recover 按初始状态锁车/封路重排整日；补真实事件状态、冻结任务、故障起止和修复释放。window_violations 实际按迟到60min判定，需与30min总热龄分开。 |
+| Person3（论文） | 待修订 | main.tex 中“三机并行”“随机/故障均已全面校验”“30min热窗”等须与真实实现对齐；更新场景2 09-28锚点268.2→258.0。统一算例和约束后再引用改善百分比。 |
