@@ -278,6 +278,23 @@
     "3#450",
     "5#450"
   ],
+  "auxiliary_150t_policy": {
+    "enabled_in_baseline": false,
+    "enabled_in_five_crane_experiment": true,
+    "candidate_cranes": ["1#150", "2#150"],
+    "max_gross_load_t": 145,
+    "rated_capacity_t": 150,
+    "capacity_reserve_t": 5,
+    "threshold_basis": "model_design",
+    "requires_post_slag_state": true,
+    "requires_verified_gross_load": true,
+    "requires_legal_ground_pickup": true,
+    "requires_outer_side_clear_route": true,
+    "requires_full_service_load_check": true,
+    "allow_suspended_handoff": false,
+    "allow_virtual_transfer_station": false,
+    "fallback": "retain_or_assign_450t_or_wait"
+  },
   "collision_scope": "all_five_cranes",
   "station_alias_required_for": [
     "SLAG_Z1",

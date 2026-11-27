@@ -1,5 +1,6 @@
 {
   "version": "contract-v1",
+  "revision_date": "2026-11-27",
   "units": {
     "time": "s",
     "load": "t"
@@ -21,6 +22,31 @@
       5
     ],
     "time_nonnegative_required": true
+  },
+  "modeling_decisions": {
+    "allow_virtual_transfer_station": false,
+    "continuous_suspension_same_crane": true
+  },
+  "thermal_window": {
+    "symbol": "Delta_h_therm_max",
+    "mode": "fixed_design_window",
+    "max_age_s": 1800,
+    "sensitivity_max_age_s": [1500, 1800, 2100],
+    "parameter_basis": "model_design",
+    "official_numeric_limit_provided": false,
+    "start_event": "last_refining_process_end",
+    "end_event": "actual_cast_start",
+    "includes": ["post_process_wait", "transport", "caster_seat_wait"],
+    "reset_on_dispatch_or_seating": false,
+    "missing_anchor_status": "THERMAL_UNRESOLVED",
+    "temperature_mode": "min_design_window_and_verified_temperature_budget",
+    "cooling_rate_unit": "degC/min",
+    "nominal_schedule_constraint": "hard",
+    "stress_violation_action": "record_violation_and_trigger_recovery",
+    "required_output_fields": [
+      "last_thermal_event_s", "thermal_anchor_source", "thermal_age_s",
+      "thermal_limit_s", "thermal_deadline_s", "thermal_violation_s", "thermal_limit_basis"
+    ]
   },
   "scene2": {
     "horizon_s": 7200,
