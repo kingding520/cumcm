@@ -416,6 +416,7 @@ def plot_yield_6c0754() -> None:
 def plot_scene1_day_layout_aux() -> None:
     cart = list(csv.DictReader((DAY_DIR / "cart_layout_sensitivity.csv").open(encoding="utf-8-sig")))
     aux = list(csv.DictReader((AUX_DIR / "aux_sensitivity.csv").open(encoding="utf-8-sig")))
+    aux145 = list(csv.DictReader((AUX_DIR / "aux_sensitivity_wcl145.csv").open(encoding="utf-8-sig")))
 
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12.0, 4.5), gridspec_kw={"width_ratios": [1.35, 1.0]})
 
@@ -442,10 +443,10 @@ def plot_scene1_day_layout_aux() -> None:
     ax1.set_title("(a) Transfer-Car Count & Westward Relocation Sensitivity")
     ax1.legend(frameon=False, loc="upper left", fontsize=7.8)
 
-    # Panel (b): 150t Auxiliary Crane Threshold Sweep
-    aux_labels = ["Disabled\n(3×450t)", "100 t", "120 t", "140 t"]
-    by_td = {(r["aux_threshold_t"], r["day"]): r for r in aux}
-    keys = ["", "100.0", "120.0", "140.0"]
+    # Panel (b): 150t Auxiliary Crane Threshold Sweep (100-145 t)
+    aux_labels = ["Disabled\n(3×450t)", "100 t", "120 t", "140 t", "145 t\n(Formal)"]
+    by_td = {(r["aux_threshold_t"], r["day"]): r for r in aux + aux145}
+    keys = ["", "100.0", "120.0", "140.0", "145.0"]
     a09 = [float(by_td[(k, "2026-09-28")]["total_wait_min"]) for k in keys]
     a10 = [float(by_td[(k, "2026-10-02")]["total_wait_min"]) for k in keys]
 

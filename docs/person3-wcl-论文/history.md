@@ -61,3 +61,8 @@
 - 更新 `code/src/viz/generate_paper_figures.py`，生成 `fig7_scene1_day_layout_aux.pdf/.png`、`fig8_scene2_stochastic_risk.pdf/.png`、`fig9_scene3_fault_recovery.pdf/.png`。
 - 回填 `paper/main.tex` 全部 `\pending{...}` 槽位（覆盖 Summary Sheet、KPI 速览表、Section 4.5 整日平车/150t、Section 5 场景 2 滚动随机、Section 6 场景 3 故障脆弱性、Section 7 独立校验、Section 8 管理建议），明确标注 63.8% 匹配覆盖率、整日预约保守上界及 L2 替代否决等科学边界。
 - 同步更新 `paper/claims_to_runs.csv`（C19–C23）与 `paper/figure_manifest.csv`（Fig 7–9）。
+
+## 2026-11-27 14:35｜接入 `97f3222` 正式 145 t 辅车结果并做 Overleaf 排版加固
+
+- 将 `data/runs/scene1_aux/aux_sensitivity_wcl145.csv` 接入 `fig7_scene1_day_layout_aux` 与 `paper/main.tex` Table 4（`AUX_145t`）、`claims_to_runs.csv`（C21）。
+- 在 `paper/main.tex` Section 3 补齐《核心符号总表》（Table 2），在 Section 7 写入 `code/run_all.py` 一键复现说明，并将 Summary Sheet 调紧为 `\small` / `\footnotesize` 防首摘要溢页、Table 4 调为 `\scriptsize` 防右出界。
