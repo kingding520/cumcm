@@ -9,7 +9,6 @@
 \usepackage{hyperref}
 \usepackage{fancyhdr}
 \usepackage{float}
-
 \hypersetup{
   colorlinks=true,
   linkcolor=blue!60!black,
@@ -169,11 +168,11 @@ Actual Casting & ALL & 1,117 & 41.45 & 5.00 & 36.23 & 40.65 & 47.89 \\
 
 \subsection{Key Modeling Assumptions}
 \begin{enumerate}[leftmargin=1.5em,itemsep=2pt]
-  \item \textbf{Sufficient Ladle Fleet:} Consistent with the problem statement (26 circulating ladles), ladle shortages do not force artificial heat cancellations; the objective focuses on crane responsiveness and continuity rather than fleet-size minimization.
+  \item \textbf{Sufficient Ladle Fleet:} Under the problem statement's sufficient-ladle assumption, ladle shortages do not force artificial heat cancellations; the objective focuses on crane responsiveness and continuity rather than fleet-size minimization.
   \item \textbf{Single-Track Non-Crossing Physics:} All five E--F cranes share one 1D coordinate rail $x \in [0, L]$ in fixed physical order $k \in \{1,\dots,5\}$ ($\text{2\#150}, \text{4\#450}, \text{3\#450}, \text{5\#450}, \text{1\#150}$) and cannot overtake.
-  \item \textbf{Load-Dependent Crane Eligibility:} A task $j$ with total lifted mass $w_j$ (steel + ladle + residue) may only be assigned to cranes in $K_j = \{k \in K : w_j \le W_k^{\max}\}$, where $W_k^{\max} \in \{150, 450\}$~t.
+  \item \textbf{Load-Dependent Crane Eligibility:} A task $j$ with total lifted mass $w_j$ (steel + ladle + residue) may only be assigned to cranes in $K_j \subseteq \{k \in K : w_j \le Q_k\}$, where $Q_k \in \{150,450\}$~t. The 145~t auxiliary policy additionally requires a verified post-slag gross load, a legal grounded pickup, and a clear outer-side route; continuous suspension stays with one crane.
   \item \textbf{Transfer-Car Layout Specification:} Consistent with the problem statement and plant schematic (Fig.~\ref{fig:plant_layout}), we model three empty-ladle transfer-car tracks (\texttt{CART1}--\texttt{CART3}, unit capacity 1 ladle) positioned along the east E--F bay, and evaluate sensitivity to transfer-car count and westward relocation in Section~7.
-  \item \textbf{Dual-Capacity Refining & Blocking:} Each LF/RH unit separates its receiving/standby berth from its active processing berth; however, a finished ladle remains occupying the station until lifted by a crane.
+  \item \textbf{Dual-Capacity Refining \& Blocking:} Each LF/RH unit separates its receiving/standby berth from its active processing berth; however, a finished ladle remains occupying the station until lifted by a crane.
 \end{enumerate}
 
 \subsection{Nomenclature and Four-Class Task Decomposition}
@@ -192,18 +191,19 @@ $K = \{1,\dots,5\}$ & Set & E--F bay cranes ordered west-to-east: \texttt{2\#150
 $J, H, M$ & Sets & Crane transfer tasks ($J$), operational heats ($H$), and plant stations/carts ($M$). \\
 $o_j, d_j \in [0, L]$ & Param. & West-to-east rail coordinates of task $j$'s origin and destination (m; $L=240$~m). \\
 $r_j, b_j, w_j$ & Param. & Earliest ready time (s), due time (s), and total lifted mass (t; steel + ladle + residue). \\
-$W_k^{\max}, D_k$ & Param. & Rated crane capacity (150 or 450~t; 145~t formal aux cap) and center clearance (12~m). \\
-$a_j, c_j, \Delta_{\text{therm}}^{\max}$ & Param. & Hook-on/off dwell times (s) and maximum thermal age from last refining end to cast start (1,800~s). \\
+$Q_k, D_k$ & Param. & Rated capacity (150/450~t) and adjacent-center separation (12~m); 145~t is an auxiliary policy limit, not a changed rating. \\
+$\tau_j^{pick}, \tau_j^{drop}, \Delta_{h,therm}^{\max}$ & Param. & Pickup/dropoff service times (s) and heat-specific thermal limit (design baseline 1,800~s; sensitivity 1,500/2,100~s). \\
 $S_{ho}, C_{ho}$ & Var. & Start and completion times of stage $o \in O_h$ for heat $h$ (s). \\
 $u_j, v_j, x_{jk}$ & Var. & Pickup time (s), dropoff time (s), and binary crane assignment ($x_{jk} \in \{0,1\}$). \\
-$q_k(t), v_k(t)$ & Var. & Continuous rail position (m) and velocity (m/s) of crane $k$ at time $t$. \\
+$q_k(t), v_k(t)$ & Var. & Crane position (m) and velocity (m/s); $v_j$ above is a task dropoff time, distinguished by its task index. \\
+$A_h,E_h,B_h,F_h$ & Times & Caster seating, last refining completion, casting start and casting finish (s). \\
 \bottomrule
 \end{tabular}
 \end{table}
 \begin{enumerate}[leftmargin=1.5em,itemsep=2pt]
   \item \textbf{Forward Heavy Transfers ($J^{\text{heavy}}$):} 2 legs for single-refining routes (`L0`, `R0`) and 3 legs for dual-refining routes (`L0R0`, `R0L0`).
-  \item \textbf{Post-Casting Empty Returns ($J^{\text{ret}}$):} Direct to transfer cars \texttt{1\#--3\#}, or via slag dumping and/or cast-residue recovery (continuous suspension if handled by one crane, or split into two lifts if handed off).
-  \item \textbf{Converter-C Empty Supply ($J^{\text{C-in}}$):} Transfer-car to C-BOF ladle-car seating tasks (`C_IN_h`), specific to converter C (A/B-BOF receive empty ladles via the D--E bay).
+  \item \textbf{Post-Casting Empty Returns ($J^{\text{ret}}$):} Direct to transfer cars \texttt{1\#--3\#}, or via slag dumping and/or cast-residue recovery (continuous suspension if handled by one crane, or split only at an existing legal grounded interface with explicit station occupancy).
+  \item \textbf{Converter-C Empty Supply ($J^{\text{C-in}}$):} Transfer-car to C-BOF ladle-car seating tasks (\texttt{C\_IN\_h}), specific to converter C (A/B-BOF receive empty ladles via the D--E bay).
   \item \textbf{Cast-Residue Recovery ($J^{\text{rec}}$):} Dual-heat tasks linking donor and receiver heats via \texttt{recovery\_id}.
 \end{enumerate}
 
@@ -211,12 +211,18 @@ $q_k(t), v_k(t)$ & Var. & Continuous rail position (m) and velocity (m/s) of cra
 For each operation $(h,o)$ with start $S_{ho}$, duration $p_{ho}$, and completion $C_{ho} = S_{ho} + p_{ho}$, and each crane task $j \in J$ with pickup $u_j$, dropoff $v_j$, and assignment $x_{jk} \in \{0,1\}$:
 \begin{align}
   u_j &\ge r_j, \qquad \sum_{k \in K_j} x_{jk} = 1, \\
-  v_j &= u_j + a_j + T_k(o_j, d_j) + c_j \quad \text{if } x_{jk} = 1, \\
+  v_j &\ge u_j + \tau_j^{pick} + T_k(o_j,d_j;z_j) + \tau_j^{drop} \quad \text{if } x_{jk}=1, \\
   S_{h,o+1} &\ge v_j \quad \forall \text{ preceding transfer } j \text{ of } (h,o+1), \\
-  u_j &\ge v_i + T_k^{\text{empty}}(d_i, o_j) \quad \text{if crane } k \text{ executes } i \to j, \\
+  u_j &\ge v_i + T_k^{hook}(d_i,o_j) \quad \text{if crane } k \text{ executes } i \to j, \\
   q_{k+1}(t) - q_k(t) &\ge D_k \quad \forall t \ge 0,\; k \in \{1,\dots,4\},
 \end{align}
-where $a_j, c_j$ are hook-on/hook-off times, $q_k(t)$ is crane $k$'s continuous rail position, and $D_k$ is the minimum center-to-center safety clearance. Within each continuous cast, consecutive heats $(h, h')$ enforce tundish continuity $S_{h',\text{cast}} \ge C_{h,\text{cast}}$ with bounded inter-heat gap and thermal age $S_{h,\text{cast}} - C_{h,\text{last-ref}} \le \Delta_{\text{therm}}^{\max}$.
+where $z_j$ is the segment load state, $T_k$ is an unobstructed travel lower bound and $T_k^{hook}$ is empty-hook repositioning time. Any route waiting, slag/recovery dwell and yielding is added explicitly; equality in the travel bound applies to an uninterrupted move. Gross load is checked throughout suspension against $Q_k$. The trajectory domain is $0\le t\le T_{max}$, with $0\le q_k(t)\le L$, and pickups/dropoffs match $o_j,d_j$. Processing precedence also requires $u_j\ge C_{ho}$ for its upstream stage. Receiving berths, process units, carts and recovery receivers retain separate occupancy constraints.
+
+Within a continuous casting segment, the target is $B_{h'}=F_h$ and $A_{h'}+\tau_{h'}^{ready}\le B_{h'}$, with planned tundish changes defining segment boundaries. The total thermal-age constraint is
+\begin{equation}
+  0\le B_h-E_h\le\Delta_{h,therm}^{\max},\qquad \Delta_{h,therm}^{\max}=1800\ \text{s}
+\end{equation}
+in the fixed-window design profile. It includes post-refining waiting, transport and caster-seat waiting. Verified temperature budgets may tighten this limit; reseating or rescheduling does not reset $E_h$. Measured casting gaps and deadline lateness are reported separately from compliance with this target. The following computational benchmarks implement different subsets of this full formulation, identified in each subsection.
 
 % ============================================================================
 % SECTION 4: SCENARIO 1
@@ -224,22 +230,22 @@ where $a_j, c_j$ are hook-on/hook-off times, $q_k(t)$ is crane $k$'s continuous 
 \section{Scenario 1: Deterministic Scheduling and Cast \texttt{6C0754} Replay}
 
 \subsection{Lexicographic Objective and Breakpoint Safety Property}
-In Scenario 1, crane cruise speed $v_k$ is constant ($T_k(o,d) = |d-o|/v_k$) and switching times are zero. Let heat waiting be $W_j = u_j - r_j$ and total crane motion time (loaded plus empty/yielding) be $R$. We minimize the lexicographic objective $\text{lex}\min \big(\text{Violations},\; \sum_{j \in J} W_j,\; R\big)$.
+The constant-speed Scenario~1 abstraction uses cruise speed $\nu_{k,z}$ for load state $z$, with $T_k(o,d;z)=|d-o|/\nu_{k,z}$ and zero pickup/dropoff switching dwell. The metric benchmarks also include the configured acceleration and slow zones; their piecewise-quadratic trajectories require interior-extremum checks. Slag/recovery processing remains a separate nonzero operation. Let heat waiting be $W_j = u_j - r_j$ and total crane motion time (loaded plus empty/yielding) be $R$. Subject to the hard constraints, the target is $\text{lex}\min(\sum_j W_j,R)$. An infeasible input produces a conflict diagnosis rather than trading safety for waiting reductions.
 
 \begin{proposition}[Breakpoint Sufficiency for Constant-Speed Non-Crossing]
-Let $\mathcal{T}$ be the union of all trajectory breakpoints (empty-move starts, pickups, dropoffs, and yield-move endpoints) across cranes $k \in K$. Under piecewise-linear trajectories $q_k(t)$ with constant segment velocities, $q_{k+1}(t) - q_k(t) \ge D_k$ holds for all $t \in [0, T_{\max}]$ if and only if it holds at every $t \in \mathcal{T}$.
+Let $\mathcal{T}$ contain $0,T_{\max}$ and the union of all trajectory breakpoints (empty-move starts, pickups, dropoffs, and yield-move endpoints) across cranes $k \in K$. Under piecewise-linear trajectories $q_k(t)$ with constant segment velocities, $q_{k+1}(t) - q_k(t) \ge D_k$ holds for all $t \in [0, T_{\max}]$ if and only if it holds at every $t \in \mathcal{T}$.
 \end{proposition}
 \begin{proof}
 On any open interval $(t_m, t_{m+1})$ between consecutive breakpoints in $\mathcal{T}$, both $q_k(t)$ and $q_{k+1}(t)$ are affine functions of $t$. Hence their difference $g_k(t) = q_{k+1}(t) - q_k(t)$ is affine and attains its minimum on $[t_m, t_{m+1}]$ at one of the endpoints $t_m$ or $t_{m+1}$.
 \end{proof}
 
-This property enables exact continuous-time MILP verification on single-cast instances and fast conflict-driven yielding in rolling-horizon CP-SAT for full-day schedules.
+This proposition applies to the constant-speed abstraction. The metric verifier additionally checks stationary points of each quadratic relative-displacement segment; the full-day implementation uses a greedy reservation rule.
 
 \subsection{Empirical Replay Benchmark on Cast \texttt{6C0754}}
 Before optimizing crane assignments, we replayed cast \texttt{6C0754} (heats \texttt{26BD6452}--\texttt{26BD6457}, all route \texttt{R0}, B-BOF $\rightarrow$ 1\#RH $\rightarrow$ 3\#CCM) using the exact observed crane assignments and timestamps (`run\_id: scene1-replay-6C0754`). As shown in Fig.~\ref{fig:replay_6c0754}:
 \begin{itemize}[leftmargin=1.5em,itemsep=2pt]
-  \item \textbf{Feasibility & Load Imbalance:} CP-SAT confirms 0 same-crane overlaps (`OPTIMAL` feasibility check), with peak ladle load 421.3~t and empty-return loads 137.0--149.9~t. Crane duty is heavily skewed: \texttt{3\#450} logs 116.87~min versus 72.40~min on \texttt{5\#450} and only 14.35~min on \texttt{4\#450}.
-  \item \textbf{Tight Cast Gaps & Thermal Escalation:} Inter-heat casting gaps compress to 1.53--2.78~min, while cast-start delay relative to plan drifts from $-0.93$~min (\texttt{26BD6452}) to $+19.00$~min (\texttt{26BD6457}) and thermal age from RH end to cast start rises from 9.98 to 31.72~min.
+  \item \textbf{Feasibility \& Load Imbalance:} CP-SAT confirms 0 same-crane overlaps (`OPTIMAL` feasibility check), with peak ladle load 421.3~t and empty-return loads 137.0--149.9~t. Crane duty is heavily skewed: \texttt{3\#450} logs 116.87~min versus 72.40~min on \texttt{5\#450} and only 14.35~min on \texttt{4\#450}.
+  \item \textbf{Tight Cast Gaps \& Thermal Escalation:} Inter-heat casting gaps compress to 1.53--2.78~min, while cast-start delay relative to plan drifts from $-0.93$~min (\texttt{26BD6452}) to $+19.00$~min (\texttt{26BD6457}) and thermal age from RH end to cast start rises from 9.98 to 31.72~min.
 \end{itemize}
 
 \begin{figure}[htbp]
@@ -253,7 +259,7 @@ Before optimizing crane assignments, we replayed cast \texttt{6C0754} (heats \te
 Evaluating five candidate policies on the 18-task \texttt{6C0754} closed-loop benchmark under provisional rail geometry (\texttt{scene1\_rail\_params.yml}; Fig.~\ref{fig:closed_loop_6c0754}) uncovers two critical structural insights:
 \begin{enumerate}[leftmargin=1.5em,itemsep=2pt]
   \item \textbf{Parallel Dispatch Without Yielding Collides:} Without explicit inter-crane yielding or handoff rules, all four three-crane parallel policies---observed replay (204.12~min wait), FCFS (21.92~min), EDF-Nearest (21.92~min), and CP-SAT with exact empty setup (33.65~min)---violate shared-track separation, producing worst-case crossings of $-1{,}235$ to $-1{,}520$~px against the $+50$~px threshold. Only single-crane \texttt{conservative\_serial} passes ($+60.0$~px clearance), at the cost of inflating task waiting to 109.48~min ($+87.6$~min above FCFS) and lateness to 18.37~min.
-  \item \textbf{Empty-Return Calibration Split:} Comparing observed leg durations against heavy-ladle OD regression (\texttt{leg\_calibration.csv}) yields small residuals for \texttt{BOF\_to\_RH} ($+0.89$~min) and \texttt{RH\_to\_CCM} ($+0.87$~min), but a $+12.60$~min residual for \texttt{CCM\_empty\_to\_transfer\_car} (16.02~min observed median vs.\ 3.41~min travel-only prediction) because slag-dumping and residue-handling dwell are embedded in the return leg.
+  \item \textbf{Empty-Return Calibration Split:} Comparing observed leg durations against heavy-ladle OD regression (\texttt{leg\_calibration.csv}) yields small residuals for \texttt{BOF\_to\_RH} ($+0.89$~min) and \texttt{RH\_to\_CCM} ($+0.87$~min), but a $+12.60$~min residual for \texttt{CCM\_empty\_to\_transfer\_car} (16.02~min observed median vs.\ 3.41~min inherited OD-regression prediction) consistent with slag/residue processing or waiting mixed into the observed return duration; event-level decomposition is needed.
 \end{enumerate}
 
 \begin{table}[htbp]
@@ -284,9 +290,9 @@ Conservative Serial (\texttt{5\#450}) & 109.48 & 18.37 & 403.73 & $+60.0$ & 0.02
 \subsection{Certified Proactive-Yielding Dispatch Under \texttt{ef-initial-v1}}
 Switching to the unified metric configuration \texttt{ef-initial-v1} ($D = 12.0$~m, speeds $0.60/0.80/1.00$~m/s, zero Scenario-1 switching dwell) and enabling explicit proactive yielding resolves the multi-crane collision bottleneck on cast \texttt{6C0754} (Table~\ref{tab:yield_6c0754}, Fig.~\ref{fig:yield_6c0754}; \texttt{run\_id: scene1-yield-6C0754}, 1~s resolution certified trajectory):
 \begin{itemize}[leftmargin=1.5em,itemsep=2pt]
-  \item \textbf{93.1\% Wait Reduction Over Best Safe Serial:} \texttt{fcfs\_nearest} completes all 18 tasks with zero cast lateness, 12.24~m minimum inter-crane clearance ($\ge 12.0$~m), 29 yield maneuvers, and only \textbf{0.52~min} total task waiting---a \textbf{6.98~min (93.1\%)} reduction compared with the best safe single-crane serial schedule (\texttt{serial\_4\#450}, 7.50~min). Note that this zero-dwell kinematic comparison is evaluated separately from the 109.48~min observation-dwell serial benchmark in Table~\ref{tab:closed_loop_6c0754}.
+  \item \textbf{93.1\% Wait Reduction Over Best Safe Serial:} \texttt{fcfs\_nearest} completes all 18 tasks with zero reported task-deadline lateness, 12.24~m minimum inter-crane clearance ($\ge 12.0$~m), 29 yield maneuvers, and only \textbf{0.52~min} total task waiting---a \textbf{6.98~min (93.1\%)} reduction compared with the best safe single-crane serial schedule (\texttt{serial\_4\#450}, 7.50~min). Note that this zero-dwell kinematic comparison is evaluated separately from the 109.48~min observation-dwell serial benchmark in Table~\ref{tab:closed_loop_6c0754}.
   \item \textbf{Necessity of Proactive Yielding \& Geometric Awareness:} Disabling yielding on the identical pipeline (\texttt{pipeline\_no\_yield}) deadlocks after 1/18 task. Conversely, geometry-blind CP-SAT crane assignment (\texttt{cp\_sat\_assignment}) attempts to force \texttt{5\#450} into the mid-bay, triggering 531 yield events and deadlocking at 11/18 tasks.
-  \item \textbf{Single-Cast Two-Crane Frontier:} Because empty returns from \texttt{CCM3} (181.5~m) must be lifted by the delivering crane without an artificial mid-air handoff stand, \texttt{4\#450} and \texttt{3\#450} naturally form the active two-crane frontier on an isolated single cast, while true three-crane parallelism emerges at the full-day multi-cast level.
+  \item \textbf{Single-Cast Two-Crane Frontier:} The accepted assignment uses \texttt{4\#450} and \texttt{3\#450} without virtual transfer stands. This demonstrates two-crane sufficiency for the 18-task transport instance; a single crane also completes it, so it is not a minimum-fleet or global-optimality result. Full thermal and station-operation compliance requires the linked event model.
 \end{itemize}
 
 \begin{table}[htbp]
@@ -317,10 +323,10 @@ Switching to the unified metric configuration \texttt{ef-initial-v1} ($D = 12.0$
 \end{figure}
 
 \subsection{Full-Day Multi-Cast Dispatch, 150~t Offload, and Transfer-Car Layout}
-Executing the full 17.5-day Tier-1/Tier-2 ETL under \texttt{contract-v1} (5,400~s time gate, 3.0~t mass-balance gate) yields \textbf{843 uniquely matched heats} out of 1,321 plan rows (63.8\% coverage; 478 unresolved heats preserved in \texttt{conflicts.csv}, 0 silent drops), comprising 3,407 operations and 3,764 crane moves. From these, two canonical benchmark days are selected: a median normal day (\textbf{2026-09-28}: 48 heats, 12 casts, 197 tasks) and the peak matched day (\textbf{2026-10-02}: 59 heats, 11 casts, 287 tasks). All three 450~t cranes (\texttt{4\#450}, \texttt{3\#450}, \texttt{5\#450}) operate concurrently across the full day with 100\% task completion and 12.5~m minimum clearance. Because the full-day reservation scheduler enforces strict single-crane motion exclusivity, its makespan slightly exceeds 24~h (25.64~h / 26.13~h) and its waiting totals represent conservative upper bounds (Table~\ref{tab:day_layout}, Fig.~\ref{fig:day_layout_aux}):
+Executing the full 17.5-day Tier-1/Tier-2 ETL under \texttt{contract-v1} (5,400~s time gate, 3.0~t mass-balance gate) yields \textbf{843 uniquely matched heats} out of 1,321 plan rows (63.8\% coverage; 478 unresolved plan rows preserved in \texttt{conflicts.csv}, 0 silent drops), comprising 3,407 operations and 3,764 crane moves. From these, two canonical benchmark days are selected: a median normal day (\textbf{2026-09-28}: 48 heats, 12 casts, 197 tasks) and the peak matched day (\textbf{2026-10-02}: 59 heats, 11 casts, 287 tasks). All three 450~t cranes (\texttt{4\#450}, \texttt{3\#450}, \texttt{5\#450}) receive tasks over the full day, with 100\% scheduled task coverage and 12.5~m minimum clearance; their movements are serialized. The reservation schedule spans 25.64/26.13~h from the earliest selected release, with total task-deadline lateness 258.0/786.9~min. A span above 24~h is not by itself a capacity infeasibility proof: releases, deadlines and cross-midnight work must be considered. These are conservative heuristic waiting totals; a production-feasible upper bound additionally requires all process and thermal constraints (Table~\ref{tab:day_layout}, Fig.~\ref{fig:day_layout_aux}):
 \begin{enumerate}[leftmargin=1.5em,itemsep=2pt]
-  \item \textbf{East-Side Transfer-Car Grouping Dominates Westward Relocation:} Reducing east transfer cars from 3 (\texttt{BASE\_3E}) to 2 (\texttt{COUNT\_2E}) slightly lowers waiting (476.0 $\rightarrow$ 474.0~min on 09-28; 1,158.1 $\rightarrow$ 1,156.2~min on 10-02). Conversely, adding a 4th cart (\texttt{COUNT\_4E}, 190~m) or relocating \texttt{CART3} westward to 80/85/90~m (\texttt{WEST\_3\_80/85/90}) severely degrades peak-day waiting to 1,424.6 / 1,589.5 / 2,154.2~min (P95 wait up to 24.3~min) by pulling eastern returns into the busy \texttt{4\#450} mid-bay core.
-  \item \textbf{150~t Auxiliary Crane Boundary:} Under capacity sweeps (100/120/140~t) and the formal 145~t policy threshold (\texttt{aux\_sensitivity\_wcl145.csv}), \texttt{1\#150}/\texttt{2\#150} receive 0 tasks on the peak day and only 1 task on the normal day (increasing wait from 476.0 to 486.2~min due to outer-rail entry interference). Keeping 150~t cranes parked at the outer ends ($7.5$~m and $227.0$~m) is therefore optimal under the current layout.
+  \item \textbf{Layout Ranking Under the Tested Routing Rule:} Reducing east transfer cars from 3 (\texttt{BASE\_3E}) to 2 (\texttt{COUNT\_2E}) slightly lowers waiting (476.0 $\rightarrow$ 474.0~min on 09-28; 1,158.1 $\rightarrow$ 1,156.2~min on 10-02). Conversely, adding a 4th cart (\texttt{COUNT\_4E}, 190~m) or relocating \texttt{CART3} westward to 80/85/90~m (\texttt{WEST\_3\_80/85/90}) severely degrades peak-day waiting to 1,424.6 / 1,589.5 / 2,154.2~min (P95 wait up to 24.3~min) by pulling eastern returns into the busy \texttt{4\#450} mid-bay core.
+  \item \textbf{150~t Auxiliary Crane Boundary:} Under capacity sweeps (100/120/140~t) and the formal 145~t policy threshold (\texttt{aux\_sensitivity\_wcl145.csv}), \texttt{1\#150}/\texttt{2\#150} receive 0 tasks on the peak day and only 1 task on the normal day (increasing wait from 476.0 to 486.2~min due to outer-rail entry interference). The sole auxiliary assignment on 09-28 is \texttt{26CD5084:CCM\_to\_CART}, whose input load is 0.0~t; this cannot certify a physical empty-ladle lift. The sweep is therefore a placeholder capability experiment and must be repeated with verified positive gross loads before concluding that the formal 145~t policy has no benefit. The formal rule additionally requires verified post-slag gross weight, grounded pickup and continuous same-crane suspension; the current capacity-only sweep does not establish compliance with all those conditions or optimality of parking.
 \end{enumerate}
 
 \begin{table}[htbp]
@@ -356,24 +362,26 @@ Executing the full 17.5-day Tier-1/Tier-2 ETL under \texttt{contract-v1} (5,400~
 \section{Scenario 2: Multi-Gear Kinematics and Risk-Averse Stochastic Optimization}
 
 \subsection{Piecewise Velocity-Envelope Kinematics}
-In Scenario 2, cranes experience finite acceleration/deceleration ($a_k$), discrete speed gears $v_{k,g}$, and spatial slow-down zones $v(x) \le v_{\text{zone}}(x)$ over active tapping or casting turntables. For any move from $x_0$ to $x_1$, the minimum-time feasible speed profile $v(x)$ is computed via a standard forward--backward $v^2(x)$ envelope pass:
-\begin{equation}
-  v_{\text{fwd}}^2(x + \Delta x) = \min\big(v_{\text{cap}}^2(x+\Delta x),\; v_{\text{fwd}}^2(x) + 2 a_k \Delta x\big), \qquad
-  v_{\text{bwd}}^2(x) = \min\big(v_{\text{fwd}}^2(x),\; v_{\text{bwd}}^2(x+\Delta x) + 2 a_k \Delta x\big),
-\end{equation}
-followed by projection onto the discrete gear set and verification of quadratic relative-displacement extrema ($v_k(t) = v_{k+1}(t)$) inside each segment.
+The intended motion contract uses finite acceleration/braking $a_k^+,a_k^-$ and load-dependent gear limits. To cover either rail direction, parameterize a move by traveled distance $\ell\in[0,|x_1-x_0|]$ and $x(\ell)=x_0+\sigma\ell$, where $\sigma$ is the travel direction. A forward--backward squared-speed envelope on a distance grid satisfies
+\begin{align}
+ (V_{i+1}^{f})^2&=\min(V_{cap,i+1}^2,(V_i^f)^2+2a_k^+\delta\ell_i),\\
+ (V_i^b)^2&=\min((V_i^f)^2,(V_{i+1}^b)^2+2a_k^-\delta\ell_i).
+\end{align}
+For rest-to-rest travel $V_0^f=V_n^b=0$. Gear targets must be realized through continuous acceleration and braking, including braking before slow-zone entry. The current helper checks a selected gear's stopping distance against the next slow zone and reports integrated travel time; this is a single-move diagnostic, not a certified implementation of the full envelope or shared-track stochastic execution.
 
-\subsection{Chronological Day-Block Sampling and Rolling SAA-CVaR}
-Pure processing durations (tapping, LF, RH, casting) are sampled from empirical distributions stratified by route and equipment using chronological train/validation/test splits without future leakage. At each dispatch epoch, a non-anticipative rolling Sample Average Approximation minimizes expected waiting plus tail tardiness risk:
+\subsection{Sampling and Adaptive Timing-Risk Evaluation}
+The contract-level objective is lexicographic in expected cast-readiness tardiness plus tail risk, expected waiting, and motion time. With $L_s$ the total readiness tardiness in seconds, its first component is
 \begin{equation}
-  \min \; \frac{1}{|S|} \sum_{s \in S} \sum_{j \in J} W_{j,s} + \lambda \left( \eta + \frac{1}{(1-\alpha)|S|} \sum_{s \in S} \max(L_s - \eta, 0) \right),
+ \frac{1}{N}\sum_{s=1}^N L_s+\lambda\left[\eta+\frac{1}{(1-\alpha)N}\sum_{s=1}^N\max(L_s-\eta,0)\right],
 \end{equation}
-where $L_s$ is scenario critical cast-readiness tardiness and $(\alpha, \lambda) = (0.90, 1.0)$. Evaluating 100 out-of-sample day-block scenarios (Table~\ref{tab:scene2_risk}, Fig.~\ref{fig:scene2_risk}) confirms: (i) zero-noise runs match the Scenario~1 daily anchors identically (268.2/786.9~min); (ii) forward--backward braking envelopes fit all slow-down zones (`gear\_envelope\_2026-09-28.csv`: heavy ladle 207.14~s vs.\ 149.50~s unconstrained; empty ladle 154.72~s vs.\ 113.12~s); and (iii) non-anticipative rolling dispatch slashes mean lateness by \textbf{74.4\%} on 09-28 (100.01 $\rightarrow$ 25.59~min) and \textbf{84.6\%} on 10-02 (293.13 $\rightarrow$ 45.22~min), while cutting CVaR90 by 61.1\%--78.4\%. Notably, under uniform day-block multiplicative shocks, \texttt{rolling\_risk} (26.42/46.44~min) does not outperform \texttt{rolling\_mean}, demonstrating that execution-time adaptation drives the primary gain unless shocks are heterogeneous across stations.
+minimized over the policy and $\eta$, with $\alpha=0.90,\lambda=1$. Current experiments instead compare fixed plans with task-by-task adaptive mean and risk-based dispatch. Risk-based selection scores sampled completion times rather than solving the full window objective. Processing-derived factors by operation type scale movement/hold durations, while release times and deadlines remain fixed. This is a timing surrogate, not a full stochastic process-event propagation model; factors below one also require a speed-cap recheck before physical execution. The adaptive path omits yielding and shared-track certification. Actual outcomes are revealed after choosing a crane, but a full 2~h/60~s non-anticipativity audit is outstanding.
+
+The 100 evaluation draws are independent of the 20 internal draws. The two benchmark dates lie inside the factor-fitting period, so this is Monte Carlo evaluation on fitted-period days, not a held-out chronological test. Reported CVaR90 uses the code's upper-tail mean (11 largest observations at $N=100$), distinguished from the optimized CVaR functional above. Evaluating these 100 timing scenarios (Table~\ref{tab:scene2_risk}, Fig.~\ref{fig:scene2_risk}) confirms: (i) zero-noise runs match the Scenario~1 daily anchors identically (258.0/786.9~min); (ii) the single-move gear diagnostic reports travel diagnostics (`gear\_envelope\_2026-09-28.csv`: heavy ladle 207.14~s vs.\ 149.50~s unconstrained; empty ladle 154.72~s vs.\ 113.12~s); and (iii) the adaptive timing surrogate reduces mean total task-deadline lateness by \textbf{74.4\%} on 09-28 (100.01 $\rightarrow$ 25.59~min) and \textbf{84.6\%} on 10-02 (293.13 $\rightarrow$ 45.22~min), while cutting CVaR90 by 61.1\%--78.4\%. Notably, under uniform day-block multiplicative shocks, \texttt{rolling\_risk} (26.42/46.44~min) does not outperform \texttt{rolling\_mean}, demonstrating that execution-time adaptation drives the primary gain for these factor samples. Equipment-specific shocks remain a future comparison; the present runs do not establish their benefit.
 
 \begin{table}[htbp]
 \centering
 \small
-\caption{Scenario~2 Out-of-Sample Stochastic Evaluation (100 Scenarios; Open-Loop vs.\ Non-Anticipative Rolling)}
+\caption{Scenario~2 Timing-Surrogate Evaluation (100 Independent Draws; Open-Loop vs.\ Adaptive Dispatch)}
 \label{tab:scene2_risk}
 \begin{tabular}{lrrrr}
 \toprule
@@ -390,7 +398,7 @@ where $L_s$ is scenario critical cast-readiness tardiness and $(\alpha, \lambda)
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.96\textwidth]{figures/fig8_scene2_stochastic_risk.pdf}
-  \caption{Scenario~2 out-of-sample mean, P95, and CVaR90 lateness comparing open-loop plans against non-anticipative rolling dispatch on (a) normal day 2026-09-28 and (b) peak day 2026-10-02.}
+  \caption{Scenario~2 timing-surrogate mean, P95, and reported tail-mean lateness comparing open-loop plans against adaptive dispatch on (a) normal day 2026-09-28 and (b) peak day 2026-10-02.}
   \label{fig:scene2_risk}
 \end{figure}
 
@@ -403,24 +411,26 @@ where $L_s$ is scenario critical cast-readiness tardiness and $(\alpha, \lambda)
 We model both micro-perturbations (tapping delays, argon-station/ladle-car occupancy extending $r_j$) and four macro-faults: BOF, refining (LF/RH), CCM, and crane breakdowns.
 
 \begin{proposition}[Topological Rail Partitioning Under Crane Failure]
-If crane $k^*$ fails and remains immobilized at rail coordinate $x_0$, the E--F track is physically partitioned into $[0, x_0 - D_{k^*-1}]$ (accessible only to cranes $k < k^*$) and $[x_0 + D_{k^*}, L]$ (accessible only to cranes $k > k^*$). Any transfer task $j$ with $\min(o_j, d_j) < x_0 < \max(o_j, d_j)$ is physically unreachable without cross-zone equipment substitution or crane towing.
+While an interior crane $k^*$ remains immobilized at rail coordinate $x_0$, the E--F track is physically partitioned into $[0, x_0 - D_{k^*-1}]$ (accessible only to cranes $k < k^*$) and $[x_0 + D_{k^*}, L]$ (accessible only to cranes $k > k^*$). During that blocked interval, any direct rail transfer $j$ with $\min(o_j, d_j) < x_0 < \max(o_j, d_j)$ cannot be carried through the blocked coordinate by another crane. This is a topological necessary condition; repair or a separately feasible alternative route changes the reachable set.
 \end{proposition}
 
 \subsection{Event-Triggered Rolling Recovery}
-Upon a fault trigger, the rescheduler: (1) updates observable states, (2) freezes completed, in-flight, and 60~s committed lifts, (3) disables faulted stations/track segments, (4) re-solves within a 5~s budget minimizing schedule disruption $\sum_j |u_j^{\text{new}} - u_j^{\text{old}}|$, and (5) evaluates L1 (same-route recovery) vs.\ L2 (compatible LF/RH substitution). Stress-testing 8 fault scenarios (Table~\ref{tab:scene3_faults}, Fig.~\ref{fig:scene3_faults}) reveals two decisive results:
+The intended event-driven contract freezes completed/in-flight tasks and a 60~s commitment region, then re-plans from observed positions within a 5~s budget. Current results are static stress replays: the task list is re-scheduled from nominal initial positions, a failed crane is pinned at its initial coordinate, and rail obstacles remain active throughout the replay. The labeled 30/60~min durations do not release these barriers after repair. Station cases shift selected releases rather than simulating full resource outages. Thus the following figures measure partial service under those replay rules, not recovered plant throughput after a finite-duration failure.
+
+Let $U$ be unserved tasks and $\ell_j=\max(v_j-b_j,0)$ for served tasks. The reported loss, in minutes, is $\sum_j\ell_j/60+60|U|$; the 60~min charge is a design penalty per unserved movement, not measured production loss. The field \texttt{window\_violations} counts served tasks with deadline lateness above 60~min. It does not measure $B_h-E_h>1800$~s. A zero count can coexist with many unserved tasks. The reported status \texttt{FOUND\_FEASIBLE} also permits partial service and is not full production feasibility. Eight disturbance cases plus a no-fault baseline yield the following diagnostics:
 \begin{enumerate}[leftmargin=1.5em,itemsep=2pt]
-  \item \textbf{Crane \texttt{4\#450} Is the Primary Single Point of Failure:} A 30~min breakdown of \texttt{4\#450} halves task completion to \textbf{46.2\%} (91/197) on 09-28 and \textbf{47.7\%} (137/287) on 10-02, followed by a 60~min mid-bay \texttt{rail\_break} at $[150,165]$~m (70.1\%/70.7\%) and a 60~min \texttt{3\#450} failure (75.1\%/79.4%). By contrast, station faults (\texttt{RH1}, \texttt{LF3}, \texttt{BOF\_B}, \texttt{CCM3}) and 10~min ready delays maintain \textbf{100\% task service} via schedule shifting.
-  \item \textbf{Off-Axis Equipment Substitution Rejected:} Attempting L2 substitution (\texttt{LF3}$\leftrightarrow$\texttt{LF1}, \texttt{RH1}$\leftrightarrow$\texttt{RH2}; 20/26 candidate trials on \texttt{LF3} and 4/12 on \texttt{RH1}) increases 30~min thermal-window violations due to long cross-bay diversions; all runs cleanly revert to L1 recovery (\texttt{substituted\_tasks = 0}).
+  \item \textbf{Persistent-Obstacle Sensitivity:} The static pinned-crane replay labeled 30~min for \texttt{4\#450} reduces scheduled task coverage to \textbf{46.2\%} (91/197) on 09-28 and \textbf{47.7\%} (137/287) on 10-02, followed by a 60~min mid-bay \texttt{rail\_break} at $[150,165]$~m (70.1\%/70.7\%) and a 60~min \texttt{3\#450} failure (75.1\%/79.4%). By contrast, station faults (\texttt{RH1}, \texttt{LF3}, \texttt{BOF\_B}, \texttt{CCM3}) and 10~min ready delays schedule all tasks via release shifting, although lateness violations remain.
+  \item \textbf{Off-Axis Equipment Substitution Rejected:} Attempting L2 substitution (\texttt{LF3}$\leftrightarrow$\texttt{LF1}, \texttt{RH1}$\leftrightarrow$\texttt{RH2}; 20/26 candidate task remappings on \texttt{LF3} and 4/12 on \texttt{RH1}) fails to reduce counts of task lateness above 60~min under the tested remapping rule; all runs cleanly revert to L1 recovery (\texttt{substituted\_tasks = 0}).
 \end{enumerate}
 
 \begin{table}[htbp]
 \centering
 \small
-\caption{Scenario~3 Fault-Recovery Stress Tests Across Eight Scenarios (Normal 09-28 / Peak 10-02)}
+\caption{Scenario~3 Static Stress Replays: Eight Disturbances Plus Baseline (Normal 09-28 / Peak 10-02)}
 \label{tab:scene3_faults}
 \begin{tabular}{llrrrrr}
 \toprule
-\textbf{Fault Scenario} & \textbf{Dur.} & \textbf{Service Rate (\%)} & \textbf{Unserved} & \textbf{Delta Loss (min)} & \textbf{Win. Viol.} & \textbf{L2 Tried/Used} \\
+\textbf{Fault Scenario} & \textbf{Dur.} & \textbf{Service Rate (\%)} & \textbf{Unserved} & \textbf{Delta Loss (min)} & \textbf{Late $>60$ min} & \textbf{L2 Tried/Used} \\
 \midrule
 \texttt{none} (Baseline) & 0~m & 100.0 / 100.0 & 0 / 0 & 0.0 / 0.0 & 0 / 0 & 0 / 0 \\
 \texttt{crane 4\#450} & 30~m & \textbf{46.2} / \textbf{47.7} & 106 / 150 & 6,103.7 / 8,223.4 & 0 / 0 & 0 / 0 \\
@@ -438,7 +448,7 @@ Upon a fault trigger, the rescheduler: (1) updates observable states, (2) freeze
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.96\textwidth]{figures/fig9_scene3_fault_recovery.pdf}
-  \caption{(a) Task completion service rate across eight fault scenarios highlighting \texttt{4\#450} and mid-bay rail breaks as topological bottlenecks; (b) total recovery loss delta including 60~min/unserved penalty.}
+  \caption{(a) Task completion service rate across eight fault scenarios under persistent pinned-crane and blocked-rail replay assumptions; (b) total recovery loss delta including 60~min/unserved penalty.}
   \label{fig:scene3_faults}
 \end{figure}
 
@@ -447,7 +457,7 @@ Upon a fault trigger, the rescheduler: (1) updates observable states, (2) freeze
 % ============================================================================
 \section{Independent Verification, Ablation, and Sensitivity Analysis}
 
-Every schedule (\texttt{schedule.csv}) and continuous trajectory (\texttt{trajectory.csv}) is audited by a standalone black-box verifier checking: (i) exact task coverage, (ii) crane weight limits ($w_j \le W_k^{\max}$, formal 145~t auxiliary threshold), (iii) process precedence and dual-station capacity, (iv) cast continuity and 30~min (1,800~s) thermal age bounds, and (v) continuous-time rail separation $q_{k+1}(t) - q_k(t) \ge D_k$ including interior quadratic extrema. Across all accepted runs (reproducible end-to-end via \texttt{code/run\_all.py} and verified by automated \texttt{pytest} suites including synthetic interior-collision counterexamples), zero track collisions occurred, while ablation confirmed that disabling proactive yielding causes immediate deadlock (1/18 tasks on \texttt{6C0754}) and uniform day-block noise limits CVaR differentiation over rolling mean dispatch.
+The target audit checks task coverage, gross load against $Q_k$, process/berth/cart occupancy, casting continuity, total thermal age and continuous rail separation. Current saved Scenario~1 trajectories have independent separation checks, including interior quadratic extrema; completeness and the rail gate do not certify the remaining production constraints. The Scenario~2 adaptive timing paths and Scenario~3 static stress replays require their own trajectory and event-state audits before receiving full safety/thermal certification. The no-yield 1/18 deadlock is an observed single-cast ablation, while the reported stochastic tail statistic is evaluated in the timing surrogate described in Section~5.
 
 % ============================================================================
 % SECTION 8: MANAGERIAL INSIGHTS, STRENGTHS & LIMITATIONS
@@ -456,15 +466,15 @@ Every schedule (\texttt{schedule.csv}) and continuous trajectory (\texttt{trajec
 
 \subsection{Operational Memo to the Plant Dispatching Center}
 \begin{enumerate}[leftmargin=1.5em,itemsep=2pt]
-  \item \textbf{Maintain East-Side Transfer-Car Grouping:} Sensitivity runs prove that 2--3 east transfer cars (\texttt{COUNT\_2E}/\texttt{BASE\_3E}) outperform adding a 4th cart or relocating \texttt{CART3} westward (which raises peak-day wait from 1,158.1 to 2,154.2~min).
-  \item \textbf{Keep 150~t Cranes at Outer Boundaries:} Because caster empty returns reach 149.9--150.9~t and outer-rail entry adds $+10.2$~min interference on normal days with 0 peak-day adoption, 3$\times$450~t operation with 150~t boundary parking is recommended.
-  \item \textbf{Prioritize \texttt{4\#450} Preventive Maintenance:} Because \texttt{4\#450} failure halves plant service rate (46.2\%/47.7\%) while station faults remain 100\% recoverable, preventive maintenance should target \texttt{4\#450} and mid-bay rail segments $[150, 165]$~m.
-  \item \textbf{Dual-Key MES Identity Enforcement:} Upgrading MES joins from \texttt{heat\_id} alone to \texttt{(heat\_id, ladle\_id)} + \texttt{temp\_ladle\_id} eliminates the 72 duplicate-heat-ID join ambiguities observed in historical logs.
+  \item \textbf{Retain the East-Side Baseline Pending a Controlled Layout Comparison:} In the tested greedy reservation/routing policy, \texttt{COUNT\_2E} has the lowest waiting on both days, while \texttt{WEST\_3\_90} increases peak-day waiting from 1,158.1 to 2,154.2~min. Adding a cart also changes routing, and the geometry retains old cart slow zones. Compare optional routing with consistent slow zones and cart turnaround before deciding to remove or relocate tracks; these runs do not establish a capacity advantage from removing a cart.
+  \item \textbf{Use 150~t Service Selectively:} Keep three 450~t cranes as the baseline and admit auxiliary service only after slag completion, verified gross load $\le145$~t, legal grounded pickup and safe outer-side access. The capacity-only sweep reports 10.2~min extra waiting on 09-28 and zero auxiliary tasks on 10-02, but its only auxiliary assignment carries a recorded 0.0~t load. Validate the missing/invalid gross load and rerun the eligibility filter before adopting an auxiliary-use recommendation. Continuous suspension cannot be transferred in mid-air.
+  \item \textbf{Inspect Central Rail Access and Plan Safe Recovery:} Persistent blockage at \texttt{4\#450} is the strongest tested task-coverage stress (46.2\%/47.7\%). Treat this as an access vulnerability to investigate. Repair-aware replay from actual fault-time states is needed to rank finite-duration maintenance benefits. Station cases with 100\% task service still have severe lateness; service coverage alone is not successful thermal/continuous-casting recovery.
+  \item \textbf{Preserve Traceable MES Identity:} Join with heat, physical ladle, route stage, time and mass evidence, retaining temporary IDs as stage aliases and ambiguous cases in the audit ledger. Report remaining ambiguity after one-to-one checks; adding a composite key alone does not prove elimination of all 72 duplicate-ID groups.
 \end{enumerate}
 
 \subsection{Strengths and Limitations}
-\textbf{Strengths:} Non-destructive multi-source data forensics; exact continuous-time breakpoint safety; unified four-class task coverage including C-BOF empty supply and cast-residue recovery; independent black-box verification.\\
-\textbf{Limitations:} Metric bay coordinates and kinematic parameters are not explicitly specified in the problem statement and must be calibrated from empirical transit times and sensitivity ranges; long-duration mid-bay crane failures can create physically unreachable transfers requiring manual towing or cast interruption.
+\textbf{Strengths:} Traceable multi-source auditing, an explicit four-class task contract, and independent continuous-time separation checks for the saved Scenario~1 trajectories.\\
+\textbf{Limitations:} Coordinates, motion limits and the 30~min thermal limit are adopted design parameters. Matched ETL rows cover 63.8\% of the plan table, including its placeholder denominator. Full-day results use serialized movement and relaxed task deadlines; full process/thermal compliance remains to be audited. Scenario~2 is an uncertified timing surrogate, and Scenario~3 uses persistent obstacles rather than repair-aware recovery. Safe towing, when available, requires its own route, time and load checks.
 
 % ============================================================================
 % REFERENCES
