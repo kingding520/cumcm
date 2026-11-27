@@ -48,13 +48,13 @@ def main() -> int:
                   f"wait={row['total_wait_min']:>8.1f} late={row['total_lateness_min']:>7.1f} "
                   f"cranes={row['cranes_used']} gate={row['gate']}")
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    with (OUT_DIR / "aux_sensitivity.csv").open("w", encoding="utf-8-sig", newline="") as fh:
+    with (OUT_DIR / f"aux_sensitivity_{args.label}.csv").open("w", encoding="utf-8-sig", newline="") as fh:
         writer = csv.DictWriter(fh, fieldnames=list(rows[0].keys()), extrasaction="ignore")
         writer.writeheader()
         writer.writerows(rows)
-    (OUT_DIR / "aux_sensitivity.json").write_text(
+    (OUT_DIR / f"aux_sensitivity_{args.label}.json").write_text(
         json.dumps({"label": args.label,
-                    "status": "awaiting_wj_weight_threshold" if args.label == "placeholder" else "contractual",
+                    "status": "awaiting_wj_weight_threshold" if args.label == "placeholder" else "requested_by_wcl_pending_wj",
                     "policy_file": "code/configs/capacity_policy_v1.json",
                     "rows": rows}, ensure_ascii=False, indent=2), encoding="utf-8")
     return 0

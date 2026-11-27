@@ -1,0 +1,5 @@
+﻿variant,day,tasks,completed,cranes_used,makespan_h,overtime_h,total_wait_min,mean_wait_min,p95_wait_min,total_lateness_min,yield_moves,rejected_trials,min_gap_m,aux_threshold_t,gate,completed_all,accepted,label
+BASE_3E,2026-09-28,197,197,3#450:42;4#450:132;5#450:23,25.64,1.64,476.0,2.42,8.9,258.0,111,0,12.5,,pass,True,True,disabled
+BASE_3E,2026-09-28,197,197,2#150:1;3#450:42;4#450:131;5#450:23,25.64,1.64,486.2,2.47,9.0,268.2,114,0,12.5,145.0,pass,True,True,wcl145
+BASE_3E,2026-10-02,287,287,3#450:67;4#450:194;5#450:26,26.13,2.13,1158.1,4.04,13.9,786.9,131,0,12.5,,pass,True,True,disabled
+BASE_3E,2026-10-02,287,287,3#450:67;4#450:194;5#450:26,26.13,2.13,1158.1,4.04,13.9,786.9,131,0,12.5,145.0,pass,True,True,wcl145
